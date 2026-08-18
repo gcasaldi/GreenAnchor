@@ -1,0 +1,41 @@
+name: Update Campaigns Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-campaigns:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Update campagne.json
+        run: python scripts/update_campaigns.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "Nessun aggiornamento da committare"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add campagne.json
+          git commit -m "chore: nightly update campagne.json"
+          git push

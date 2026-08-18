@@ -1,0 +1,906 @@
+{
+  "generated_at": "2026-08-18T15:24:12.605035+00:00",
+  "campaigns": [
+    {
+      "id": "ce26dad643dc",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Clicca qui per segnalare il problema.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://www.avaaz.org/it/contact/?block",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.328017+00:00"
+    },
+    {
+      "id": "f78001eb0066",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Click here to report a problem.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://www.avaaz.org/en/contact/?block",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.327900+00:00"
+    },
+    {
+      "id": "fe4fc3f48786",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Cliquez ici pour rendre compte d'un problÃ¨me.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://www.avaaz.org/fr/contact/?block",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.328075+00:00"
+    },
+    {
+      "id": "e422e9293476",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Contact Avaaz",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://secure.avaaz.org/en/contact/",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.328221+00:00"
+    },
+    {
+      "id": "8525cd14e4ea",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Haz clic aquÃ­ para reportar un problema.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://www.avaaz.org/es/contact/?block",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.327963+00:00"
+    },
+    {
+      "id": "5abd0a294ee3",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Klicken Sie hier, um ein Problem zu melden.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://www.avaaz.org/de/contact/?block",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.328128+00:00"
+    },
+    {
+      "id": "777cf9cec562",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Share this campaign on Facebook.",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://secure.avaaz.org/campaign/en/",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.327569+00:00"
+    },
+    {
+      "id": "5165d03d6758",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Start a Petition",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://secure.avaaz.org/en/petition/start_a_petition/?source=splh",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.327471+00:00"
+    },
+    {
+      "id": "ed9d78094a47",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Start a Petition",
+      "summary": "Campagna individuata automaticamente da Avaaz.",
+      "action_url": "https://secure.avaaz.org/en/petition/start_a_petition?source=splf",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "mobilitazione",
+        "pressione politica",
+        "globale"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.328289+00:00"
+    },
+    {
+      "id": "2c46902a1b17",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Beyond Seafood – Support migrant fishers",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/support-migrant-fishers/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026651+00:00"
+    },
+    {
+      "id": "580271f3fda3",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Choose your Act of Resistance",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/choose-your-acts-of-resistance/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025374+00:00"
+    },
+    {
+      "id": "241fced10bce",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Defend forest defenders",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/defend-defenders/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025408+00:00"
+    },
+    {
+      "id": "0841cfd535b5",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Fight the billionaire takeover",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/time-to-resist/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025441+00:00"
+    },
+    {
+      "id": "ddf77d2c2b10",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Let’s end the age of plastic!",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/lets-end-the-age-of-plastic/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026469+00:00"
+    },
+    {
+      "id": "ee5abc5c9e47",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Make war profiteers pay: tax fossil fuel profits",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/call-for-new-taxes-on-fossil-fuel-profits/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026207+00:00"
+    },
+    {
+      "id": "97a5a622c168",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Polluters Pay Pact",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/the-polluters-pay-pact/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026339+00:00"
+    },
+    {
+      "id": "9a1dbe05ce46",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Protect the Oceans",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/ocean-sanctuaries/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026502+00:00"
+    },
+    {
+      "id": "1e986d0ceaae",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Reclaim the moral compass",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/reclaim-the-moral-compass/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026243+00:00"
+    },
+    {
+      "id": "1f1b0b039890",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Skip to Content",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/#content",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025146+00:00"
+    },
+    {
+      "id": "55bb3ad8ddbb",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Skip to Footer",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/#footer",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025179+00:00"
+    },
+    {
+      "id": "ca9cf37e1f8d",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Skip to Navigation",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/#header",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025094+00:00"
+    },
+    {
+      "id": "0198d48964b8",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stand with coastal communities",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stand-with-coastal-communities/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026602+00:00"
+    },
+    {
+      "id": "2fa2eee2b55c",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop Big Meat and Dairy",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-big-meat-and-dairy/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026434+00:00"
+    },
+    {
+      "id": "9989de0e36a7",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop Fossil Gas",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-fossil-gas/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026567+00:00"
+    },
+    {
+      "id": "f2cbe442d47a",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop corporate intimidation",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-corporate-intimidation/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026292+00:00"
+    },
+    {
+      "id": "c29864c46136",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop deep sea mining",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-deep-sea-mining/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.025473+00:00"
+    },
+    {
+      "id": "f5daaad80896",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Take the world’s biggest meat company to court",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/take-jbs-to-court/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026101+00:00"
+    },
+    {
+      "id": "4cc212525fc7",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Tax the super-rich",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/tax-the-super-rich/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026387+00:00"
+    },
+    {
+      "id": "bfbf9e320f62",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Tell Dove: Kick out plastic to protect health!",
+      "summary": "Campagna individuata automaticamente da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/dove-kick-out-plastics/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:12.026138+00:00"
+    },
+    {
+      "id": "542f73963dc2",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "ECI lifecycle statistics",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative/european-citizens-initiative-key-figures_en",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.248244+00:00"
+    },
+    {
+      "id": "77717280e21b",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "Find initiative",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.248183+00:00"
+    },
+    {
+      "id": "53602b5cac53",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "Skip to main content",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_en#main-content",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.247749+00:00"
+    },
+    {
+      "id": "c1d1cf67e606",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "bg български",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_bg",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.247830+00:00"
+    },
+    {
+      "id": "006aac364804",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "nl Nederlands",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_nl",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.247927+00:00"
+    },
+    {
+      "id": "f9942896cf98",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "pt português",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_pt",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.247969+00:00"
+    },
+    {
+      "id": "a06007cc2c25",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "sk slovenčina",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_sk",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.248045+00:00"
+    },
+    {
+      "id": "ea668bff64f0",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "sl slovenščina",
+      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
+      "action_url": "https://citizens-initiative.europa.eu/find-initiative_sl",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "UE",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.248101+00:00"
+    },
+    {
+      "id": "wwf-fallback",
+      "source": "WWF",
+      "organization": "WWF",
+      "title": "WWF - Act",
+      "summary": "Fallback: azioni civiche dal portale WWF.",
+      "action_url": "https://wwf.panda.org/act/",
+      "source_url": "https://wwf.panda.org/act/",
+      "tags": [
+        "clima",
+        "biodiversita",
+        "fallback"
+      ],
+      "country": "Global",
+      "language": "en",
+      "last_seen": "2026-08-18T15:24:11.141126+00:00"
+    },
+    {
+      "id": "5f004fb368cf",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Alle Petitionen",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petitionen",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.604742+00:00"
+    },
+    {
+      "id": "2d97cb02fc27",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Baden-Württemberg",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/region/petition/Baden-W%C3%BCrttemberg",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.604077+00:00"
+    },
+    {
+      "id": "7f259ea641cc",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Berliner Aufsicht versagt – Renten retten!",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/online/berliner-aufsicht-versagt-renten-retten",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.604408+00:00"
+    },
+    {
+      "id": "ad34613c11f9",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Bürgerrechte",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petitionen?category=58#petitionen",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.602996+00:00"
+    },
+    {
+      "id": "cbbe208cc29a",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Dialog mit Petitionsempfänger beendet",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/12#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603690+00:00"
+    },
+    {
+      "id": "57a6a21adce7",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Für Bürger:innen-Rechte - Palantir Überwachung in Ba-Wü stoppen!",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/online/fuer-buerger-innen-rechte-palantir-ueberwachung-in-ba-wue-stoppen",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.604193+00:00"
+    },
+    {
+      "id": "8dc419c15761",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Kommentare 13.446",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/kommentare/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603216+00:00"
+    },
+    {
+      "id": "4a10da002e38",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Land Hessen: AfD-Verbotsverfahren im Bundesrat einleiten – JETZT!",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/online/land-hessen-afd-verbotsverfahren-im-bundesrat-einleiten-jetzt",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.604305+00:00"
+    },
+    {
+      "id": "fcd9e35f23aa",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Nachricht zu einer abgeschlossenen Petition",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/13#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603542+00:00"
+    },
+    {
+      "id": "83b44a95f28f",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Neuigkeiten 7",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603143+00:00"
+    },
+    {
+      "id": "3b921f726101",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Petition eingereicht - Danke für die Unterstützung!",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/10#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603777+00:00"
+    },
+    {
+      "id": "770d239c3a5c",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Petition starten",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/neu",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.602855+00:00"
+    },
+    {
+      "id": "6959bff81ee1",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Pro & Contra 49",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/argumente/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603076+00:00"
+    },
+    {
+      "id": "6b0755b4b2fa",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Zum Hauptinhalt",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/it/petitions#main",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.602108+00:00"
+    },
+    {
+      "id": "e4fac38a9774",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "openpetition.org/!Petitionsrecht",
+      "summary": "Campagna individuata automaticamente da openPetition.",
+      "action_url": "https://www.openpetition.eu/it/petitions",
+      "source_url": "https://www.openpetition.eu/it/petitions",
+      "tags": [
+        "no-profit",
+        "trasparenza",
+        "petizioni"
+      ],
+      "country": "EU",
+      "language": "it",
+      "last_seen": "2026-08-18T15:24:12.603379+00:00"
+    }
+  ]
+}
