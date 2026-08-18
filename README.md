@@ -2,7 +2,9 @@
 
 Aggregatore 100% gratuito di campagne ambientali in stile Change, distribuito su GitHub Pages.
 
-GreenAnchor - trova un'azione ambientale concreta da sostenere oggi.
+GreenAnchor - Campaign Consolidation & Completion Engine.
+
+Non creare un'altra campagna. Portiamone una a termine.
 
 ## Architettura Tecnica
 
@@ -14,10 +16,16 @@ GreenAnchor - trova un'azione ambientale concreta da sostenere oggi.
 ## Evoluzione Prodotto
 
 - GreenAnchor Radar: nuove campagne nelle ultime 24 ore, conteggio attive e urgenti.
-- Agisci adesso: top 5 campagne ordinate per urgenza, affidabilita e impatto locale.
+- GreenAnchor Focus: top 5 campagne ordinate per completion score, urgenza e concentrazione community.
 - Verifica tecnica: score di affidabilita (0-100) e stato `verificata`, `da_verificare`, `fonte_aggregata`.
+- Completion Score: indice oggettivo basato su verificabilita, attivita, progresso e partecipazione.
 - Deduplicazione: URL canonico + titolo normalizzato.
+- Clustering semantico: individua campagne simili anche su fonti e lingue diverse.
 - Filtri avanzati: area (Italia/Europa/Globale), tema, tipo azione, ordinamento per urgenza/recenza/verifica.
+
+## Architettura Concettuale
+
+Sources -> Data Extraction -> Cleaning -> AI Classification -> Semantic Clustering -> Verification -> Completion Score -> GreenAnchor Focus -> Original Campaign
 
 ## Fonti Mappate
 

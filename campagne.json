@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-08-18T15:58:44.719140+00:00",
+  "generated_at": "2026-08-18T16:03:15.502369+00:00",
   "radar": {
-    "generated_at": "2026-08-18T15:58:40.595340+00:00",
+    "generated_at": "2026-08-18T16:03:10.445291+00:00",
     "new_campaigns_24h": 28,
     "active_campaigns": 28,
-    "urgent_campaigns": 0
+    "urgent_campaigns": 0,
+    "fragmented_topics": 1
   },
-  "spotlight": [
+  "greenanchor_focus": [
     {
       "id": "changeorg-italia-fallback",
       "source": "Change.org Italia",
@@ -30,10 +31,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -43,7 +46,17 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "ambientali",
+        "change",
+        "italia",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-023",
+      "semantic_cluster_size": 1
     },
     {
       "id": "1e0a96b37658",
@@ -68,10 +81,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -81,7 +96,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "firma",
+        "nostre",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-024",
+      "semantic_cluster_size": 1
     },
     {
       "id": "legambiente-fallback",
@@ -106,10 +130,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -119,7 +145,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagne",
+        "legambiente"
+      ],
+      "semantic_cluster_id": "cluster-025",
+      "semantic_cluster_size": 1
     },
     {
       "id": "86acd55323a7",
@@ -144,10 +178,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -157,7 +193,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "evento",
+        "organizza"
+      ],
+      "semantic_cluster_id": "cluster-026",
+      "semantic_cluster_size": 1
     },
     {
       "id": "7d4c3d2b445e",
@@ -182,10 +226,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -195,7 +241,272 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagna",
+        "contro",
+        "crimini",
+        "gesti",
+        "grandi",
+        "littering",
+        "piccoli",
+        "sensibilizzazione"
+      ],
+      "semantic_cluster_id": "cluster-027",
+      "semantic_cluster_size": 1
+    }
+  ],
+  "spotlight": [
+    {
+      "id": "changeorg-italia-fallback",
+      "source": "Change.org Italia",
+      "organization": "Change.org",
+      "title": "Change.org Italia - Petizioni ambientali",
+      "summary": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "objective": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "action_url": "https://www.change.org/it",
+      "source_url": "https://www.change.org/it",
+      "tags": [
+        "italia",
+        "petizioni",
+        "mobilitazione"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": false,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "ambientali",
+        "change",
+        "italia",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-023",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "1e0a96b37658",
+      "source": "Greenpeace Italia",
+      "organization": "Greenpeace Italia",
+      "title": "Firma le nostre petizioni",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
+      "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/firma-le-petizioni/",
+      "source_url": "https://www.greenpeace.org/italy/attivati/",
+      "tags": [
+        "italia",
+        "attivati",
+        "ambiente"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "firma",
+        "nostre",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-024",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "legambiente-fallback",
+      "source": "Legambiente",
+      "organization": "Legambiente",
+      "title": "Legambiente - Campagne",
+      "summary": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
+      "objective": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
+      "action_url": "https://www.legambiente.it/campagne/",
+      "source_url": "https://www.legambiente.it/campagne/",
+      "tags": [
+        "italia",
+        "territorio",
+        "campagne"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagne",
+        "legambiente"
+      ],
+      "semantic_cluster_id": "cluster-025",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "86acd55323a7",
+      "source": "WWF Italia",
+      "organization": "WWF Italia",
+      "title": "Organizza un Evento",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
+      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/organizza-un-evento/",
+      "source_url": "https://www.wwf.it/",
+      "tags": [
+        "italia",
+        "clima",
+        "biodiversita"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "clima",
+      "action_type": "evento",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "evento",
+        "organizza"
+      ],
+      "semantic_cluster_id": "cluster-026",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "7d4c3d2b445e",
+      "source": "Marevivo",
+      "organization": "Marevivo",
+      "title": "“Piccoli gesti, grandi crimini”: al via la campagna di sensibilizzazione contro il littering",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "action_url": "https://marevivo.it/blue-news/piccoli-gesti-grandi-crimini-al-via-la-campagna-di-sensibilizzazione-da-nord-a-sud-contro-il-littering/",
+      "source_url": "https://marevivo.it/cosa-puoi-fare/",
+      "tags": [
+        "italia",
+        "oceani",
+        "inquinamento"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "oceani",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagna",
+        "contro",
+        "crimini",
+        "gesti",
+        "grandi",
+        "littering",
+        "piccoli",
+        "sensibilizzazione"
+      ],
+      "semantic_cluster_id": "cluster-027",
+      "semantic_cluster_size": 1
     }
   ],
   "campaigns": [
@@ -223,10 +534,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -236,7 +549,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "alle",
+        "neuigkeiten"
+      ],
+      "semantic_cluster_id": "cluster-001",
+      "semantic_cluster_size": 1
     },
     {
       "id": "5f004fb368cf",
@@ -262,10 +583,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -275,7 +598,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "alle",
+        "petitionen"
+      ],
+      "semantic_cluster_id": "cluster-002",
+      "semantic_cluster_size": 1
     },
     {
       "id": "2d97cb02fc27",
@@ -301,10 +632,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -314,7 +647,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "baden",
+        "wurttemberg"
+      ],
+      "semantic_cluster_id": "cluster-003",
+      "semantic_cluster_size": 1
     },
     {
       "id": "7f259ea641cc",
@@ -340,10 +681,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -353,7 +696,18 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "aufsicht",
+        "berliner",
+        "renten",
+        "retten",
+        "versagt"
+      ],
+      "semantic_cluster_id": "cluster-004",
+      "semantic_cluster_size": 1
     },
     {
       "id": "e107071b29d2",
@@ -379,10 +733,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -392,7 +748,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "beendet",
+        "dialog",
+        "petitionsempfanger"
+      ],
+      "semantic_cluster_id": "cluster-005",
+      "semantic_cluster_size": 1
     },
     {
       "id": "57a6a21adce7",
@@ -418,10 +783,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -431,7 +798,19 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "burger",
+        "innen",
+        "palantir",
+        "rechte",
+        "stoppen",
+        "uberwachung"
+      ],
+      "semantic_cluster_id": "cluster-006",
+      "semantic_cluster_size": 1
     },
     {
       "id": "a7a9bafd90cb",
@@ -457,10 +836,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -470,7 +851,14 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "kommentare"
+      ],
+      "semantic_cluster_id": "cluster-007",
+      "semantic_cluster_size": 1
     },
     {
       "id": "4a10da002e38",
@@ -496,10 +884,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -509,7 +899,19 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "bundesrat",
+        "einleiten",
+        "hessen",
+        "jetzt",
+        "land",
+        "verbotsverfahren"
+      ],
+      "semantic_cluster_id": "cluster-008",
+      "semantic_cluster_size": 1
     },
     {
       "id": "5dda15074add",
@@ -535,10 +937,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -548,7 +952,17 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "abgeschlossenen",
+        "einer",
+        "nachricht",
+        "petition"
+      ],
+      "semantic_cluster_id": "cluster-009",
+      "semantic_cluster_size": 1
     },
     {
       "id": "991dbfe008a1",
@@ -574,10 +988,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -587,7 +1003,17 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "danke",
+        "eingereicht",
+        "petition",
+        "unterstutzung"
+      ],
+      "semantic_cluster_id": "cluster-010",
+      "semantic_cluster_size": 1
     },
     {
       "id": "770d239c3a5c",
@@ -613,10 +1039,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -626,7 +1054,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "petition",
+        "starten"
+      ],
+      "semantic_cluster_id": "cluster-011",
+      "semantic_cluster_size": 1
     },
     {
       "id": "ice-fallback",
@@ -651,10 +1087,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -664,7 +1102,17 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "evidenza",
+        "iniziative",
+        "portale",
+        "ufficiale"
+      ],
+      "semantic_cluster_id": "cluster-012",
+      "semantic_cluster_size": 1
     },
     {
       "id": "20a936bde684",
@@ -690,10 +1138,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -703,7 +1153,14 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "contra"
+      ],
+      "semantic_cluster_id": "cluster-013",
+      "semantic_cluster_size": 1
     },
     {
       "id": "8896bcc7b1dc",
@@ -729,10 +1186,12 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -742,7 +1201,14 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "hauptinhalt"
+      ],
+      "semantic_cluster_id": "cluster-014",
+      "semantic_cluster_size": 1
     },
     {
       "id": "avaaz-fallback",
@@ -767,10 +1233,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -780,7 +1248,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "avaaz",
+        "campagne",
+        "portale"
+      ],
+      "semantic_cluster_id": "cluster-015",
+      "semantic_cluster_size": 1
     },
     {
       "id": "79448e9cbe91",
@@ -806,10 +1283,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -819,7 +1298,18 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "climate",
+        "justice",
+        "raise",
+        "voice",
+        "your"
+      ],
+      "semantic_cluster_id": "cluster-016",
+      "semantic_cluster_size": 1
     },
     {
       "id": "a114a0798c7a",
@@ -844,10 +1334,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -857,7 +1349,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "letter",
+        "open",
+        "sign"
+      ],
+      "semantic_cluster_id": "cluster-017",
+      "semantic_cluster_size": 1
     },
     {
       "id": "2fa2eee2b55c",
@@ -882,10 +1383,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -895,7 +1398,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "dairy",
+        "meat",
+        "stop"
+      ],
+      "semantic_cluster_id": "cluster-018",
+      "semantic_cluster_size": 1
     },
     {
       "id": "9989de0e36a7",
@@ -920,10 +1432,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -933,7 +1447,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "fossil",
+        "stop"
+      ],
+      "semantic_cluster_id": "cluster-019",
+      "semantic_cluster_size": 1
     },
     {
       "id": "93b4bd631eb2",
@@ -958,10 +1480,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -971,7 +1495,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "bullies",
+        "corporate",
+        "stop"
+      ],
+      "semantic_cluster_id": "cluster-020",
+      "semantic_cluster_size": 2
     },
     {
       "id": "f2cbe442d47a",
@@ -996,10 +1529,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1009,7 +1544,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "corporate",
+        "intimidation",
+        "stop"
+      ],
+      "semantic_cluster_id": "cluster-020",
+      "semantic_cluster_size": 2
     },
     {
       "id": "c29864c46136",
@@ -1034,10 +1578,12 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1047,7 +1593,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "deep",
+        "mining",
+        "stop"
+      ],
+      "semantic_cluster_id": "cluster-021",
+      "semantic_cluster_size": 1
     },
     {
       "id": "wwf-fallback",
@@ -1072,10 +1627,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1085,7 +1642,12 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [],
+      "semantic_cluster_id": "cluster-022",
+      "semantic_cluster_size": 1
     },
     {
       "id": "changeorg-italia-fallback",
@@ -1110,10 +1672,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1123,7 +1687,17 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "ambientali",
+        "change",
+        "italia",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-023",
+      "semantic_cluster_size": 1
     },
     {
       "id": "1e0a96b37658",
@@ -1148,10 +1722,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1161,7 +1737,16 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "firma",
+        "nostre",
+        "petizioni"
+      ],
+      "semantic_cluster_id": "cluster-024",
+      "semantic_cluster_size": 1
     },
     {
       "id": "legambiente-fallback",
@@ -1186,10 +1771,12 @@
       "action_type": "petizione",
       "deadline": null,
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1199,7 +1786,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagne",
+        "legambiente"
+      ],
+      "semantic_cluster_id": "cluster-025",
+      "semantic_cluster_size": 1
     },
     {
       "id": "86acd55323a7",
@@ -1224,10 +1819,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1237,7 +1834,15 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "evento",
+        "organizza"
+      ],
+      "semantic_cluster_id": "cluster-026",
+      "semantic_cluster_size": 1
     },
     {
       "id": "7d4c3d2b445e",
@@ -1262,10 +1867,12 @@
       "deadline": null,
       "scope": "Italia",
       "verified_source": true,
-      "last_verified": "2026-08-18T15:58:40.595340+00:00",
-      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "last_verified": "2026-08-18T16:03:10.445291+00:00",
+      "last_seen": "2026-08-18T16:03:10.445291+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": true,
+      "progress_current": null,
+      "progress_target": null,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -1275,7 +1882,21 @@
         "date_verified": true,
         "link_working": true,
         "goal_declared": true
-      }
+      },
+      "progress_ratio": null,
+      "completion_score": 85,
+      "semantic_tokens": [
+        "campagna",
+        "contro",
+        "crimini",
+        "gesti",
+        "grandi",
+        "littering",
+        "piccoli",
+        "sensibilizzazione"
+      ],
+      "semantic_cluster_id": "cluster-027",
+      "semantic_cluster_size": 1
     }
   ]
 }

@@ -108,6 +108,34 @@ ACTION_KEYWORDS = {
     "letter": "mail action",
 }
 
+TITLE_STOPWORDS = {
+    "the",
+    "and",
+    "for",
+    "with",
+    "from",
+    "della",
+    "delle",
+    "degli",
+    "dello",
+    "della",
+    "per",
+    "con",
+    "del",
+    "dei",
+    "di",
+    "la",
+    "le",
+    "il",
+    "gli",
+    "un",
+    "una",
+    "to",
+    "in",
+    "su",
+    "da",
+}
+
 MONTHS_IT = {
     "gennaio": 1,
     "febbraio": 2,
@@ -393,6 +421,120 @@ def extract_deadline_from_text(text: str, base: datetime) -> str | None:
     return None
 
 
+def parse_int_like(value: str) -> int | None:
+    cleaned = re.sub(r"[^0-9]", "", value)
+    if not cleaned:
+        return None
+    return int(cleaned)
+
+
+def extract_progress(text: str) -> tuple[int | None, int | None]:
+    patterns = [
+        r"(\d[\d\.,\s]{2,})\s*(?:firme|signatures|supporters)\s*(?:su|of|/)?\s*(\d[\d\.,\s]{2,})",
+        r"(\d[\d\.,\s]{2,})\s*/\s*(\d[\d\.,\s]{2,})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text.lower())
+        if not match:
+            continue
+        current = parse_int_like(match.group(1))
+        target = parse_int_like(match.group(2))
+        if current and target and target > 0:
+            return current, target
+    return None, None
+
+
+def completion_payload(item: dict, now_dt: datetime) -> dict:
+    active_points = 20 if item.get("status") == "attiva" else 0
+    ver_score = int(item.get("verification_score", 0))
+
+    current = item.get("progress_current")
+    target = item.get("progress_target")
+    ratio: float | None = None
+    progress_points = 0
+    if isinstance(current, int) and isinstance(target, int) and target > 0:
+        ratio = min(current / target, 1.5)
+        if ratio <= 1:
+            progress_points = int(25 * ratio)
+        else:
+            progress_points = 25
+
+    participation_points = 15 if item.get("action_url", "").startswith("http") else 0
+    freshness_days = 99
+    if item.get("last_verified"):
+        dt = parse_dt(item["last_verified"])
+        if dt:
+            freshness_days = max((now_dt - dt).days, 0)
+    freshness_points = 10 if freshness_days <= 2 else 6 if freshness_days <= 7 else 2
+
+    completion_score = int(round((ver_score * 0.4) + active_points + progress_points + participation_points + freshness_points))
+    completion_score = max(0, min(100, completion_score))
+
+    return {
+        "progress_current": current,
+        "progress_target": target,
+        "progress_ratio": ratio,
+        "completion_score": completion_score,
+    }
+
+
+def title_tokens(title: str) -> set[str]:
+    normalized = normalize_for_dedupe(title)
+    return {
+        token
+        for token in normalized.split(" ")
+        if token and len(token) >= 4 and token not in TITLE_STOPWORDS
+    }
+
+
+def jaccard(a: set[str], b: set[str]) -> float:
+    if not a and not b:
+        return 0.0
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def assign_semantic_clusters(campaigns: list[dict]) -> list[dict]:
+    clusters: list[dict] = []
+
+    for item in campaigns:
+        tokens = title_tokens(item.get("title", ""))
+        item["semantic_tokens"] = sorted(tokens)
+        assigned = False
+
+        for cluster in clusters:
+            if item.get("theme") != cluster["theme"]:
+                continue
+            similarity = jaccard(tokens, cluster["tokens"])
+            if similarity >= 0.45:
+                cluster["items"].append(item)
+                cluster["tokens"] = cluster["tokens"] | tokens
+                item["semantic_cluster_id"] = cluster["id"]
+                assigned = True
+                break
+
+        if assigned:
+            continue
+
+        cluster_id = f"cluster-{len(clusters) + 1:03d}"
+        item["semantic_cluster_id"] = cluster_id
+        clusters.append(
+            {
+                "id": cluster_id,
+                "theme": item.get("theme"),
+                "tokens": set(tokens),
+                "items": [item],
+            }
+        )
+
+    cluster_sizes = {cluster["id"]: len(cluster["items"]) for cluster in clusters}
+    for item in campaigns:
+        item["semantic_cluster_size"] = cluster_sizes.get(item["semantic_cluster_id"], 1)
+
+    return campaigns
+
+
 def build_id(source: str, title: str, action_url: str) -> str:
     digest = hashlib.sha1(f"{source}|{title}|{action_url}".encode("utf-8")).hexdigest()
     return digest[:12]
@@ -441,7 +583,11 @@ def enrich_campaign(item: dict, now_dt: datetime, previous_first_seen: str | Non
     item["first_seen"] = first_seen
     first_seen_dt = parse_dt(first_seen) or now_dt
     item["is_new_24h"] = now_dt - first_seen_dt <= timedelta(hours=24)
+    progress_current, progress_target = extract_progress(f"{item['title']} {item['summary']}")
+    item["progress_current"] = progress_current
+    item["progress_target"] = progress_target
     item.update(verification_payload(item))
+    item.update(completion_payload(item, now_dt))
     return item
 
 
@@ -671,10 +817,10 @@ def dedupe(campaigns: Iterable[dict]) -> list[dict]:
             by_key[key] = item
             continue
         current = by_key[key]
-        if item.get("verification_score", 0) > current.get("verification_score", 0):
+        if item.get("completion_score", 0) > current.get("completion_score", 0):
             by_key[key] = item
     cleaned = list(by_key.values())
-    cleaned.sort(key=lambda x: (x.get("scope", ""), -x.get("verification_score", 0), x.get("title", "")))
+    cleaned.sort(key=lambda x: (x.get("scope", ""), -x.get("completion_score", 0), x.get("title", "")))
     return cleaned
 
 
@@ -704,36 +850,64 @@ def urgency_rank(item: dict, now_dt: datetime) -> int:
     return 3
 
 
-def select_spotlight(campaigns: list[dict], now_dt: datetime) -> list[dict]:
-    active = [item for item in campaigns if item.get("status") == "attiva"]
-    active.sort(
-        key=lambda item: (
-            0 if item.get("scope") == "Italia" else 1,
-            urgency_rank(item, now_dt),
-            -item.get("verification_score", 0),
-            -int(item.get("is_new_24h", False)),
-        )
+def focus_priority(item: dict, now_dt: datetime) -> tuple:
+    ratio = item.get("progress_ratio")
+    if isinstance(ratio, float):
+        ratio_distance = abs(1 - min(ratio, 1))
+        ratio_flag = 0
+    else:
+        ratio_distance = 1.0
+        ratio_flag = 1
+
+    return (
+        0 if item.get("status") == "attiva" else 1,
+        0 if item.get("scope") == "Italia" else 1,
+        urgency_rank(item, now_dt),
+        ratio_flag,
+        ratio_distance,
+        -item.get("completion_score", 0),
+        -item.get("verification_score", 0),
     )
-    return active[:5]
+
+
+def select_focus(campaigns: list[dict], now_dt: datetime) -> list[dict]:
+    active = [item for item in campaigns if item.get("status") == "attiva"]
+    best_by_cluster: dict[str, dict] = {}
+    for item in active:
+        cluster_id = item.get("semantic_cluster_id", "cluster-unknown")
+        current = best_by_cluster.get(cluster_id)
+        if current is None or focus_priority(item, now_dt) < focus_priority(current, now_dt):
+            best_by_cluster[cluster_id] = item
+
+    winners = list(best_by_cluster.values())
+    winners.sort(key=lambda item: focus_priority(item, now_dt))
+    return winners[:5]
 
 
 def radar_payload(campaigns: list[dict], now_dt: datetime) -> dict:
     new_24h = [item for item in campaigns if item.get("is_new_24h")]
     active = [item for item in campaigns if item.get("status") == "attiva"]
     urgent = [item for item in active if urgency_rank(item, now_dt) == 1]
+    fragmented_clusters = {
+        item.get("semantic_cluster_id")
+        for item in campaigns
+        if item.get("semantic_cluster_size", 1) > 1
+    }
     return {
         "generated_at": now_dt.isoformat(),
         "new_campaigns_24h": len(new_24h),
         "active_campaigns": len(active),
         "urgent_campaigns": len(urgent),
+        "fragmented_topics": len(fragmented_clusters),
     }
 
 
-def update_file(campaigns: list[dict], spotlight: list[dict], radar: dict) -> None:
+def update_file(campaigns: list[dict], focus: list[dict], radar: dict) -> None:
     payload = {
         "generated_at": now_utc().isoformat(),
         "radar": radar,
-        "spotlight": spotlight,
+        "greenanchor_focus": focus,
+        "spotlight": focus,
         "campaigns": campaigns,
     }
     TARGET_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -767,12 +941,13 @@ def main() -> None:
         all_campaigns = ensure_source_coverage(all_campaigns, now_dt, previous_map)
         all_campaigns = dedupe(all_campaigns)
 
-    spotlight = select_spotlight(all_campaigns, now_dt)
+    all_campaigns = assign_semantic_clusters(all_campaigns)
+    focus = select_focus(all_campaigns, now_dt)
     radar = radar_payload(all_campaigns, now_dt)
-    update_file(all_campaigns, spotlight, radar)
+    update_file(all_campaigns, focus, radar)
 
     print(f"Aggiornato {TARGET_FILE} con {len(all_campaigns)} campagne")
-    print(f"Agisci adesso: {len(spotlight)} campagne")
+    print(f"GreenAnchor Focus: {len(focus)} campagne")
 
 
 if __name__ == "__main__":

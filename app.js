@@ -23,7 +23,8 @@ const refs = {
   spotlightTemplate: document.getElementById('spotlightTemplate'),
   radarNew: document.getElementById('radarNew'),
   radarActive: document.getElementById('radarActive'),
-  radarUrgent: document.getElementById('radarUrgent')
+  radarUrgent: document.getElementById('radarUrgent'),
+  radarClusters: document.getElementById('radarClusters')
 };
 
 function parseDate(value) {
@@ -51,6 +52,7 @@ function enrichCampaign(raw) {
   campaign.last_verified = campaign.last_verified || campaign.last_seen || null;
   campaign.verification_score = Number(campaign.verification_score || 70);
   campaign.verification_status = campaign.verification_status || 'da_verificare';
+  campaign.completion_score = Number(campaign.completion_score || campaign.verification_score || 60);
   campaign.objective = campaign.objective || campaign.summary || 'Obiettivo non disponibile.';
   campaign._id = campaign.id || `${campaign.source}:${campaign.action_url}`;
   return campaign;
@@ -65,7 +67,7 @@ async function loadCampaigns() {
 
     const data = await res.json();
     state.campaigns = (data.campaigns || []).map(enrichCampaign);
-    state.spotlight = (data.spotlight || []).map(enrichCampaign);
+    state.spotlight = (data.greenanchor_focus || data.spotlight || []).map(enrichCampaign);
     state.radar = data.radar || null;
 
     state.fuse = new Fuse(state.campaigns, {
@@ -110,16 +112,20 @@ function renderRadar() {
   refs.radarNew.textContent = state.radar?.new_campaigns_24h ?? '-';
   refs.radarActive.textContent = state.radar?.active_campaigns ?? '-';
   refs.radarUrgent.textContent = state.radar?.urgent_campaigns ?? '-';
+  refs.radarClusters.textContent = state.radar?.fragmented_topics ?? '-';
 }
 
 function renderSpotlight() {
   refs.spotlight.innerHTML = '';
   state.spotlight.slice(0, 5).forEach((campaign) => {
     const node = refs.spotlightTemplate.content.cloneNode(true);
-    const urgentLabel = campaign.deadline ? `URGENTE · ${campaign.scope}` : `${campaign.scope.toUpperCase()} · VERIFICATA`;
+    const urgentLabel = campaign.deadline ? `URGENTE · ${campaign.scope}` : `${campaign.scope.toUpperCase()} · FOCUS`;
     node.querySelector('[data-spotlight-label]').textContent = urgentLabel;
     node.querySelector('[data-spotlight-title]').textContent = campaign.title;
-    node.querySelector('[data-spotlight-meta]').textContent = `${campaign.action_type} · score ${campaign.verification_score}/100`;
+    const progress = campaign.progress_current && campaign.progress_target
+      ? ` · ${campaign.progress_current.toLocaleString('it-IT')}/${campaign.progress_target.toLocaleString('it-IT')}`
+      : '';
+    node.querySelector('[data-spotlight-meta]').textContent = `${campaign.action_type} · Completion ${campaign.completion_score}/100${progress}`;
     node.querySelector('[data-spotlight-link]').href = campaign.action_url;
     refs.spotlight.appendChild(node);
   });
@@ -158,7 +164,7 @@ function applySorting(list) {
   } else if (sortMode === 'recent') {
     sorted.sort((a, b) => (parseDate(b.last_verified)?.getTime() || 0) - (parseDate(a.last_verified)?.getTime() || 0));
   } else if (sortMode === 'verification') {
-    sorted.sort((a, b) => (b.verification_score || 0) - (a.verification_score || 0));
+    sorted.sort((a, b) => (b.completion_score || 0) - (a.completion_score || 0));
   } else {
     sorted.sort((a, b) => (state.searchScores.get(a._id) || 1) - (state.searchScores.get(b._id) || 1));
   }
@@ -264,7 +270,10 @@ function renderCards() {
     node.querySelector('[data-action-type]').textContent = `🎯 ${campaign.action_type}`;
     node.querySelector('[data-status]').textContent = `🟢 ${campaign.status}`;
     node.querySelector('[data-verification]').textContent = `✓ ${verificationBadge(campaign)} · ${campaign.verification_score}/100`;
-    node.querySelector('[data-last-verified]').textContent = `📅 Ultima verifica: ${fmtDate(campaign.last_verified)}`;
+    const completion = campaign.progress_current && campaign.progress_target
+      ? ` · ${campaign.progress_current.toLocaleString('it-IT')}/${campaign.progress_target.toLocaleString('it-IT')}`
+      : '';
+    node.querySelector('[data-last-verified]').textContent = `📅 Ultima verifica: ${fmtDate(campaign.last_verified)} · Completion ${campaign.completion_score}/100${completion}`;
     node.querySelector('[data-objective]').textContent = campaign.objective;
 
     const tagsBox = node.querySelector('[data-tags]');
