@@ -55,16 +55,42 @@
           GreenAnchor
         </p>
         <h1 class="font-display text-4xl leading-tight text-slate-900 sm:text-5xl">
-          Trova campagne ambientali
+          Trova un'azione ambientale concreta
           <span class="text-emerald-700">attive e verificabili</span>
         </h1>
         <p class="mt-4 max-w-2xl text-slate-700">
-          Aggregatore gratuito con priorita Italia: dati da fonti italiane ed europee, piu reti globali.
-          Ricerca istantanea nel browser, senza backend e senza costi piattaforma.
+          Motore di iniziative ambientali con priorita Italia: deduplica, score di verifica e filtri operativi
+          per agire in pochi minuti.
         </p>
       </header>
 
-      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/80 p-5 shadow-halo backdrop-blur md:grid-cols-3">
+      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/85 p-5 shadow-halo backdrop-blur md:grid-cols-3">
+        <article class="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4">
+          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">GreenAnchor Radar</p>
+          <p id="radarNew" class="mt-2 text-2xl font-display text-slate-900">-</p>
+          <p class="text-sm text-slate-700">Nuove campagne nelle ultime 24 ore</p>
+        </article>
+        <article class="rounded-2xl border border-emerald-100 bg-white p-4">
+          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Campagne attive</p>
+          <p id="radarActive" class="mt-2 text-2xl font-display text-slate-900">-</p>
+          <p class="text-sm text-slate-700">Verificate e in corso</p>
+        </article>
+        <article class="rounded-2xl border border-emerald-100 bg-white p-4">
+          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Urgenti</p>
+          <p id="radarUrgent" class="mt-2 text-2xl font-display text-slate-900">-</p>
+          <p class="text-sm text-slate-700">Con scadenza ravvicinata</p>
+        </article>
+      </section>
+
+      <section class="mb-8 rounded-3xl border border-emerald-200 bg-white/90 p-6 shadow-halo backdrop-blur">
+        <div class="mb-4 flex items-center justify-between gap-3">
+          <h2 class="font-display text-2xl text-slate-900">🔥 Agisci adesso</h2>
+          <p class="text-sm text-slate-600">Top 5 per urgenza, verifica e impatto locale</p>
+        </div>
+        <div id="spotlight" class="grid gap-4 md:grid-cols-2 xl:grid-cols-5"></div>
+      </section>
+
+      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/80 p-5 shadow-halo backdrop-blur md:grid-cols-6">
         <label class="md:col-span-2">
           <span class="mb-2 block text-sm font-semibold text-slate-700">Cerca per titolo, tema o organizzazione</span>
           <input
@@ -84,9 +110,55 @@
             <option value="all">Tutte le fonti</option>
           </select>
         </label>
+
+        <label>
+          <span class="mb-2 block text-sm font-semibold text-slate-700">Area</span>
+          <select
+            id="scopeFilter"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
+          >
+            <option value="all">Italia, Europa, Globale</option>
+            <option value="Italia">Italia</option>
+            <option value="Europa">Europa</option>
+            <option value="Globale">Globale</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="mb-2 block text-sm font-semibold text-slate-700">Tema</span>
+          <select
+            id="themeFilter"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
+          >
+            <option value="all">Tutti i temi</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="mb-2 block text-sm font-semibold text-slate-700">Azione</span>
+          <select
+            id="actionTypeFilter"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
+          >
+            <option value="all">Tutti i tipi</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="mb-2 block text-sm font-semibold text-slate-700">Ordina per</span>
+          <select
+            id="sortFilter"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
+          >
+            <option value="relevance">Rilevanza</option>
+            <option value="urgency">Urgenza</option>
+            <option value="recent">Recenza</option>
+            <option value="verification">Affidabilita</option>
+          </select>
+        </label>
       </section>
 
-      <section class="mb-4 flex items-center justify-between">
+      <section class="mb-4 flex items-center justify-between gap-4">
         <p id="stats" class="text-sm font-medium text-slate-700">Caricamento campagne...</p>
         <p id="updatedAt" class="text-xs text-slate-500"></p>
       </section>
@@ -95,19 +167,44 @@
 
       <template id="campaignCardTemplate">
         <article class="group rounded-2xl border border-emerald-100 bg-white p-5 shadow-halo transition hover:-translate-y-0.5 hover:shadow-lg">
-          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700" data-source></p>
+          <div class="flex items-start justify-between gap-3">
+            <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700" data-source></p>
+            <button data-favorite class="rounded-full border border-emerald-200 px-2 py-1 text-xs font-semibold text-emerald-700">☆</button>
+          </div>
           <h2 class="mt-2 font-display text-xl leading-tight text-slate-900" data-title></h2>
-          <p class="mt-3 text-sm text-slate-700" data-summary></p>
+          <p class="mt-1 text-sm font-medium text-slate-700" data-organization></p>
+          <ul class="mt-3 space-y-1 text-xs text-slate-600">
+            <li data-location></li>
+            <li data-theme></li>
+            <li data-action-type></li>
+            <li data-status></li>
+            <li data-verification></li>
+            <li data-last-verified></li>
+          </ul>
+          <p class="mt-3 text-sm text-slate-700" data-objective></p>
           <div class="mt-4 flex flex-wrap gap-2" data-tags></div>
-          <a
-            data-link
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-5 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
-          >
-            Partecipa
-            <span aria-hidden="true">-></span>
-          </a>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <a
+              data-link
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
+            >
+              Partecipa
+              <span aria-hidden="true">-></span>
+            </a>
+            <button data-share class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700">Condividi</button>
+            <button data-report class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700">Segnala</button>
+          </div>
+        </article>
+      </template>
+
+      <template id="spotlightTemplate">
+        <article class="rounded-2xl border border-emerald-200 bg-gradient-to-b from-emerald-50 to-white p-4">
+          <p class="text-[11px] font-bold uppercase tracking-wide text-emerald-700" data-spotlight-label></p>
+          <h3 class="mt-2 font-display text-lg leading-tight text-slate-900" data-spotlight-title></h3>
+          <p class="mt-2 text-xs text-slate-700" data-spotlight-meta></p>
+          <a data-spotlight-link target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex text-sm font-semibold text-emerald-800">Partecipa in 2 minuti -></a>
         </article>
       </template>
     </main>

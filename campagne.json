@@ -1,166 +1,20 @@
 {
-  "generated_at": "2026-08-18T15:50:32.538035+00:00",
-  "campaigns": [
+  "generated_at": "2026-08-18T15:58:44.719140+00:00",
+  "radar": {
+    "generated_at": "2026-08-18T15:58:40.595340+00:00",
+    "new_campaigns_24h": 28,
+    "active_campaigns": 28,
+    "urgent_campaigns": 0
+  },
+  "spotlight": [
     {
-      "id": "ce26dad643dc",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Clicca qui per segnalare il problema.",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://www.avaaz.org/it/contact/?block",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067848+00:00"
-    },
-    {
-      "id": "f78001eb0066",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Click here to report a problem.",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://www.avaaz.org/en/contact/?block",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067775+00:00"
-    },
-    {
-      "id": "fe4fc3f48786",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Cliquez ici pour rendre compte d'un problÃ¨me.",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://www.avaaz.org/fr/contact/?block",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067884+00:00"
-    },
-    {
-      "id": "e422e9293476",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Contact Avaaz",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://secure.avaaz.org/en/contact/",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067974+00:00"
-    },
-    {
-      "id": "8525cd14e4ea",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Haz clic aquÃ­ para reportar un problema.",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://www.avaaz.org/es/contact/?block",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067813+00:00"
-    },
-    {
-      "id": "5abd0a294ee3",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Klicken Sie hier, um ein Problem zu melden.",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://www.avaaz.org/de/contact/?block",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067918+00:00"
-    },
-    {
-      "id": "5165d03d6758",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Start a Petition",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://secure.avaaz.org/en/petition/start_a_petition/?source=splh",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.067566+00:00"
-    },
-    {
-      "id": "ed9d78094a47",
-      "source": "Avaaz",
-      "organization": "Avaaz",
-      "title": "Start a Petition",
-      "summary": "Campagna individuata automaticamente da Avaaz.",
-      "action_url": "https://secure.avaaz.org/en/petition/start_a_petition?source=splf",
-      "source_url": "https://secure.avaaz.org/campaign/en/",
-      "tags": [
-        "mobilitazione",
-        "pressione politica",
-        "globale"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.068018+00:00"
-    },
-    {
-      "id": "changeorg-fallback",
-      "source": "Change.org",
-      "organization": "Change.org",
-      "title": "Change.org - petizioni ambientali",
-      "summary": "Fallback: raccolta petizioni pubbliche su Change.org.",
-      "action_url": "https://www.change.org/petitions?selected_suggestions=true",
-      "source_url": "https://www.change.org/petitions?selected_suggestions=true",
-      "tags": [
-        "petizioni",
-        "globale",
-        "fallback"
-      ],
-      "country": "Global",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.459342+00:00"
-    },
-    {
-      "id": "04455db48882",
+      "id": "changeorg-italia-fallback",
       "source": "Change.org Italia",
       "organization": "Change.org",
-      "title": "Avvia una petizione",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/start-a-petition/intro?source_location=footer_link",
+      "title": "Change.org Italia - Petizioni ambientali",
+      "summary": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "objective": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "action_url": "https://www.change.org/it",
       "source_url": "https://www.change.org/it",
       "tags": [
         "italia",
@@ -169,660 +23,35 @@
       ],
       "country": "IT",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912711+00:00"
-    },
-    {
-      "id": "266f07c24bee",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Coinvolgi il tuo decisore",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/engage-decision-makers",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912651+00:00"
-    },
-    {
-      "id": "c2a84f9688f2",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Coinvolgi il tuo decisore",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/engage-decision-makers?source_location=footer_link",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912938+00:00"
-    },
-    {
-      "id": "7b4ac75deba4",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Contatta i media",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/media",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912611+00:00"
-    },
-    {
-      "id": "9c8d814a538e",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Contatta i media",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/media?source_location=footer_link",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912902+00:00"
-    },
-    {
-      "id": "4411520fc8ea",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Crea la tua petizione",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/create-a-petition",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912532+00:00"
-    },
-    {
-      "id": "5cfa6efc25db",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Crea la tua petizione",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/create-a-petition?source_location=footer_link",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912832+00:00"
-    },
-    {
-      "id": "efe690a60f7d",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Guide per petizioni",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides?source_location=footer_link",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912795+00:00"
-    },
-    {
-      "id": "8048e95afdcc",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Inizia con l’IA",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/start-a-petition/intro?state=RmlkOHY3TEhzZ3hWX3ZWSHNEd0x4T2NVaid-cGV0aS4hRmFpUHJvbXB0Q2hvaWNlOGFpJyl-R3RhZGF0YSFGNjM2U3ViM2RpOWMuOGZvcndhcmQnfnNBcyFbNTlhY2gqRSpCLSoxKmFzayotKkdkaWEqMio0XX5zQXNLZXk4OWFjaCxFLEJKMSxhc2ssSkdkaWEsMiw0KSonKSw1LWRlc2NyaXAuLnRpb24xQjlzdWx0c19kcmFmdDJwaG9uZV9jb2xsZWMuM1NBSW5kZXghMH40cHVibGlzaCcpNUZuYUc4NmN1cjludDghJzlyZUF0ZXBCYWlfRWxvY2EuRignR21lSi0sAUpHRkVCQTk4NjU0MzIxLi0qXw&source_location=homepage_secondary_button",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912170+00:00"
-    },
-    {
-      "id": "7ba081bc6f96",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Lancia una petizione",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/start-a-petition/intro?source_location=header",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912062+00:00"
-    },
-    {
-      "id": "c4ed3988e469",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Lancia una petizione",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/start-a-petition/intro?source_location=homepage_primary_button",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912121+00:00"
-    },
-    {
-      "id": "10cef5d8f9e6",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Raccogli firme",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/share-your-petition",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912575+00:00"
-    },
-    {
-      "id": "7e05f1e9e645",
-      "source": "Change.org Italia",
-      "organization": "Change.org",
-      "title": "Raccogli firme",
-      "summary": "Campagna individuata automaticamente da Change.org Italia.",
-      "action_url": "https://www.change.org/petition-guides/share-your-petition?source_location=footer_link",
-      "source_url": "https://www.change.org/it",
-      "tags": [
-        "italia",
-        "petizioni",
-        "mobilitazione"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.912867+00:00"
-    },
-    {
-      "id": "2c46902a1b17",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Beyond Seafood – Support migrant fishers",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/support-migrant-fishers/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640787+00:00"
-    },
-    {
-      "id": "580271f3fda3",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Choose your Act of Resistance",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/choose-your-acts-of-resistance/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639475+00:00"
-    },
-    {
-      "id": "241fced10bce",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Defend forest defenders",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/defend-defenders/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639510+00:00"
-    },
-    {
-      "id": "0841cfd535b5",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Fight the billionaire takeover",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/time-to-resist/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639557+00:00"
-    },
-    {
-      "id": "ddf77d2c2b10",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Let’s end the age of plastic!",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/lets-end-the-age-of-plastic/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640618+00:00"
-    },
-    {
-      "id": "ee5abc5c9e47",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Make war profiteers pay: tax fossil fuel profits",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/call-for-new-taxes-on-fossil-fuel-profits/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640339+00:00"
-    },
-    {
-      "id": "97a5a622c168",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Polluters Pay Pact",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/the-polluters-pay-pact/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640473+00:00"
-    },
-    {
-      "id": "9a1dbe05ce46",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Protect the Oceans",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/ocean-sanctuaries/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640653+00:00"
-    },
-    {
-      "id": "1e986d0ceaae",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Reclaim the moral compass",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/reclaim-the-moral-compass/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640375+00:00"
-    },
-    {
-      "id": "1f1b0b039890",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Skip to Content",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/#content",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639241+00:00"
-    },
-    {
-      "id": "55bb3ad8ddbb",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Skip to Footer",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/#footer",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639277+00:00"
-    },
-    {
-      "id": "ca9cf37e1f8d",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Skip to Navigation",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/#header",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639185+00:00"
-    },
-    {
-      "id": "0198d48964b8",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stand with coastal communities",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stand-with-coastal-communities/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640737+00:00"
-    },
-    {
-      "id": "2fa2eee2b55c",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop Big Meat and Dairy",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-big-meat-and-dairy/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640581+00:00"
-    },
-    {
-      "id": "9989de0e36a7",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop Fossil Gas",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-fossil-gas/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640702+00:00"
-    },
-    {
-      "id": "f2cbe442d47a",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop corporate intimidation",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-corporate-intimidation/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640423+00:00"
-    },
-    {
-      "id": "c29864c46136",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop deep sea mining",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-deep-sea-mining/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.639591+00:00"
-    },
-    {
-      "id": "f5daaad80896",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Take the world’s biggest meat company to court",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/take-jbs-to-court/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640233+00:00"
-    },
-    {
-      "id": "4cc212525fc7",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Tax the super-rich",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/tax-the-super-rich/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640531+00:00"
-    },
-    {
-      "id": "bfbf9e320f62",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Tell Dove: Kick out plastic to protect health!",
-      "summary": "Campagna individuata automaticamente da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/dove-kick-out-plastics/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:31.640271+00:00"
-    },
-    {
-      "id": "78b16dc8eba7",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Bilancio sociale",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/bilancio-sociale/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947208+00:00"
-    },
-    {
-      "id": "ff10defc5526",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Cibo e agricoltura",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-facciamo/cibo-agricoltura/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947366+00:00"
-    },
-    {
-      "id": "e35a198d6de2",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Cosa facciamo",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-facciamo/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947322+00:00"
-    },
-    {
-      "id": "5f7fd59d0742",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Cosa puoi fare tu",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947463+00:00"
-    },
-    {
-      "id": "a1c65bfe66b3",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Diventa Cyberattivista",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/diventa-cyberattivista/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947540+00:00"
-    },
-    {
-      "id": "5872304f0d07",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Fai volontariato e attivismo",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/volontariato-e-attivismo/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947576+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "1e0a96b37658",
       "source": "Greenpeace Italia",
       "organization": "Greenpeace Italia",
       "title": "Firma le nostre petizioni",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
       "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/firma-le-petizioni/",
       "source_url": "https://www.greenpeace.org/italy/attivati/",
       "tags": [
@@ -832,745 +61,73 @@
       ],
       "country": "IT",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947495+00:00"
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "593ff28da210",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Grandi donazioni",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/sostienici/grandi-donazioni/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947639+00:00"
-    },
-    {
-      "id": "7e3e4b2306b7",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Indagini e Report",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/rapporto/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947434+00:00"
-    },
-    {
-      "id": "1c7beb567e4c",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Inquinamento",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cosa-facciamo/inquinamento/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947396+00:00"
-    },
-    {
-      "id": "030777b598a3",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Integrità e valori",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/integrita-valori/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947154+00:00"
-    },
-    {
-      "id": "899e73f80a0e",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "La nostra storia",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/la-nostra-storia/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947021+00:00"
-    },
-    {
-      "id": "7d680ba2c758",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Lavora con noi",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/lavora-con-noi/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947249+00:00"
-    },
-    {
-      "id": "05997582e7e9",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Le nostre navi",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/navi/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947096+00:00"
-    },
-    {
-      "id": "65d1b5f93a3f",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Le nostre vittorie",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/vittorie/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947061+00:00"
-    },
-    {
-      "id": "c52fa8062068",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Per saperne di più clicca qui",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/cookies-policy",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.946962+00:00"
-    },
-    {
-      "id": "586c3e42c4e5",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Skip to Content",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/attivati/#content",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.946853+00:00"
-    },
-    {
-      "id": "1e30d5080578",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Skip to Footer",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/attivati/#footer",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.946904+00:00"
-    },
-    {
-      "id": "39570eccafc0",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Skip to Navigation",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/attivati/#header",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.946784+00:00"
-    },
-    {
-      "id": "e6b3270db4b8",
-      "source": "Greenpeace Italia",
-      "organization": "Greenpeace Italia",
-      "title": "Ufficio Stampa",
-      "summary": "Campagna individuata automaticamente da Greenpeace Italia.",
-      "action_url": "https://www.greenpeace.org/italy/chi-siamo/ufficio-stampa/",
-      "source_url": "https://www.greenpeace.org/italy/attivati/",
-      "tags": [
-        "italia",
-        "attivati",
-        "ambiente"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:28.947281+00:00"
-    },
-    {
-      "id": "542f73963dc2",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "ECI lifecycle statistics",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative/european-citizens-initiative-key-figures_en",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.986100+00:00"
-    },
-    {
-      "id": "77717280e21b",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "Find initiative",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.986066+00:00"
-    },
-    {
-      "id": "53602b5cac53",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "Skip to main content",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_en#main-content",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.985781+00:00"
-    },
-    {
-      "id": "c1d1cf67e606",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "bg български",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_bg",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.985845+00:00"
-    },
-    {
-      "id": "006aac364804",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "nl Nederlands",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_nl",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.985925+00:00"
-    },
-    {
-      "id": "f9942896cf98",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "pt português",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_pt",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.985960+00:00"
-    },
-    {
-      "id": "a06007cc2c25",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "sk slovenčina",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_sk",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.985996+00:00"
-    },
-    {
-      "id": "ea668bff64f0",
-      "source": "Iniziativa dei Cittadini Europei",
-      "organization": "Commissione Europea (ICE)",
-      "title": "sl slovenščina",
-      "summary": "Campagna individuata automaticamente da Iniziativa dei Cittadini Europei.",
-      "action_url": "https://citizens-initiative.europa.eu/find-initiative_sl",
-      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
-      "tags": [
-        "UE",
-        "legislazione",
-        "partecipazione civica"
-      ],
-      "country": "EU",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:30.986027+00:00"
-    },
-    {
-      "id": "68f4fe182096",
+      "id": "legambiente-fallback",
       "source": "Legambiente",
       "organization": "Legambiente",
-      "title": "Aggiorna preferenze di tracciamento",
-      "summary": "Campagna individuata automaticamente da Legambiente.",
+      "title": "Legambiente - Campagne",
+      "summary": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
+      "objective": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
       "action_url": "https://www.legambiente.it/campagne/",
       "source_url": "https://www.legambiente.it/campagne/",
       "tags": [
         "italia",
-        "campagne",
-        "territorio"
+        "territorio",
+        "campagne"
       ],
       "country": "IT",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:29.417079+00:00"
-    },
-    {
-      "id": "5a59d4a0af02",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Close Search",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/cosa-puoi-fare/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.595436+00:00"
-    },
-    {
-      "id": "7beb749403d7",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Informazioni progetto",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/wp-content/uploads/2026/03/progetto_MAREVIVO_CUSTODI_DEL_MARE.pdf",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.596823+00:00"
-    },
-    {
-      "id": "1780b59c02ea",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Marevivo Community",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/marevivo-community/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.595772+00:00"
-    },
-    {
-      "id": "66597cfa1d80",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Overtourism: proteggere gli habitat marini è la prima difesa per rafforzare la resilienza del mare alla crisi climatica",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/blue-news/overtourism-proteggere-gli-habitat-marini-e-la-prima-difesa-per-rafforzare-la-resilienza-del-mare-alla-crisi-climatica/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.596168+00:00"
-    },
-    {
-      "id": "1dfe5b292f29",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Redazione_Marevivo_Onlus",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/author/redazione_marevivo_onlus/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.596203+00:00"
-    },
-    {
-      "id": "a866a95d2e53",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Se sei una scuola",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/prendi-parte/marevivo-education/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.595826+00:00"
-    },
-    {
-      "id": "a4eb3b1c6869",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "Skip to main content",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/cosa-puoi-fare/#ajax-content-wrap",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.595389+00:00"
-    },
-    {
-      "id": "7d4c3d2b445e",
-      "source": "Marevivo",
-      "organization": "Marevivo",
-      "title": "“Piccoli gesti, grandi crimini”: al via la campagna di sensibilizzazione contro il littering",
-      "summary": "Campagna individuata automaticamente da Marevivo.",
-      "action_url": "https://marevivo.it/blue-news/piccoli-gesti-grandi-crimini-al-via-la-campagna-di-sensibilizzazione-da-nord-a-sud-contro-il-littering/",
-      "source_url": "https://marevivo.it/cosa-puoi-fare/",
-      "tags": [
-        "italia",
-        "oceani",
-        "inquinamento"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:30.596389+00:00"
-    },
-    {
-      "id": "wwf-fallback",
-      "source": "WWF",
-      "organization": "WWF",
-      "title": "WWF - Act",
-      "summary": "Fallback: azioni civiche dal portale WWF.",
-      "action_url": "https://wwf.panda.org/act/",
-      "source_url": "https://wwf.panda.org/act/",
-      "tags": [
-        "clima",
-        "biodiversita",
-        "fallback"
-      ],
-      "country": "Global",
-      "language": "en",
-      "last_seen": "2026-08-18T15:50:28.459342+00:00"
-    },
-    {
-      "id": "5592dec4c04d",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Adotta una specie",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/adotta-una-specie/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228686+00:00"
-    },
-    {
-      "id": "51ed53777602",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Campi di Volontariato",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/campi-di-volontariato/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228417+00:00"
-    },
-    {
-      "id": "420b4acae298",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Cosa puoi fare tu",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228192+00:00"
-    },
-    {
-      "id": "1e4f2019fd99",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Diventa Avvocato del Panda",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/diventa-avvocato-del-panda/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228351+00:00"
-    },
-    {
-      "id": "4b6ea31b6caa",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Diventa Partner",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/diventa-partner/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229188+00:00"
-    },
-    {
-      "id": "d3c0bcc4a6dc",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Diventa Socio",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/diventa-socio/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228622+00:00"
-    },
-    {
-      "id": "fb4dff45024c",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Diventa Volontario",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/diventa-volontario/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228283+00:00"
-    },
-    {
-      "id": "fbeebf01b431",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Donazioni in memoria",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/donazioni-in-memoria/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228934+00:00"
-    },
-    {
-      "id": "ac88a9cc123e",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Fai ora una donazione",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/donazione/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228761+00:00"
-    },
-    {
-      "id": "9835c41480ad",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Grandi Donatori",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/grandi-donatori/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228878+00:00"
-    },
-    {
-      "id": "ddd12ba42a61",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "In evidenza WWF Italia: 60 anni per la natura",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/60-anni-per-la-natura/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.227143+00:00"
-    },
-    {
-      "id": "654ca4c1cda1",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Lasciti Testamentari",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/lasciti-testamentari/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229003+00:00"
+      "verified_organization": true,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "86acd55323a7",
       "source": "WWF Italia",
       "organization": "WWF Italia",
       "title": "Organizza un Evento",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
       "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/organizza-un-evento/",
       "source_url": "https://www.wwf.it/",
       "tags": [
@@ -1580,381 +137,1145 @@
       ],
       "country": "IT",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228557+00:00"
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "clima",
+      "action_type": "evento",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "b9a6df774e42",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Per i più piccoli",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/per-i-piu-piccoli/",
-      "source_url": "https://www.wwf.it/",
+      "id": "7d4c3d2b445e",
+      "source": "Marevivo",
+      "organization": "Marevivo",
+      "title": "“Piccoli gesti, grandi crimini”: al via la campagna di sensibilizzazione contro il littering",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "action_url": "https://marevivo.it/blue-news/piccoli-gesti-grandi-crimini-al-via-la-campagna-di-sensibilizzazione-da-nord-a-sud-contro-il-littering/",
+      "source_url": "https://marevivo.it/cosa-puoi-fare/",
       "tags": [
         "italia",
-        "clima",
-        "biodiversita"
+        "oceani",
+        "inquinamento"
       ],
       "country": "IT",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229321+00:00"
-    },
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "oceani",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    }
+  ],
+  "campaigns": [
     {
-      "id": "3e1a5c9ca8ae",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Piccole e Medie Imprese",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/diventa-partner/imprese-per-la-natura/",
-      "source_url": "https://www.wwf.it/",
+      "id": "a927ea4792d7",
+      "source": "openPetition",
+      "organization": "openPetition",
+      "title": "Alle 7 Neuigkeiten",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung",
+      "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
+        "no-profit",
+        "trasparenza",
+        "petizioni",
+        "ambiente"
       ],
-      "country": "IT",
+      "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229256+00:00"
-    },
-    {
-      "id": "4718839df5e4",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Prodotti solidali e Bomboniere",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/prodotti-solidali-bomboniere/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229062+00:00"
-    },
-    {
-      "id": "6af5589ce287",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "RICEVI IL PROMEMORIA",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/sostienici/5xmille/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229655+00:00"
-    },
-    {
-      "id": "ff91b3294872",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Scopri le nostre Community",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/community/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228484+00:00"
-    },
-    {
-      "id": "34a7d5a835eb",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "Turismo responsabile",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/vivi-green/turismo-responsabile/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.229126+00:00"
-    },
-    {
-      "id": "0aa832ca3762",
-      "source": "WWF Italia",
-      "organization": "WWF Italia",
-      "title": "WWF & Fondazioni",
-      "summary": "Campagna individuata automaticamente da WWF Italia.",
-      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/wwf-fondazioni/",
-      "source_url": "https://www.wwf.it/",
-      "tags": [
-        "italia",
-        "clima",
-        "biodiversita"
-      ],
-      "country": "IT",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:29.228821+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "5f004fb368cf",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Alle Petitionen",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/petitionen",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.045401+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "2d97cb02fc27",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Baden-Württemberg",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/region/petition/Baden-W%C3%BCrttemberg",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044997+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "7f259ea641cc",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Berliner Aufsicht versagt – Renten retten!",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/petition/online/berliner-aufsicht-versagt-renten-retten",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.045193+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "ad34613c11f9",
-      "source": "openPetition",
-      "organization": "openPetition",
-      "title": "Bürgerrechte",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petitionen?category=58#petitionen",
-      "source_url": "https://www.openpetition.eu/it/petitions",
-      "tags": [
-        "no-profit",
-        "trasparenza",
-        "petizioni"
-      ],
-      "country": "EU",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044406+00:00"
-    },
-    {
-      "id": "cbbe208cc29a",
+      "id": "e107071b29d2",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Dialog mit Petitionsempfänger beendet",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/12#petition-main",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/12",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044810+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "57a6a21adce7",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Für Bürger:innen-Rechte - Palantir Überwachung in Ba-Wü stoppen!",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/petition/online/fuer-buerger-innen-rechte-palantir-ueberwachung-in-ba-wue-stoppen",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.045061+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "8dc419c15761",
+      "id": "a7a9bafd90cb",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Kommentare 13.446",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/kommentare/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/kommentare/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044541+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "4a10da002e38",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Land Hessen: AfD-Verbotsverfahren im Bundesrat einleiten – JETZT!",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/petition/online/land-hessen-afd-verbotsverfahren-im-bundesrat-einleiten-jetzt",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.045130+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "fcd9e35f23aa",
+      "id": "5dda15074add",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Nachricht zu einer abgeschlossenen Petition",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/13#petition-main",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/13",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044731+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "83b44a95f28f",
-      "source": "openPetition",
-      "organization": "openPetition",
-      "title": "Neuigkeiten 7",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
-      "source_url": "https://www.openpetition.eu/it/petitions",
-      "tags": [
-        "no-profit",
-        "trasparenza",
-        "petizioni"
-      ],
-      "country": "EU",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044492+00:00"
-    },
-    {
-      "id": "3b921f726101",
+      "id": "991dbfe008a1",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Petition eingereicht - Danke für die Unterstützung!",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/10#petition-main",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/blog/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung/10",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044853+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
       "id": "770d239c3a5c",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Petition starten",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/petition/neu",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044325+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "6959bff81ee1",
+      "id": "ice-fallback",
+      "source": "Iniziativa dei Cittadini Europei",
+      "organization": "Commissione Europea (ICE)",
+      "title": "Portale ufficiale ICE - iniziative in evidenza",
+      "summary": "Obiettivo: partecipare alle iniziative civiche legislative UE.",
+      "objective": "Obiettivo: partecipare alle iniziative civiche legislative UE.",
+      "action_url": "https://citizens-initiative.europa.eu/_it",
+      "source_url": "https://citizens-initiative.europa.eu/find-initiative_en",
+      "tags": [
+        "europa",
+        "legislazione",
+        "partecipazione civica"
+      ],
+      "country": "EU",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "scope": "Europa",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "20a936bde684",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Pro & Contra 49",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/petition/argumente/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung#petition-main",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "action_url": "https://www.openpetition.eu/petition/argumente/petitionsrecht-4-0-mehr-dialog-mehr-digitale-beteiligung",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044453+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     },
     {
-      "id": "6b0755b4b2fa",
+      "id": "8896bcc7b1dc",
       "source": "openPetition",
       "organization": "openPetition",
       "title": "Zum Hauptinhalt",
-      "summary": "Campagna individuata automaticamente da openPetition.",
-      "action_url": "https://www.openpetition.eu/it/petitions#main",
-      "source_url": "https://www.openpetition.eu/it/petitions",
-      "tags": [
-        "no-profit",
-        "trasparenza",
-        "petizioni"
-      ],
-      "country": "EU",
-      "language": "it",
-      "last_seen": "2026-08-18T15:50:32.043927+00:00"
-    },
-    {
-      "id": "e4fac38a9774",
-      "source": "openPetition",
-      "organization": "openPetition",
-      "title": "openpetition.org/!Petitionsrecht",
-      "summary": "Campagna individuata automaticamente da openPetition.",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da openPetition.",
       "action_url": "https://www.openpetition.eu/it/petitions",
       "source_url": "https://www.openpetition.eu/it/petitions",
       "tags": [
         "no-profit",
         "trasparenza",
-        "petizioni"
+        "petizioni",
+        "ambiente"
       ],
       "country": "EU",
       "language": "it",
-      "last_seen": "2026-08-18T15:50:32.044641+00:00"
+      "verified_organization": false,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Europa",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "avaaz-fallback",
+      "source": "Avaaz",
+      "organization": "Avaaz",
+      "title": "Portale campagne Avaaz",
+      "summary": "Obiettivo: esplorare mobilitazioni ambientali globali.",
+      "objective": "Obiettivo: esplorare mobilitazioni ambientali globali.",
+      "action_url": "https://secure.avaaz.org/campaign/en/",
+      "source_url": "https://secure.avaaz.org/campaign/en/",
+      "tags": [
+        "globale",
+        "pressione politica",
+        "mobilitazione"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": false,
+      "status": "attiva",
+      "scope": "Globale",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "79448e9cbe91",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Raise your voice for Climate Justice",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/climate-justice/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali",
+        "clima"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "clima",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "a114a0798c7a",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Sign the open letter",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/reclaim-the-moral-compass/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "mail action",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "2fa2eee2b55c",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop Big Meat and Dairy",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-big-meat-and-dairy/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "9989de0e36a7",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop Fossil Gas",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-fossil-gas/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "93b4bd631eb2",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop corporate bullies",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/time-to-resist/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "f2cbe442d47a",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop corporate intimidation",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-corporate-intimidation/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "c29864c46136",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Stop deep sea mining",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/stop-deep-sea-mining/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "wwf-fallback",
+      "source": "WWF",
+      "organization": "WWF",
+      "title": "WWF - Act",
+      "summary": "Obiettivo: sostenere le azioni WWF internazionali.",
+      "objective": "Obiettivo: sostenere le azioni WWF internazionali.",
+      "action_url": "https://wwf.panda.org/act/",
+      "source_url": "https://wwf.panda.org/act/",
+      "tags": [
+        "globale",
+        "biodiversita",
+        "clima"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "scope": "Globale",
+      "theme": "clima",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "changeorg-italia-fallback",
+      "source": "Change.org Italia",
+      "organization": "Change.org",
+      "title": "Change.org Italia - Petizioni ambientali",
+      "summary": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "objective": "Obiettivo: trovare petizioni ambientali italiane attive.",
+      "action_url": "https://www.change.org/it",
+      "source_url": "https://www.change.org/it",
+      "tags": [
+        "italia",
+        "petizioni",
+        "mobilitazione"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": false,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "1e0a96b37658",
+      "source": "Greenpeace Italia",
+      "organization": "Greenpeace Italia",
+      "title": "Firma le nostre petizioni",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace Italia.",
+      "action_url": "https://www.greenpeace.org/italy/cosa-puoi-fare-tu/firma-le-petizioni/",
+      "source_url": "https://www.greenpeace.org/italy/attivati/",
+      "tags": [
+        "italia",
+        "attivati",
+        "ambiente"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "legambiente-fallback",
+      "source": "Legambiente",
+      "organization": "Legambiente",
+      "title": "Legambiente - Campagne",
+      "summary": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
+      "objective": "Obiettivo: aderire alle campagne nazionali di Legambiente.",
+      "action_url": "https://www.legambiente.it/campagne/",
+      "source_url": "https://www.legambiente.it/campagne/",
+      "tags": [
+        "italia",
+        "territorio",
+        "campagne"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "scope": "Italia",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "86acd55323a7",
+      "source": "WWF Italia",
+      "organization": "WWF Italia",
+      "title": "Organizza un Evento",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da WWF Italia.",
+      "action_url": "https://www.wwf.it/cosa-puoi-fare-tu/partecipa/organizza-un-evento/",
+      "source_url": "https://www.wwf.it/",
+      "tags": [
+        "italia",
+        "clima",
+        "biodiversita"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "clima",
+      "action_type": "evento",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
+    },
+    {
+      "id": "7d4c3d2b445e",
+      "source": "Marevivo",
+      "organization": "Marevivo",
+      "title": "“Piccoli gesti, grandi crimini”: al via la campagna di sensibilizzazione contro il littering",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Marevivo.",
+      "action_url": "https://marevivo.it/blue-news/piccoli-gesti-grandi-crimini-al-via-la-campagna-di-sensibilizzazione-da-nord-a-sud-contro-il-littering/",
+      "source_url": "https://marevivo.it/cosa-puoi-fare/",
+      "tags": [
+        "italia",
+        "oceani",
+        "inquinamento"
+      ],
+      "country": "IT",
+      "language": "it",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "oceani",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Italia",
+      "verified_source": true,
+      "last_verified": "2026-08-18T15:58:40.595340+00:00",
+      "last_seen": "2026-08-18T15:58:40.595340+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": true,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      }
     }
   ]
 }
