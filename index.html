@@ -62,6 +62,11 @@
           Non creare un'altra campagna. Portiamone una a termine.
           GreenAnchor unisce fonti gratuite italiane, europee e globali per concentrare la partecipazione.
         </p>
+        <p class="mt-3 max-w-3xl text-sm text-slate-600">
+          GreenAnchor e un hub indipendente di discovery e prioritizzazione di campagne ambientali.
+          Non crea ne gestisce le campagne: raccoglie iniziative pubblicamente disponibili, ne organizza le
+          informazioni e indirizza sempre alla fonte originale per partecipare.
+        </p>
       </header>
 
       <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/85 p-5 shadow-halo backdrop-blur md:grid-cols-3">
@@ -158,7 +163,7 @@
             <option value="relevance">Rilevanza</option>
             <option value="urgency">Urgenza</option>
             <option value="recent">Recenza</option>
-            <option value="verification">Affidabilita</option>
+            <option value="verification">Progresso / affidabilita</option>
           </select>
         </label>
       </section>
@@ -185,6 +190,7 @@
             <li data-status></li>
             <li data-verification></li>
             <li data-last-verified></li>
+            <li data-progress-note></li>
           </ul>
           <p class="mt-3 text-sm text-slate-700" data-objective></p>
           <div class="mt-4 flex flex-wrap gap-2" data-tags></div>
@@ -195,7 +201,7 @@
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
             >
-              Partecipa
+              Vai alla campagna
               <span aria-hidden="true">-></span>
             </a>
             <button data-share class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700">Condividi</button>
@@ -209,7 +215,7 @@
           <p class="text-[11px] font-bold uppercase tracking-wide text-emerald-700" data-spotlight-label></p>
           <h3 class="mt-2 font-display text-lg leading-tight text-slate-900" data-spotlight-title></h3>
           <p class="mt-2 text-xs text-slate-700" data-spotlight-meta></p>
-          <a data-spotlight-link target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex text-sm font-semibold text-emerald-800">Contribuisci ora -></a>
+          <a data-spotlight-link target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex text-sm font-semibold text-emerald-800">Partecipa sulla fonte originale -></a>
         </article>
       </template>
     </main>

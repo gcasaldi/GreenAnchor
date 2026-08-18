@@ -99,9 +99,24 @@ THEME_KEYWORDS = {
 }
 
 ACTION_KEYWORDS = {
-    "don": "donazione",
-    "volont": "volontariato",
+    "petition": "petizione",
+    "petizione": "petizione",
+    "firma": "petizione",
+    "don": "raccolta fondi",
+    "fund": "raccolta fondi",
+    "raccolta fondi": "raccolta fondi",
+    "crowdfunding": "crowdfunding",
+    "gofundme": "crowdfunding",
+    "kickstarter": "crowdfunding",
+    "adesion": "raccolta adesioni",
+    "iscriv": "raccolta adesioni",
+    "join": "raccolta adesioni",
+    "signup": "raccolta adesioni",
     "event": "evento",
+    "evento": "evento",
+    "mobilit": "evento",
+    "protest": "evento",
+    "volont": "volontariato",
     "citizen science": "citizen science",
     "scienza": "citizen science",
     "mail": "mail action",
@@ -428,10 +443,10 @@ def parse_int_like(value: str) -> int | None:
     return int(cleaned)
 
 
-def extract_progress(text: str) -> tuple[int | None, int | None]:
+def extract_ratio_pair(text: str) -> tuple[int | None, int | None]:
     patterns = [
-        r"(\d[\d\.,\s]{2,})\s*(?:firme|signatures|supporters)\s*(?:su|of|/)?\s*(\d[\d\.,\s]{2,})",
-        r"(\d[\d\.,\s]{2,})\s*/\s*(\d[\d\.,\s]{2,})",
+        r"(\d[\d\.,\s]{2,})\s*(?:su|of|/)\s*(\d[\d\.,\s]{2,})",
+        r"(\d[\d\.,\s]{2,})\s*(?:firme|signatures|supporters|adesioni|iscritti)\s*(?:su|of)?\s*(\d[\d\.,\s]{2,})",
     ]
     for pattern in patterns:
         match = re.search(pattern, text.lower())
@@ -439,42 +454,77 @@ def extract_progress(text: str) -> tuple[int | None, int | None]:
             continue
         current = parse_int_like(match.group(1))
         target = parse_int_like(match.group(2))
-        if current and target and target > 0:
+        if current is not None and target and target > 0:
             return current, target
     return None, None
 
 
-def completion_payload(item: dict, now_dt: datetime) -> dict:
-    active_points = 20 if item.get("status") == "attiva" else 0
-    ver_score = int(item.get("verification_score", 0))
+def extract_currency_pair(text: str) -> tuple[int | None, int | None]:
+    patterns = [
+        r"(?:€|eur|euro)\s*(\d[\d\.,\s]{2,})\s*(?:su|of|/)\s*(?:€|eur|euro)\s*(\d[\d\.,\s]{2,})",
+        r"(\d[\d\.,\s]{2,})\s*(?:€|eur|euro)\s*(?:su|of|/)\s*(\d[\d\.,\s]{2,})\s*(?:€|eur|euro)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text.lower())
+        if not match:
+            continue
+        current = parse_int_like(match.group(1))
+        target = parse_int_like(match.group(2))
+        if current is not None and target and target > 0:
+            return current, target
+    return None, None
 
-    current = item.get("progress_current")
-    target = item.get("progress_target")
-    ratio: float | None = None
-    progress_points = 0
-    if isinstance(current, int) and isinstance(target, int) and target > 0:
-        ratio = min(current / target, 1.5)
-        if ratio <= 1:
-            progress_points = int(25 * ratio)
-        else:
-            progress_points = 25
 
-    participation_points = 15 if item.get("action_url", "").startswith("http") else 0
-    freshness_days = 99
-    if item.get("last_verified"):
-        dt = parse_dt(item["last_verified"])
-        if dt:
-            freshness_days = max((now_dt - dt).days, 0)
-    freshness_points = 10 if freshness_days <= 2 else 6 if freshness_days <= 7 else 2
+def extract_percent(text: str) -> int | None:
+    match = re.search(r"\b(\d{1,3})\s*%", text)
+    if not match:
+        return None
+    value = int(match.group(1))
+    if 0 <= value <= 100:
+        return value
+    return None
 
-    completion_score = int(round((ver_score * 0.4) + active_points + progress_points + participation_points + freshness_points))
-    completion_score = max(0, min(100, completion_score))
 
+def progress_payload(item: dict) -> dict:
+    action_type = item.get("action_type", "petizione")
+    text = f"{item.get('title', '')} {item.get('summary', '')}"
+
+    current: int | None = None
+    target: int | None = None
+    percent: int | None = None
+    unit: str | None = None
+
+    if action_type == "petizione":
+        current, target = extract_ratio_pair(text)
+        unit = "firme" if current is not None and target is not None else None
+    elif action_type == "raccolta fondi":
+        current, target = extract_currency_pair(text)
+        unit = "euro" if current is not None and target is not None else None
+    elif action_type == "crowdfunding":
+        current, target = extract_currency_pair(text)
+        unit = "euro" if current is not None and target is not None else None
+        if current is None or target is None:
+            percent = extract_percent(text)
+            unit = "percentuale" if percent is not None else None
+    elif action_type == "raccolta adesioni":
+        current, target = extract_ratio_pair(text)
+        unit = "adesioni" if current is not None and target is not None else None
+    else:
+        # Eventi e mobilitazioni senza target numerico non hanno progresso percentuale.
+        current, target, percent, unit = None, None, None, None
+
+    if percent is None and current is not None and target is not None and target > 0:
+        percent = max(0, min(100, round((current / target) * 100)))
+
+    measurable = percent is not None
     return {
         "progress_current": current,
         "progress_target": target,
-        "progress_ratio": ratio,
-        "completion_score": completion_score,
+        "progress_percent": percent,
+        "progress_unit": unit,
+        "progress_measurable": measurable,
+        "progress_note": "Il progresso e calcolato sui dati pubblicati dalla fonte originale." if measurable else None,
+        "progress_method": "deterministico",
     }
 
 
@@ -583,11 +633,8 @@ def enrich_campaign(item: dict, now_dt: datetime, previous_first_seen: str | Non
     item["first_seen"] = first_seen
     first_seen_dt = parse_dt(first_seen) or now_dt
     item["is_new_24h"] = now_dt - first_seen_dt <= timedelta(hours=24)
-    progress_current, progress_target = extract_progress(f"{item['title']} {item['summary']}")
-    item["progress_current"] = progress_current
-    item["progress_target"] = progress_target
     item.update(verification_payload(item))
-    item.update(completion_payload(item, now_dt))
+    item.update(progress_payload(item))
     return item
 
 
@@ -817,10 +864,10 @@ def dedupe(campaigns: Iterable[dict]) -> list[dict]:
             by_key[key] = item
             continue
         current = by_key[key]
-        if item.get("completion_score", 0) > current.get("completion_score", 0):
+        if item.get("verification_score", 0) > current.get("verification_score", 0):
             by_key[key] = item
     cleaned = list(by_key.values())
-    cleaned.sort(key=lambda x: (x.get("scope", ""), -x.get("completion_score", 0), x.get("title", "")))
+    cleaned.sort(key=lambda x: (x.get("scope", ""), -x.get("verification_score", 0), x.get("title", "")))
     return cleaned
 
 
@@ -851,21 +898,20 @@ def urgency_rank(item: dict, now_dt: datetime) -> int:
 
 
 def focus_priority(item: dict, now_dt: datetime) -> tuple:
-    ratio = item.get("progress_ratio")
-    if isinstance(ratio, float):
-        ratio_distance = abs(1 - min(ratio, 1))
+    percent = item.get("progress_percent")
+    if isinstance(percent, int):
+        ratio_distance = abs(100 - percent)
         ratio_flag = 0
     else:
-        ratio_distance = 1.0
+        ratio_distance = 999
         ratio_flag = 1
 
     return (
         0 if item.get("status") == "attiva" else 1,
         0 if item.get("scope") == "Italia" else 1,
-        urgency_rank(item, now_dt),
         ratio_flag,
         ratio_distance,
-        -item.get("completion_score", 0),
+        urgency_rank(item, now_dt),
         -item.get("verification_score", 0),
     )
 

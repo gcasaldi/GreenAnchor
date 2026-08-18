@@ -52,7 +52,12 @@ function enrichCampaign(raw) {
   campaign.last_verified = campaign.last_verified || campaign.last_seen || null;
   campaign.verification_score = Number(campaign.verification_score || 70);
   campaign.verification_status = campaign.verification_status || 'da_verificare';
-  campaign.completion_score = Number(campaign.completion_score || campaign.verification_score || 60);
+  campaign.progress_percent = Number.isFinite(Number(campaign.progress_percent)) ? Number(campaign.progress_percent) : null;
+  campaign.progress_current = Number.isFinite(Number(campaign.progress_current)) ? Number(campaign.progress_current) : null;
+  campaign.progress_target = Number.isFinite(Number(campaign.progress_target)) ? Number(campaign.progress_target) : null;
+  campaign.progress_unit = campaign.progress_unit || null;
+  campaign.progress_measurable = Boolean(campaign.progress_measurable);
+  campaign.progress_note = campaign.progress_note || null;
   campaign.objective = campaign.objective || campaign.summary || 'Obiettivo non disponibile.';
   campaign._id = campaign.id || `${campaign.source}:${campaign.action_url}`;
   return campaign;
@@ -122,10 +127,13 @@ function renderSpotlight() {
     const urgentLabel = campaign.deadline ? `URGENTE · ${campaign.scope}` : `${campaign.scope.toUpperCase()} · FOCUS`;
     node.querySelector('[data-spotlight-label]').textContent = urgentLabel;
     node.querySelector('[data-spotlight-title]').textContent = campaign.title;
-    const progress = campaign.progress_current && campaign.progress_target
-      ? ` · ${campaign.progress_current.toLocaleString('it-IT')}/${campaign.progress_target.toLocaleString('it-IT')}`
+    const progress = Number.isFinite(campaign.progress_percent)
+      ? ` · Progresso ${campaign.progress_percent}%`
       : '';
-    node.querySelector('[data-spotlight-meta]').textContent = `${campaign.action_type} · Completion ${campaign.completion_score}/100${progress}`;
+    const detail = Number.isFinite(campaign.progress_current) && Number.isFinite(campaign.progress_target)
+      ? ` · ${campaign.progress_current.toLocaleString('it-IT')} / ${campaign.progress_target.toLocaleString('it-IT')} ${campaign.progress_unit || ''}`
+      : '';
+    node.querySelector('[data-spotlight-meta]').textContent = `${campaign.action_type}${progress}${detail}`.trim();
     node.querySelector('[data-spotlight-link]').href = campaign.action_url;
     refs.spotlight.appendChild(node);
   });
@@ -164,7 +172,14 @@ function applySorting(list) {
   } else if (sortMode === 'recent') {
     sorted.sort((a, b) => (parseDate(b.last_verified)?.getTime() || 0) - (parseDate(a.last_verified)?.getTime() || 0));
   } else if (sortMode === 'verification') {
-    sorted.sort((a, b) => (b.completion_score || 0) - (a.completion_score || 0));
+    sorted.sort((a, b) => {
+      const ap = Number.isFinite(a.progress_percent) ? a.progress_percent : -1;
+      const bp = Number.isFinite(b.progress_percent) ? b.progress_percent : -1;
+      if (bp !== ap) {
+        return bp - ap;
+      }
+      return (b.verification_score || 0) - (a.verification_score || 0);
+    });
   } else {
     sorted.sort((a, b) => (state.searchScores.get(a._id) || 1) - (state.searchScores.get(b._id) || 1));
   }
@@ -270,10 +285,16 @@ function renderCards() {
     node.querySelector('[data-action-type]').textContent = `🎯 ${campaign.action_type}`;
     node.querySelector('[data-status]').textContent = `🟢 ${campaign.status}`;
     node.querySelector('[data-verification]').textContent = `✓ ${verificationBadge(campaign)} · ${campaign.verification_score}/100`;
-    const completion = campaign.progress_current && campaign.progress_target
-      ? ` · ${campaign.progress_current.toLocaleString('it-IT')}/${campaign.progress_target.toLocaleString('it-IT')}`
-      : '';
-    node.querySelector('[data-last-verified]').textContent = `📅 Ultima verifica: ${fmtDate(campaign.last_verified)} · Completion ${campaign.completion_score}/100${completion}`;
+    if (Number.isFinite(campaign.progress_percent)) {
+      const detail = Number.isFinite(campaign.progress_current) && Number.isFinite(campaign.progress_target)
+        ? ` · ${campaign.progress_current.toLocaleString('it-IT')} / ${campaign.progress_target.toLocaleString('it-IT')} ${campaign.progress_unit || ''}`
+        : '';
+      node.querySelector('[data-last-verified]').textContent = `📅 Ultimo controllo: ${fmtDate(campaign.last_verified)} · Progresso ${campaign.progress_percent}%${detail}`;
+      node.querySelector('[data-progress-note]').textContent = 'Il progresso e calcolato sui dati pubblicati dalla fonte originale.';
+    } else {
+      node.querySelector('[data-last-verified]').textContent = `📅 Ultimo controllo: ${fmtDate(campaign.last_verified)} · Progresso non disponibile`;
+      node.querySelector('[data-progress-note]').textContent = '';
+    }
     node.querySelector('[data-objective]').textContent = campaign.objective;
 
     const tagsBox = node.querySelector('[data-tags]');

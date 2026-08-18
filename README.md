@@ -6,6 +6,8 @@ GreenAnchor - Campaign Consolidation & Completion Engine.
 
 Non creare un'altra campagna. Portiamone una a termine.
 
+GreenAnchor e un hub indipendente: non crea ne gestisce campagne, ma organizza dati pubblici e rimanda sempre alla fonte originale per partecipare.
+
 ## Architettura Tecnica
 
 - Frontend: pagina statica `index.html` + `app.js` + Tailwind CSS da CDN.
@@ -18,10 +20,20 @@ Non creare un'altra campagna. Portiamone una a termine.
 - GreenAnchor Radar: nuove campagne nelle ultime 24 ore, conteggio attive e urgenti.
 - GreenAnchor Focus: top 5 campagne ordinate per completion score, urgenza e concentrazione community.
 - Verifica tecnica: score di affidabilita (0-100) e stato `verificata`, `da_verificare`, `fonte_aggregata`.
-- Completion Score: indice oggettivo basato su verificabilita, attivita, progresso e partecipazione.
+- Progresso deterministico: percentuale calcolata solo quando la fonte pubblica numeri verificabili.
 - Deduplicazione: URL canonico + titolo normalizzato.
 - Clustering semantico: individua campagne simili anche su fonti e lingue diverse.
 - Filtri avanzati: area (Italia/Europa/Globale), tema, tipo azione, ordinamento per urgenza/recenza/verifica.
+
+## Metriche Deterministiche Di Progresso
+
+- Petizioni: `firme raccolte / target firme`.
+- Raccolta fondi: `euro raccolti / target euro`.
+- Crowdfunding: `percentuale finanziata` oppure `euro raccolti / target` quando disponibili.
+- Raccolta adesioni: `adesioni / target`.
+- Eventi o mobilitazioni senza target numerico: nessun punteggio di progresso.
+
+L'AI e usata per classificazione/estrazione; il calcolo finale del progresso e deterministico e spiegabile.
 
 ## Architettura Concettuale
 
