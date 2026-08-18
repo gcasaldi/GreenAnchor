@@ -15,14 +15,15 @@ Aggregatore 100% gratuito di campagne ambientali in stile Change, distribuito su
 - Avaaz (Ambiente)
 - Greenpeace (Act)
 - WWF (Act)
+- Change.org
 - openPetition
 
 ## Deploy su GitHub Pages
 
 1. Vai su GitHub -> Settings -> Pages.
-2. Source: `Deploy from a branch`.
-3. Branch: `main` e root `/`.
-4. Salva e attendi la pubblicazione.
+2. Source: GitHub Actions.
+3. Esegui una push su `main` oppure avvia manualmente il workflow `Deploy GitHub Pages`.
+4. Attendi il completamento del job e apri l'URL pubblico.
 
 ## Aggiornamento Manuale Dati
 

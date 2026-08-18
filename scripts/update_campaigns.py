@@ -87,6 +87,16 @@ SOURCES = [
         language="it",
         country="EU",
     ),
+    SourceConfig(
+        name="Change.org",
+        organization="Change.org",
+        list_url="https://www.change.org/petitions?selected_suggestions=true",
+        allowed_domains=("change.org", "www.change.org"),
+        include_patterns=("/p/", "petition", "petitions", "campaign"),
+        tags=("petizioni", "mobilitazione", "globale"),
+        language="it",
+        country="Global",
+    ),
 ]
 
 
@@ -227,6 +237,19 @@ def fallback_items(now_iso: str) -> list[dict]:
             "source_url": "https://www.openpetition.eu/it/petitions",
             "tags": ["no-profit", "trasparenza", "fallback"],
             "country": "EU",
+            "language": "it",
+            "last_seen": now_iso,
+        },
+        {
+            "id": "changeorg-fallback",
+            "source": "Change.org",
+            "organization": "Change.org",
+            "title": "Change.org - petizioni ambientali",
+            "summary": "Fallback: raccolta petizioni pubbliche su Change.org.",
+            "action_url": "https://www.change.org/petitions?selected_suggestions=true",
+            "source_url": "https://www.change.org/petitions?selected_suggestions=true",
+            "tags": ["petizioni", "globale", "fallback"],
+            "country": "Global",
             "language": "it",
             "last_seen": now_iso,
         },
