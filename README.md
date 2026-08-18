@@ -11,12 +11,19 @@ Aggregatore 100% gratuito di campagne ambientali in stile Change, distribuito su
 
 ## Fonti Mappate
 
+- Greenpeace Italia (Attivati)
+- WWF Italia
+- Legambiente
+- Marevivo
+- Change.org Italia
 - Iniziativa dei Cittadini Europei (ICE)
 - Avaaz (Ambiente)
 - Greenpeace (Act)
 - WWF (Act)
 - Change.org
 - openPetition
+
+Le fonti italiane sono prioritarie, con estensione a fonti europee e globali per aumentare l'impatto.
 
 ## Deploy su GitHub Pages
 

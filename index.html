@@ -19,7 +19,7 @@
               body: ['"IBM Plex Sans"', 'sans-serif']
             },
             boxShadow: {
-              halo: '0 0 0 1px rgba(15, 23, 42, 0.08), 0 16px 40px rgba(2, 132, 199, 0.18)'
+              halo: '0 0 0 1px rgba(15, 23, 42, 0.08), 0 16px 40px rgba(22, 163, 74, 0.20)'
             },
             keyframes: {
               fadeUp: {
@@ -51,27 +51,27 @@
 
     <main class="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-8">
       <header class="mb-10 rounded-3xl border border-white/70 bg-white/70 p-7 shadow-halo backdrop-blur">
-        <p class="mb-3 inline-block rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-900">
+        <p class="mb-3 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-900">
           GreenAnchor
         </p>
         <h1 class="font-display text-4xl leading-tight text-slate-900 sm:text-5xl">
           Trova campagne ambientali
-          <span class="text-cyan-700">attive e verificabili</span>
+          <span class="text-emerald-700">attive e verificabili</span>
         </h1>
         <p class="mt-4 max-w-2xl text-slate-700">
-          Aggregatore gratuito stile Change.org: dati da ICE, Avaaz, Greenpeace, WWF, Change.org e openPetition.
-          Ricerca istantanea nel browser, senza backend.
+          Aggregatore gratuito con priorita Italia: dati da fonti italiane ed europee, piu reti globali.
+          Ricerca istantanea nel browser, senza backend e senza costi piattaforma.
         </p>
       </header>
 
-      <section class="mb-6 grid gap-4 rounded-3xl border border-cyan-100 bg-white/80 p-5 shadow-halo backdrop-blur md:grid-cols-3">
+      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/80 p-5 shadow-halo backdrop-blur md:grid-cols-3">
         <label class="md:col-span-2">
           <span class="mb-2 block text-sm font-semibold text-slate-700">Cerca per titolo, tema o organizzazione</span>
           <input
             id="searchInput"
             type="search"
             placeholder="es. plastica, foreste, oceani"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-cyan-600 focus:ring-2 focus:ring-cyan-200"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
           />
         </label>
 
@@ -79,7 +79,7 @@
           <span class="mb-2 block text-sm font-semibold text-slate-700">Fonte</span>
           <select
             id="sourceFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-cyan-600 focus:ring-2 focus:ring-cyan-200"
+            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
           >
             <option value="all">Tutte le fonti</option>
           </select>
@@ -94,8 +94,8 @@
       <section id="results" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></section>
 
       <template id="campaignCardTemplate">
-        <article class="group rounded-2xl border border-cyan-100 bg-white p-5 shadow-halo transition hover:-translate-y-0.5 hover:shadow-lg">
-          <p class="text-xs font-semibold uppercase tracking-wide text-cyan-700" data-source></p>
+        <article class="group rounded-2xl border border-emerald-100 bg-white p-5 shadow-halo transition hover:-translate-y-0.5 hover:shadow-lg">
+          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700" data-source></p>
           <h2 class="mt-2 font-display text-xl leading-tight text-slate-900" data-title></h2>
           <p class="mt-3 text-sm text-slate-700" data-summary></p>
           <div class="mt-4 flex flex-wrap gap-2" data-tags></div>
@@ -103,7 +103,7 @@
             data-link
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-5 inline-flex items-center gap-2 rounded-lg bg-cyan-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-cyan-800"
+            class="mt-5 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
           >
             Partecipa
             <span aria-hidden="true">-></span>

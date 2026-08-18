@@ -1,7 +1,7 @@
 :root {
-  --bg-top: #ecfeff;
-  --bg-mid: #fefce8;
-  --bg-bottom: #f8fafc;
+  --bg-top: #ecfdf5;
+  --bg-mid: #dcfce7;
+  --bg-bottom: #f0fdf4;
 }
 
 * {
@@ -19,8 +19,8 @@ body {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.3), transparent 34%),
-    radial-gradient(circle at 88% 12%, rgba(253, 224, 71, 0.4), transparent 32%),
+    radial-gradient(circle at 12% 18%, rgba(16, 185, 129, 0.26), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(74, 222, 128, 0.28), transparent 32%),
     linear-gradient(160deg, var(--bg-top) 0%, var(--bg-mid) 42%, var(--bg-bottom) 100%);
 }
 
