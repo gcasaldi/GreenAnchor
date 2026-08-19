@@ -1,223 +1,987 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GreenAnchor | Campagne Ambientali</title>
-    <meta
-      name="description"
-      content="Scopri e firma campagne ambientali gratuite da fonti affidabili europee e globali."
-    />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['"Space Grotesk"', 'sans-serif'],
-              body: ['"IBM Plex Sans"', 'sans-serif']
-            },
-            boxShadow: {
-              halo: '0 0 0 1px rgba(15, 23, 42, 0.08), 0 16px 40px rgba(22, 163, 74, 0.20)'
-            },
-            keyframes: {
-              fadeUp: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' }
-              }
-            },
-            animation: {
-              fadeUp: 'fadeUp 0.5s ease-out both'
-            }
-          }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenAnchor - Campagne Ambientali Consolidate</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      };
+
+        :root {
+            --primary: #00d96f;
+            --primary-dark: #00a84a;
+            --primary-light: #1dff8d;
+            --secondary: #0f3d2f;
+            --accent: #ff6b6b;
+            --bg-dark: #0a0e27;
+            --bg-light: #0f1e38;
+            --text-light: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: rgba(0, 217, 111, 0.2);
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0d1b2a 50%, var(--secondary) 100%);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        /* Animated Background with Plants */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .plant-container {
+            position: absolute;
+            opacity: 0.15;
+            filter: blur(0.5px);
+        }
+
+        .plant-1 {
+            bottom: -10%;
+            left: 5%;
+            width: 400px;
+            height: 400px;
+            animation: sway 6s ease-in-out infinite;
+        }
+
+        .plant-2 {
+            bottom: -15%;
+            right: 8%;
+            width: 450px;
+            height: 450px;
+            animation: sway 7s ease-in-out infinite reverse;
+        }
+
+        .plant-3 {
+            bottom: -5%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            animation: sway 8s ease-in-out infinite;
+            opacity: 0.08;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(10px) translateY(-5px); }
+            75% { transform: translateX(-10px) translateY(5px); }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(1);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateY(-100vh) translateX(100px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 14, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 2rem;
+            filter: drop-shadow(0 0 10px var(--primary));
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            background: rgba(15, 30, 56, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 217, 111, 0.3);
+        }
+
+        .search-bar input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(0, 217, 111, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--bg-dark);
+            box-shadow: 0 10px 30px rgba(0, 217, 111, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 217, 111, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 217, 111, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Radar Section */
+        .radar {
+            background: rgba(15, 30, 56, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .radar-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .radar-title i {
+            color: var(--primary);
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 10px var(--primary));
+        }
+
+        .radar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .radar-card {
+            background: rgba(0, 217, 111, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .radar-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 217, 111, 0.2);
+        }
+
+        .radar-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .radar-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Focus Section */
+        .focus-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title i {
+            color: var(--primary);
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 15px var(--primary));
+        }
+
+        .campaigns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .campaign-card {
+            background: rgba(15, 30, 56, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .campaign-card:nth-child(n) {
+            animation-delay: calc(0.1s * var(--index, 0));
+        }
+
+        .campaign-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 217, 111, 0.2);
+        }
+
+        .campaign-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .campaign-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .campaign-meta {
+            display: flex;
+            gap: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(0, 217, 111, 0.15);
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .campaign-body {
+            padding: 1.5rem;
+        }
+
+        .campaign-summary {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .progress-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .progress-label-left {
+            font-weight: 600;
+        }
+
+        .progress-label-right {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 217, 111, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            transition: width 0.6s ease;
+            box-shadow: 0 0 15px rgba(0, 217, 111, 0.5);
+        }
+
+        .campaign-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 0.8rem;
+            background: rgba(0, 217, 111, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-action:hover {
+            border-color: var(--primary);
+            background: rgba(0, 217, 111, 0.2);
+        }
+
+        .btn-action-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-color: var(--primary);
+            color: var(--bg-dark);
+        }
+
+        .btn-action-primary:hover {
+            box-shadow: 0 5px 20px rgba(0, 217, 111, 0.4);
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background: rgba(15, 30, 56, 0.6);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--primary);
+            background: rgba(0, 217, 111, 0.1);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-muted);
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-bar {
+                max-width: 100%;
+            }
+
+            .stats {
+                display: none;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .campaigns-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                justify-content: flex-start;
+            }
+
+            .plant-1, .plant-2, .plant-3 {
+                opacity: 0.08;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg">
+        <svg class="plant-container plant-1" viewBox="0 0 200 400">
+            <defs>
+                <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00d96f;stop-opacity:0.6" />
+                    <stop offset="100%" style="stop-color:#00a84a;stop-opacity:0.4" />
+                </linearGradient>
+            </defs>
+            <path d="M 100 400 Q 95 350 90 300 Q 85 250 80 200" stroke="url(#leafGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M 100 400 Q 105 350 110 300 Q 115 250 120 200" stroke="url(#leafGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <ellipse cx="75" cy="280" rx="25" ry="35" fill="url(#leafGrad)" transform="rotate(-30 75 280)"/>
+            <ellipse cx="125" cy="280" rx="25" ry="35" fill="url(#leafGrad)" transform="rotate(30 125 280)"/>
+            <ellipse cx="60" cy="200" rx="20" ry="30" fill="url(#leafGrad)" transform="rotate(-40 60 200)"/>
+            <ellipse cx="140" cy="200" rx="20" ry="30" fill="url(#leafGrad)" transform="rotate(40 140 200)"/>
+            <circle cx="100" cy="150" r="15" fill="url(#leafGrad)"/>
+        </svg>
+
+        <svg class="plant-container plant-2" viewBox="0 0 200 400">
+            <defs>
+                <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1dff8d;stop-opacity:0.5" />
+                    <stop offset="100%" style="stop-color:#00d96f;stop-opacity:0.3" />
+                </linearGradient>
+            </defs>
+            <path d="M 100 400 Q 90 320 85 240 Q 80 160 75 80" stroke="url(#leafGrad2)" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <ellipse cx="70" cy="300" rx="30" ry="40" fill="url(#leafGrad2)" transform="rotate(-45 70 300)"/>
+            <ellipse cx="80" cy="180" rx="28" ry="38" fill="url(#leafGrad2)" transform="rotate(-35 80 180)"/>
+            <ellipse cx="75" cy="80" rx="25" ry="35" fill="url(#leafGrad2)" transform="rotate(-50 75 80)"/>
+            <circle cx="85" cy="40" r="12" fill="url(#leafGrad2)"/>
+        </svg>
+
+        <svg class="plant-container plant-3" viewBox="0 0 300 400">
+            <defs>
+                <linearGradient id="leafGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00d96f;stop-opacity:0.4" />
+                    <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:0.2" />
+                </linearGradient>
+            </defs>
+            <path d="M 150 400 Q 140 300 135 200 Q 130 100 125 20" stroke="url(#leafGrad3)" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <ellipse cx="110" cy="300" rx="35" ry="45" fill="url(#leafGrad3)" transform="rotate(-50 110 300)"/>
+            <ellipse cx="160" cy="300" rx="35" ry="45" fill="url(#leafGrad3)" transform="rotate(50 160 300)"/>
+            <ellipse cx="105" cy="150" rx="30" ry="40" fill="url(#leafGrad3)" transform="rotate(-45 105 150)"/>
+        </svg>
+
+        <div class="particle" style="width: 100px; height: 100px; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 60px; height: 60px; left: 20%; animation-delay: 5s;"></div>
+        <div class="particle" style="width: 80px; height: 80px; left: 30%; animation-delay: 10s;"></div>
+        <div class="particle" style="width: 50px; height: 50px; left: 50%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 120px; height: 120px; right: 15%; animation-delay: 8s;"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>GreenAnchor</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cerca campagne ambientali...">
+                </div>
+                <div class="header-actions">
+                    <div class="stats" id="headerStats">
+                        <div class="stat-item">
+                            <div class="stat-number stat-campaigns">-</div>
+                            <div class="stat-label">Campagne</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number stat-active">-</div>
+                            <div class="stat-label">Attive</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number stat-urgent">-</div>
+                            <div class="stat-label">Urgenti</div>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambia tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>
+                    <span class="gradient">Consolida le Campagne,</span><br>
+                    Non crearne Altre
+                </h1>
+                <p>GreenAnchor aggrega petizioni ambientali da fonti verificate. Finanziamento collettivo su campagne che hanno vera continuità.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="document.getElementById('focusCampaigns').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-search"></i> Esplora Campagne
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-book"></i> Scopri di più
+                    </button>
+                </div>
+            </section>
+
+            <section class="radar">
+                <div class="radar-title">
+                    <i class="fas fa-radar"></i>
+                    <span>GreenAnchor Radar</span>
+                </div>
+                <div class="radar-grid">
+                    <div class="radar-card">
+                        <div class="radar-number" id="radarCampaigns">-</div>
+                        <div class="radar-label">Campagne Totali</div>
+                    </div>
+                    <div class="radar-card">
+                        <div class="radar-number" id="radarActive">-</div>
+                        <div class="radar-label">Attive</div>
+                    </div>
+                    <div class="radar-card">
+                        <div class="radar-number" id="radarUrgent">-</div>
+                        <div class="radar-label">Urgenti (7 giorni)</div>
+                    </div>
+                    <div class="radar-card">
+                        <div class="radar-number" id="radarNew">-</div>
+                        <div class="radar-label">Nuove (24h)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="focus-section" id="focusSectionContainer">
+                <div class="section-title">
+                    <i class="fas fa-star"></i>
+                    <span>GreenAnchor Focus - Top Priorità</span>
+                </div>
+                <div class="filters" id="filtersContainer">
+                    <button class="filter-btn active" data-filter="all">Tutto</button>
+                    <button class="filter-btn" data-filter="italia">🇮🇹 Italia</button>
+                    <button class="filter-btn" data-filter="europa">🇪🇺 Europa</button>
+                    <button class="filter-btn" data-filter="globale">🌍 Globale</button>
+                </div>
+                <div class="campaigns-grid" id="focusCampaigns"></div>
+            </section>
+
+            <section class="focus-section">
+                <div class="section-title">
+                    <i class="fas fa-list"></i>
+                    <span>Tutte le Campagne</span>
+                </div>
+                <div class="campaigns-grid" id="allCampaigns"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-leaf"></i> GreenAnchor</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+                        Hub indipendente di campagne ambientali. Non creiamo campagne, le organizziamo e le portiamo a termine.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Utili</h3>
+                    <a href="https://github.com/gcasaldi/GreenAnchor" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#about">Chi Siamo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Fonti</h3>
+                    <a href="https://www.change.org" target="_blank">Change.org</a>
+                    <a href="https://ec.europa.eu/citizens" target="_blank">ICE Commissione UE</a>
+                    <a href="https://www.greenpeace.org/italy" target="_blank">Greenpeace Italia</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GreenAnchor | Aggregatore indipendente di campagne ambientali | 
+                    <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        async function loadCampaigns() {
+            try {
+                const response = await fetch('campagne.json');
+                const data = await response.json();
+                renderDashboard(data);
+            } catch (error) {
+                console.error('Errore nel caricamento campagne:', error);
+                document.getElementById('focusCampaigns').innerHTML = 
+                    '<p style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Errore nel caricamento dei dati</p>';
+            }
+        }
+
+        function renderDashboard(data) {
+            if (data.radar) {
+                document.getElementById('radarCampaigns').textContent = data.campaigns?.length || 0;
+                document.getElementById('radarActive').textContent = data.radar.active_campaigns || 0;
+                document.getElementById('radarUrgent').textContent = data.radar.urgent_campaigns || 0;
+                document.getElementById('radarNew').textContent = data.radar.new_campaigns_24h || 0;
+                
+                document.querySelector('.stat-campaigns').textContent = data.campaigns?.length || 0;
+                document.querySelector('.stat-active').textContent = data.radar.active_campaigns || 0;
+                document.querySelector('.stat-urgent').textContent = data.radar.urgent_campaigns || 0;
+            }
+
+            if (data.greenanchor_focus) {
+                renderCampaigns(data.greenanchor_focus, 'focusCampaigns');
+            }
+
+            if (data.campaigns) {
+                renderCampaigns(data.campaigns, 'allCampaigns');
+            }
+        }
+
+        function renderCampaigns(campaigns, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = campaigns.map((campaign, index) => {
+                const progressPercent = campaign.progress_percent || 0;
+                const scope = campaign.scope || campaign.country || 'Global';
+                
+                return `
+                    <div class="campaign-card" style="--index: ${index}">
+                        <div class="campaign-header">
+                            <div class="campaign-title">${campaign.title}</div>
+                            <div class="campaign-meta">
+                                <span class="badge">${campaign.source}</span>
+                                <span class="badge">${scope}</span>
+                                <span class="badge" style="background: ${campaign.status === 'attiva' ? 'rgba(0, 217, 111, 0.15)' : 'rgba(255, 107, 107, 0.15)'}; color: ${campaign.status === 'attiva' ? 'var(--primary)' : 'var(--accent)'};">
+                                    ${campaign.status === 'attiva' ? '🟢 Attiva' : '🔴 Chiusa'}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="campaign-body">
+                            <div class="campaign-summary">${campaign.summary || campaign.objective}</div>
+                            
+                            ${campaign.progress_percent !== null && campaign.progress_percent !== undefined ? `
+                                <div class="progress-section">
+                                    <div class="progress-label">
+                                        <span class="progress-label-left">Progresso</span>
+                                        <span class="progress-label-right">${progressPercent}%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: ${progressPercent}%"></div>
+                                    </div>
+                                    ${campaign.progress_current !== null ? `
+                                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+                                            ${campaign.progress_current || 0} / ${campaign.progress_target || 0} ${campaign.progress_unit || 'firme'}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            ` : ''}
+
+                            ${campaign.deadline ? `
+                                <div style="font-size: 0.85rem; color: ${new Date(campaign.deadline) < new Date() ? 'var(--accent)' : 'var(--primary)'}; margin-top: 1rem;">
+                                    <i class="fas fa-calendar"></i> Scadenza: ${new Date(campaign.deadline).toLocaleDateString('it-IT')}
+                                </div>
+                            ` : ''}
+
+                            <div class="campaign-footer">
+                                <button class="btn-action" onclick="openCampaign('${campaign.action_url}')">
+                                    Dettagli
+                                </button>
+                                <a href="${campaign.action_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; flex: 1;">
+                                    <button class="btn-action btn-action-primary" style="width: 100%; cursor: pointer;">
+                                        Partecipa
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function openCampaign(url) {
+            window.open(url, '_blank');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.campaign-card');
+            cards.forEach(card => {
+                const title = card.querySelector('.campaign-title').textContent.toLowerCase();
+                const summary = card.querySelector('.campaign-summary').textContent.toLowerCase();
+                card.style.display = title.includes(searchTerm) || summary.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                const cards = document.querySelectorAll('.campaign-card');
+                cards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = '';
+                    } else {
+                        const scope = card.querySelector('.campaign-meta').textContent.toLowerCase();
+                        card.style.display = scope.includes(filter) ? '' : 'none';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+
+        window.addEventListener('load', loadCampaigns);
     </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-    <script defer src="app.js"></script>
-  </head>
-  <body class="font-body text-slate-900 antialiased">
-    <div class="page-bg"></div>
-
-    <main class="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-8">
-      <header class="mb-10 rounded-3xl border border-white/70 bg-white/70 p-7 shadow-halo backdrop-blur">
-        <p class="mb-3 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-900">
-          GreenAnchor
-        </p>
-        <h1 class="font-display text-4xl leading-tight text-slate-900 sm:text-5xl">
-          Campaign Consolidation & Completion Engine
-          <span class="text-emerald-700">per azioni ambientali concrete</span>
-        </h1>
-        <p class="mt-4 max-w-2xl text-slate-700">
-          Non creare un'altra campagna. Portiamone una a termine.
-          GreenAnchor unisce fonti gratuite italiane, europee e globali per concentrare la partecipazione.
-        </p>
-        <p class="mt-3 max-w-3xl text-sm text-slate-600">
-          GreenAnchor e un hub indipendente di discovery e prioritizzazione di campagne ambientali.
-          Non crea ne gestisce le campagne: raccoglie iniziative pubblicamente disponibili, ne organizza le
-          informazioni e indirizza sempre alla fonte originale per partecipare.
-        </p>
-      </header>
-
-      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/85 p-5 shadow-halo backdrop-blur md:grid-cols-3">
-        <article class="rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4">
-          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">GreenAnchor Radar</p>
-          <p id="radarNew" class="mt-2 text-2xl font-display text-slate-900">-</p>
-          <p class="text-sm text-slate-700">Nuove campagne nelle ultime 24 ore</p>
-        </article>
-        <article class="rounded-2xl border border-emerald-100 bg-white p-4">
-          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Campagne attive</p>
-          <p id="radarActive" class="mt-2 text-2xl font-display text-slate-900">-</p>
-          <p class="text-sm text-slate-700">Verificate e in corso</p>
-        </article>
-        <article class="rounded-2xl border border-emerald-100 bg-white p-4">
-          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Urgenti</p>
-          <p id="radarUrgent" class="mt-2 text-2xl font-display text-slate-900">-</p>
-          <p class="text-sm text-slate-700">Con scadenza ravvicinata</p>
-        </article>
-        <article class="rounded-2xl border border-emerald-100 bg-white p-4 md:col-span-3">
-          <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700">Frammentazione ridotta</p>
-          <p id="radarClusters" class="mt-2 text-2xl font-display text-slate-900">-</p>
-          <p class="text-sm text-slate-700">Topic con campagne semanticamente simili consolidate</p>
-        </article>
-      </section>
-
-      <section class="mb-8 rounded-3xl border border-emerald-200 bg-white/90 p-6 shadow-halo backdrop-blur">
-        <div class="mb-4 flex items-center justify-between gap-3">
-          <h2 class="font-display text-2xl text-slate-900">🔥 GreenAnchor Focus</h2>
-          <p class="text-sm text-slate-600">Top 5 per completion score, urgenza e concentrazione community</p>
-        </div>
-        <div id="spotlight" class="grid gap-4 md:grid-cols-2 xl:grid-cols-5"></div>
-      </section>
-
-      <section class="mb-6 grid gap-4 rounded-3xl border border-emerald-100 bg-white/80 p-5 shadow-halo backdrop-blur md:grid-cols-6">
-        <label class="md:col-span-2">
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Cerca per titolo, tema o organizzazione</span>
-          <input
-            id="searchInput"
-            type="search"
-            placeholder="es. plastica, foreste, oceani"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          />
-        </label>
-
-        <label>
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Fonte</span>
-          <select
-            id="sourceFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          >
-            <option value="all">Tutte le fonti</option>
-          </select>
-        </label>
-
-        <label>
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Area</span>
-          <select
-            id="scopeFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          >
-            <option value="all">Italia, Europa, Globale</option>
-            <option value="Italia">Italia</option>
-            <option value="Europa">Europa</option>
-            <option value="Globale">Globale</option>
-          </select>
-        </label>
-
-        <label>
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Tema</span>
-          <select
-            id="themeFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          >
-            <option value="all">Tutti i temi</option>
-          </select>
-        </label>
-
-        <label>
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Azione</span>
-          <select
-            id="actionTypeFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          >
-            <option value="all">Tutti i tipi</option>
-          </select>
-        </label>
-
-        <label>
-          <span class="mb-2 block text-sm font-semibold text-slate-700">Ordina per</span>
-          <select
-            id="sortFilter"
-            class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200"
-          >
-            <option value="relevance">Rilevanza</option>
-            <option value="urgency">Urgenza</option>
-            <option value="recent">Recenza</option>
-            <option value="verification">Progresso / affidabilita</option>
-          </select>
-        </label>
-      </section>
-
-      <section class="mb-4 flex items-center justify-between gap-4">
-        <p id="stats" class="text-sm font-medium text-slate-700">Caricamento campagne...</p>
-        <p id="updatedAt" class="text-xs text-slate-500"></p>
-      </section>
-
-      <section id="results" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></section>
-
-      <template id="campaignCardTemplate">
-        <article class="group rounded-2xl border border-emerald-100 bg-white p-5 shadow-halo transition hover:-translate-y-0.5 hover:shadow-lg">
-          <div class="flex items-start justify-between gap-3">
-            <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700" data-source></p>
-            <button data-favorite class="rounded-full border border-emerald-200 px-2 py-1 text-xs font-semibold text-emerald-700">☆</button>
-          </div>
-          <h2 class="mt-2 font-display text-xl leading-tight text-slate-900" data-title></h2>
-          <p class="mt-1 text-sm font-medium text-slate-700" data-organization></p>
-          <ul class="mt-3 space-y-1 text-xs text-slate-600">
-            <li data-location></li>
-            <li data-theme></li>
-            <li data-action-type></li>
-            <li data-status></li>
-            <li data-verification></li>
-            <li data-last-verified></li>
-            <li data-progress-note></li>
-          </ul>
-          <p class="mt-3 text-sm text-slate-700" data-objective></p>
-          <div class="mt-4 flex flex-wrap gap-2" data-tags></div>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <a
-              data-link
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
-            >
-              Vai alla campagna
-              <span aria-hidden="true">-></span>
-            </a>
-            <button data-share class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700">Condividi</button>
-            <button data-report class="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700">Segnala</button>
-          </div>
-        </article>
-      </template>
-
-      <template id="spotlightTemplate">
-        <article class="rounded-2xl border border-emerald-200 bg-gradient-to-b from-emerald-50 to-white p-4">
-          <p class="text-[11px] font-bold uppercase tracking-wide text-emerald-700" data-spotlight-label></p>
-          <h3 class="mt-2 font-display text-lg leading-tight text-slate-900" data-spotlight-title></h3>
-          <p class="mt-2 text-xs text-slate-700" data-spotlight-meta></p>
-          <a data-spotlight-link target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex text-sm font-semibold text-emerald-800">Partecipa sulla fonte originale -></a>
-        </article>
-      </template>
-    </main>
-  </body>
+</body>
 </html>
