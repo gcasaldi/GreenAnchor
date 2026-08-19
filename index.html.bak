@@ -634,98 +634,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        
-        /* About Section */
-        .about-section {
-            margin: 4rem 0;
-            padding: 3rem;
-            background: rgba(15, 30, 56, 0.5);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            animation: slideUp 0.8s ease-out;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .about-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .about-text p {
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .about-author {
-            background: rgba(0, 217, 111, 0.08);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .about-author h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .author-bio {
-            margin: 1.5rem 0;
-        }
-
-        .author-bio p {
-            margin: 0.5rem 0;
-            color: var(--text-light);
-        }
-
-        .author-bio p:first-child {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .author-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .btn-author {
-            padding: 0.7rem 1.5rem;
-            background: rgba(0, 217, 111, 0.1);
-            border: 1px solid var(--border-color);
-            color: var(--primary);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-author:hover {
-            border-color: var(--primary);
-            background: rgba(0, 217, 111, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0, 217, 111, 0.2);
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -858,10 +766,13 @@
                     <button class="btn btn-primary" onclick="document.getElementById('focusCampaigns').scrollIntoView({behavior: 'smooth'})">
                         <i class="fas fa-search"></i> Esplora Campagne
                     </button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('aboutSection').scrollIntoView({behavior: 'smooth'})">
+                    <button class="btn btn-secondary">
                         <i class="fas fa-book"></i> Scopri di più
                     </button>
                 </div>
+                        <button class="btn btn-secondary" onclick="document.getElementById('aboutSection').scrollIntoView({behavior: 'smooth'})">
+                            <i class="fas fa-book"></i> Scopri di più
+                        </button>
             </section>
 
             <section class="radar">
@@ -912,53 +823,6 @@
             </section>
         </main>
 
-        
-            <section class="about-section" id="aboutSection">
-                <div class="section-title">
-                    <i class="fas fa-user-circle"></i>
-                    <span>Chi Siamo</span>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>GreenAnchor - Consolidamento Campagne Ambientali</h3>
-                        <p>
-                            GreenAnchor è un hub indipendente che non crea né gestisce campagne ambientali, ma organizza 
-                            dati pubblici da fonti verificate e rimanda sempre alla sorgente originale per partecipare. 
-                            La nostra missione: <strong>consolidare, non frammentare</strong>. Non creiamo un'altra campagna, 
-                            portiamone una a termine.
-                        </p>
-                        <p style="margin-top: 1rem;">
-                            <strong>Perché solo 16 campagne?</strong> Stiamo ancora ottimizzando la ricerca su Change.org 
-                            e l'API della Commissione UE. Lavoriamo per aggiungere più fonti (Avaaz, WWF, Greenpeace, Legambiente) 
-                            e migliorare la raccolta dati. Ogni campagna è verificata al 100% prima di essere pubblicata.
-                        </p>
-                    </div>
-                    <div class="about-author">
-                        <h3>Creato da Giulia Casaldi</h3>
-                        <div class="author-bio">
-                            <p><strong>AI Engineer & Cybersecurity Specialist</strong></p>
-                            <p>Splunk Specialist | NIS2 DORA Compliance Expert</p>
-                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
-                                Passionata di tecnologia sostenibile e soluzioni intelligenti per l'ambiente.
-                            </p>
-                        </div>
-                        <div class="author-buttons">
-                            <button class="btn-author" onclick="visitAuthor('github')">
-                                <i class="fab fa-github"></i> GitHub
-                            </button>
-                            <button class="btn-author" onclick="visitAuthor('website')">
-                                <i class="fas fa-globe"></i> Sito Web
-                            </button>
-                            <button class="btn-author" onclick="visitAuthor('linkedin')">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </button>
-                        </div>
-                        <div id="authorResponse" style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 217, 111, 0.1); border-radius: 10px; border: 1px solid var(--border-color); display: none; color: var(--primary); font-size: 0.9rem; text-align: center;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         <footer>
             <div class="footer-content">
                 <div class="footer-section">
@@ -967,6 +831,52 @@
                         Hub indipendente di campagne ambientali. Non creiamo campagne, le organizziamo e le portiamo a termine.
                     </p>
                 </div>
+
+                <section class="about-section" id="aboutSection">
+                    <div class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Chi Siamo</span>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>GreenAnchor - Consolidamento Campagne Ambientali</h3>
+                            <p>
+                                GreenAnchor è un hub indipendente che non crea né gestisce campagne ambientali, ma organizza 
+                                dati pubblici da fonti verificate e rimanda sempre alla sorgente originale per partecipare. 
+                                La nostra missione: <strong>consolidare, non frammentare</strong>. Non creiamo un'altra campagna, 
+                                portiamone una a termine.
+                            </p>
+                            <p style="margin-top: 1rem;">
+                                <strong>Perché solo 16 campagne?</strong> Stiamo ancora ottimizzando la ricerca su Change.org 
+                                e l'API della Commissione UE. Lavoriamo per aggiungere più fonti (Avaaz, WWF, Greenpeace, Legambiente) 
+                                e migliorare la raccolta dati. Ogni campagna è verificata al 100% prima di essere pubblicata.
+                            </p>
+                        </div>
+                        <div class="about-author">
+                            <h3>Creato da Giulia Casaldi</h3>
+                            <div class="author-bio">
+                                <p><strong>AI Engineer & Cybersecurity Specialist</strong></p>
+                                <p>Splunk Specialist | NIS2 DORA Compliance Expert</p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                                    Passionata di tecnologia sostenibile e soluzioni intelligenti per l'ambiente.
+                                </p>
+                            </div>
+                            <div class="author-buttons">
+                                <button class="btn-author" onclick="visitAuthor('github')">
+                                    <i class="fab fa-github"></i> GitHub
+                                </button>
+                                <button class="btn-author" onclick="visitAuthor('website')">
+                                    <i class="fas fa-globe"></i> Sito Web
+                                </button>
+                                <button class="btn-author" onclick="visitAuthor('linkedin')">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </button>
+                            </div>
+                            <div id="authorResponse" style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 217, 111, 0.1); border-radius: 10px; border: 1px solid var(--border-color); display: none; color: var(--primary); font-size: 0.9rem; text-align: center;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="footer-section">
                     <h3>Link Utili</h3>
                     <a href="https://github.com/gcasaldi/GreenAnchor" target="_blank">
@@ -1119,47 +1029,6 @@
         document.getElementById('themeToggle').addEventListener('click', () => {
             document.body.classList.toggle('light-theme');
         });
-
-        
-        function visitAuthor(link) {
-            const responseDiv = document.getElementById('authorResponse');
-            const messages = {
-                github: {
-                    text: '✨ Visita il profilo GitHub di Giulia - Codice open source e progetti innovativi',
-                    url: 'https://github.com/gcasaldi'
-                },
-                website: {
-                    text: '🌐 Scopri tutti i progetti e competenze di Giulia - Best AI Engineer & Cybersecurity Expert',
-                    url: 'https://gcasaldi.github.io/giuliacasaldi.github.io/'
-                },
-                linkedin: {
-                    text: '💼 Connettiti con Giulia su LinkedIn - Splunk Specialist & NIS2 DORA Expert',
-                    url: 'https://www.linkedin.com/in/giuliacasaldi'
-                }
-            };
-
-            if (messages[link]) {
-                responseDiv.textContent = messages[link].text;
-                responseDiv.style.display = 'block';
-                responseDiv.style.animation = 'none';
-                setTimeout(() => {
-                    responseDiv.style.animation = 'slideUp 0.5s ease-out';
-                }, 10);
-                setTimeout(() => {
-                    window.open(messages[link].url, '_blank');
-                }, 800);
-            }
-        
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .about-section {
-                padding: 1.5rem;
-            }
-        }
 
         window.addEventListener('load', loadCampaigns);
     </script>
