@@ -6,6 +6,7 @@
     <title>GreenAnchor - Campagne Ambientali Consolidate</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <style>
         * {
             margin: 0;
@@ -688,15 +689,17 @@
             background: rgba(10, 14, 39, 0.82);
             border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 1rem;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            min-height: 520px;
         }
 
-        .volunteer-map svg {
+        .volunteer-map .leaflet-container {
             width: 100%;
-            height: auto;
+            height: 100%;
+            min-height: 520px;
             display: block;
+            background: #09111f;
         }
 
         .volunteer-list {
@@ -866,6 +869,11 @@
 
             .volunteer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .volunteer-map,
+            .volunteer-map .leaflet-container {
+                min-height: 420px;
             }
         }
     </style>
@@ -1045,83 +1053,13 @@
                 <div class="volunteer-hub" id="volunteerHub">
                     <div class="section-title">
                         <i class="fas fa-map-location-dot"></i>
-                        <span>Mappa Volontariato Sicuro</span>
+                        <span>Mappa</span>
                     </div>
                     <p class="volunteer-intro">
-                        Solo progetti ufficiali, attivi e verificati. Nessun progetto fake, nessuna fonte rischiosa.
+                        Progetti ufficiali verificati.
                     </p>
                     <div class="volunteer-grid">
-                        <div class="volunteer-map" aria-label="Mappa Europa con progetti di volontariato verificati">
-                            <svg viewBox="0 0 900 560" role="img" aria-labelledby="volunteerMapTitle volunteerMapDesc">
-                                <title id="volunteerMapTitle">Mappa Europea dei progetti di volontariato sicuro</title>
-                                <desc id="volunteerMapDesc">Progetti verificati e attivi con punti in Europa e area globale.</desc>
-                                <defs>
-                                    <linearGradient id="mapGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#00d96f" stop-opacity="0.22" />
-                                        <stop offset="100%" stop-color="#00a84a" stop-opacity="0.06" />
-                                    </linearGradient>
-                                    <filter id="pinGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                        <feGaussianBlur stdDeviation="8" result="blur" />
-                                        <feMerge>
-                                            <feMergeNode in="blur" />
-                                            <feMergeNode in="SourceGraphic" />
-                                        </feMerge>
-                                    </filter>
-                                </defs>
-                                <rect width="900" height="560" rx="28" fill="rgba(10, 14, 39, 0.85)" />
-                                <g opacity="0.18" stroke="var(--primary)" stroke-width="1">
-                                    <path d="M50 90 H850" />
-                                    <path d="M50 180 H850" />
-                                    <path d="M50 270 H850" />
-                                    <path d="M50 360 H850" />
-                                    <path d="M50 450 H850" />
-                                    <path d="M120 40 V520" />
-                                    <path d="M240 40 V520" />
-                                    <path d="M360 40 V520" />
-                                    <path d="M480 40 V520" />
-                                    <path d="M600 40 V520" />
-                                    <path d="M720 40 V520" />
-                                </g>
-                                <path d="M160 150 C220 110, 300 108, 360 132 C410 152, 450 128, 505 152 C560 176, 615 158, 670 184 C720 208, 770 190, 820 228 C780 270, 730 286, 680 278 C635 272, 610 322, 560 326 C506 330, 478 300, 430 304 C378 308, 336 348, 286 338 C238 330, 196 286, 168 258 C145 232, 138 188, 160 150 Z" fill="url(#mapGlow)" stroke="rgba(0,217,111,0.45)" stroke-width="2"/>
-                                <text x="88" y="86" fill="var(--text-muted)" font-size="20" font-weight="600">ATLANTICO</text>
-                                <text x="600" y="86" fill="var(--text-muted)" font-size="20" font-weight="600">EUROPA</text>
-                                <text x="726" y="472" fill="var(--text-muted)" font-size="20" font-weight="600">MEDITERRANEO</text>
-
-                                <g class="map-pin" data-project-id="greenpeace-italy" transform="translate(430 330)">
-                                    <circle r="18" fill="rgba(0,217,111,0.18)"/>
-                                    <circle r="10" fill="var(--primary)" filter="url(#pinGlow)"/>
-                                    <path d="M0 22 C-9 9 -12 0 -12 -8 C-12 -18 -5 -25 0 -25 C5 -25 12 -18 12 -8 C12 0 9 9 0 22 Z" fill="var(--primary)"/>
-                                </g>
-                                <text x="458" y="334" fill="#fff" font-size="18">Greenpeace Italia</text>
-
-                                <g class="map-pin" data-project-id="wwf-italy" transform="translate(470 360)">
-                                    <circle r="18" fill="rgba(0,217,111,0.18)"/>
-                                    <circle r="10" fill="#1dff8d" filter="url(#pinGlow)"/>
-                                    <path d="M0 22 C-9 9 -12 0 -12 -8 C-12 -18 -5 -25 0 -25 C5 -25 12 -18 12 -8 C12 0 9 9 0 22 Z" fill="#1dff8d"/>
-                                </g>
-                                <text x="498" y="364" fill="#fff" font-size="18">WWF Italia</text>
-
-                                <g class="map-pin" data-project-id="legambiente-italy" transform="translate(395 300)">
-                                    <circle r="18" fill="rgba(0,217,111,0.18)"/>
-                                    <circle r="10" fill="#00b85d" filter="url(#pinGlow)"/>
-                                    <path d="M0 22 C-9 9 -12 0 -12 -8 C-12 -18 -5 -25 0 -25 C5 -25 12 -18 12 -8 C12 0 9 9 0 22 Z" fill="#00b85d"/>
-                                </g>
-                                <text x="423" y="304" fill="#fff" font-size="18">Legambiente</text>
-
-                                <g class="map-pin" data-project-id="marevivo-italy" transform="translate(505 390)">
-                                    <circle r="18" fill="rgba(0,217,111,0.18)"/>
-                                    <circle r="10" fill="#00d96f" filter="url(#pinGlow)"/>
-                                    <path d="M0 22 C-9 9 -12 0 -12 -8 C-12 -18 -5 -25 0 -25 C5 -25 12 -18 12 -8 C12 0 9 9 0 22 Z" fill="#00d96f"/>
-                                </g>
-                                <text x="533" y="394" fill="#fff" font-size="18">Marevivo</text>
-
-                                <g class="map-pin" data-project-id="greenpeace-global" transform="translate(620 220)">
-                                    <circle r="18" fill="rgba(0,217,111,0.18)"/>
-                                    <circle r="10" fill="#66ffb0" filter="url(#pinGlow)"/>
-                                    <path d="M0 22 C-9 9 -12 0 -12 -8 C-12 -18 -5 -25 0 -25 C5 -25 12 -18 12 -8 C12 0 9 9 0 22 Z" fill="#66ffb0"/>
-                                </g>
-                                <text x="648" y="224" fill="#fff" font-size="18">Greenpeace Global</text>
-                            </svg>
+                        <div class="volunteer-map" id="volunteerMap" aria-label="Mappa Europa con progetti ufficiali verificati"></div>
                         </div>
                         <div class="volunteer-list" id="volunteerList"></div>
                     </div>
@@ -1161,6 +1099,7 @@
         </footer>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         const volunteerProjects = [
             {
@@ -1174,6 +1113,8 @@
                 scope: 'Italia',
                 verified: 'Verificato',
                 pinClass: 'greenpeace-italy',
+                lat: 41.9028,
+                lng: 12.4964,
             },
             {
                 id: 'wwf-italy',
@@ -1186,6 +1127,8 @@
                 scope: 'Italia',
                 verified: 'Verificato',
                 pinClass: 'wwf-italy',
+                lat: 41.9028,
+                lng: 12.4964,
             },
             {
                 id: 'legambiente-italy',
@@ -1198,6 +1141,8 @@
                 scope: 'Italia',
                 verified: 'Verificato',
                 pinClass: 'legambiente-italy',
+                lat: 41.9028,
+                lng: 12.4964,
             },
             {
                 id: 'marevivo-italy',
@@ -1210,6 +1155,8 @@
                 scope: 'Italia',
                 verified: 'Verificato',
                 pinClass: 'marevivo-italy',
+                lat: 41.8947,
+                lng: 12.4839,
             },
             {
                 id: 'greenpeace-global',
@@ -1222,6 +1169,8 @@
                 scope: 'Europa / Globale',
                 verified: 'Verificato',
                 pinClass: 'greenpeace-global',
+                lat: 52.3676,
+                lng: 4.9041,
             },
             {
                 id: 'wwf-global',
@@ -1234,8 +1183,46 @@
                 scope: 'Europa / Globale',
                 verified: 'Verificato',
                 pinClass: 'wwf-global',
+                lat: 46.4212,
+                lng: 6.1889,
             },
         ];
+
+        let volunteerMap = null;
+        const volunteerMarkers = new Map();
+
+        function initVolunteerMap() {
+            const mapContainer = document.getElementById('volunteerMap');
+            if (!mapContainer || typeof L === 'undefined' || volunteerMap) {
+                return;
+            }
+
+            volunteerMap = L.map('volunteerMap', {
+                zoomControl: true,
+                scrollWheelZoom: false,
+                worldCopyJump: true,
+            }).setView([47.2, 9.1], 4);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 18,
+            }).addTo(volunteerMap);
+
+            volunteerProjects.forEach(project => {
+                const marker = L.marker([project.lat, project.lng], {
+                    title: project.title,
+                }).addTo(volunteerMap);
+
+                marker.bindPopup(`
+                    <strong>${project.title}</strong><br>
+                    ${project.region}<br>
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer">Apri progetto verificato</a>
+                `);
+
+                marker.on('click', () => showVolunteerProject(project.id));
+                volunteerMarkers.set(project.id, marker);
+            });
+        }
 
         async function loadCampaigns() {
             try {
@@ -1313,6 +1300,12 @@
                 pin.classList.toggle('active', pin.dataset.projectId === projectId);
             });
 
+            const marker = volunteerMarkers.get(projectId);
+            if (marker && volunteerMap) {
+                volunteerMap.setView(marker.getLatLng(), 6, { animate: true });
+                marker.openPopup();
+            }
+
             const detail = document.getElementById('volunteerDetail');
             if (!detail) {
                 return;
@@ -1328,7 +1321,7 @@
                 </div>
                 <div class="volunteer-detail-actions">
                     <a class="volunteer-action-btn" href="${project.link}" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-shield-heart"></i> Apri progetto sicuro
+                        <i class="fas fa-shield-heart"></i> Apri progetto
                     </a>
                 </div>
             `;
@@ -1430,6 +1423,7 @@
             document.body.classList.toggle('light-theme');
         });
 
+        window.addEventListener('load', initVolunteerMap);
         window.addEventListener('load', renderVolunteerProjects);
 
         window.addEventListener('load', loadCampaigns);
