@@ -67,6 +67,20 @@ CAMPAIGN_HINTS = (
     "campagna",
     "firma",
     "sign",
+    "help",
+    "aiut",
+    "solidar",
+    "umanit",
+    "humanitarian",
+    "relief",
+    "diritt",
+    "salute",
+    "sanit",
+    "emergenz",
+    "cure",
+    "migr",
+    "pover",
+    "fame",
     "proteggi",
     "difendi",
     "stop",
@@ -299,10 +313,44 @@ def parse_dt(value: str | None) -> datetime | None:
     except ValueError:
         return None
 
+    CHANGEORG_TYPESENSE_API_KEY = (
+        "Mm5jam83L2h4SVVnR01qOHhHcU1kUHl5SW94TzdQM3pMK2pwQTUzTVJXOD04VzVX"
+        "eyJmaWx0ZXJfYnkiOiJkaXNjb3ZlcmFibGU6dHJ1ZSIsImV4Y2x1ZGVfZmllbGRzIjoiY2FtcGFpZ25fdGVhbV9uYW1lIn0="
+    )
+    CHANGEORG_TYPESENSE_BASE_URL = "https://www.change.org/ts"
+    CHANGEORG_HUMANITARIAN_QUERIES = (
+        ("it", "aiuti umanitari"),
+        ("it", "solidarieta"),
+        ("it", "diritti umani"),
+        ("it", "emergenza"),
+        ("it", "salute"),
+        ("it", "migranti"),
+        ("en", "humanitarian aid"),
+        ("en", "solidarity"),
+        ("en", "human rights"),
+        ("en", "relief"),
+        ("en", "refugees"),
+    )
+    CHANGEORG_HUMANITARIAN_HINTS = (
+        "humanitarian",
+        "umanit",
+        "solidar",
+        "diritt",
+        "aiut",
+        "emergenz",
+        "salute",
+        "sanit",
+        "migr",
+        "rifugiat",
+        "refuge",
+        "aid",
+        "relief",
+        "help",
+    )
+
 
 def normalize_space(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
-
 
 def clean_text(text: str) -> str:
     text = normalize_space(text)
@@ -349,6 +397,67 @@ def fetch_html(url: str) -> str:
     return response.text
 
 
+def search_changeorg_humanitarian_campaigns() -> list[dict]:
+    headers = {**HEADERS, "X-TYPESENSE-API-KEY": CHANGEORG_TYPESENSE_API_KEY}
+    found: dict[str, dict] = {}
+
+    for locale, query in CHANGEORG_HUMANITARIAN_QUERIES:
+        collection = "petitions_it" if locale == "it" else "petitions_en"
+        preset = "petitions_initial_it" if locale == "it" else "petitions_initial_en"
+        params = {"q": query, "preset": preset, "page": 1, "per_page": 8}
+
+        try:
+            response = requests.get(
+                f"{CHANGEORG_TYPESENSE_BASE_URL}/collections/{collection}/documents/search",
+                params=params,
+                headers=headers,
+                timeout=TIMEOUT,
+            )
+            response.raise_for_status()
+            payload = response.json()
+        except Exception:
+            continue
+
+        for hit in payload.get("hits", []):
+            document = hit.get("document", {})
+            slug = document.get("slug")
+            title = clean_text(document.get("ask", "")).strip()
+            summary = clean_text(document.get("description", "")).strip()
+            if not slug or not title:
+                continue
+
+            haystack = f"{title} {summary} {' '.join(document.get('tags', []))}".lower()
+            if not any(token in haystack for token in CHANGEORG_HUMANITARIAN_HINTS):
+                continue
+
+            action_url = canonicalize_url(f"https://www.change.org/p/{slug}")
+            objective = summary or f"Obiettivo: sostenere la petizione umanitaria '{title}'."
+            item = {
+                "id": build_id("Change.org Italia", title, action_url),
+                "source": "Change.org Italia",
+                "organization": "Change.org",
+                "title": title,
+                "summary": objective,
+                "objective": objective,
+                "action_url": action_url,
+                "source_url": action_url,
+                "tags": list(dict.fromkeys(["italia", "petizioni", "umanitario", *document.get("tags", [])])),
+                "country": "IT" if locale == "it" else "Global",
+                "language": locale,
+                "verified_organization": False,
+                "status": "chiusa" if document.get("victory") else "attiva",
+                "theme": infer_theme(title, ["umanitario", *document.get("tags", [])]),
+                "action_type": infer_action_type(title, action_url),
+                "deadline": None,
+            }
+            found[dedupe_key(title, action_url)] = item
+
+            if len(found) >= MAX_PER_SOURCE:
+                return list(found.values())
+
+    return list(found.values())
+
+
 def is_allowed_link(config: SourceConfig, href: str) -> bool:
     absolute = canonicalize_url(urljoin(config.list_url, href))
     parsed = urlparse(absolute)
@@ -373,6 +482,8 @@ def looks_like_campaign(title: str, action_url: str) -> bool:
     if len(title) < 14:
         return False
     haystack = f"{title} {action_url}".lower()
+    if "change.org" in haystack and "/p/" in haystack:
+        return True
     return any(token in haystack for token in CAMPAIGN_HINTS)
 
 
@@ -639,6 +750,11 @@ def enrich_campaign(item: dict, now_dt: datetime, previous_first_seen: str | Non
 
 
 def scrape_source(config: SourceConfig) -> list[dict]:
+    if config.name == "Change.org Italia":
+        humanitarian = search_changeorg_humanitarian_campaigns()
+        if humanitarian:
+            return humanitarian
+
     html = fetch_html(config.list_url)
     soup = BeautifulSoup(html, "html.parser")
 
