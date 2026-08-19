@@ -760,6 +760,15 @@
             .plant-1, .plant-2, .plant-3 {
                 opacity: 0.08;
             }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -937,7 +946,7 @@
                         <h3>Creato da Giulia Casaldi</h3>
                         <div class="author-bio">
                             <p><strong>AI Engineer & Cybersecurity Specialist</strong></p>
-                            <p>Splunk Specialist | NIS2 DORA Compliance Expert</p>
+                            <p>Splunk Specialist</p>
                             <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
                                 Passionata di tecnologia sostenibile e soluzioni intelligenti per l'ambiente.
                             </p>
@@ -1133,7 +1142,7 @@
                     url: 'https://gcasaldi.github.io/giuliacasaldi.github.io/'
                 },
                 linkedin: {
-                    text: '💼 Connettiti con Giulia su LinkedIn - Splunk Specialist & NIS2 DORA Expert',
+                    text: '💼 Connettiti con Giulia su LinkedIn - Splunk Specialist e professionista cybersecurity',
                     url: 'https://www.linkedin.com/in/giuliacasaldi'
                 }
             };
@@ -1148,16 +1157,6 @@
                 setTimeout(() => {
                     window.open(messages[link].url, '_blank');
                 }, 800);
-            }
-        
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .about-section {
-                padding: 1.5rem;
             }
         }
 
