@@ -1,0 +1,56 @@
+name: Validate Project
+
+"on":
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Python syntax
+        run: python -m py_compile scripts/update_campaigns.py
+
+      - name: Validate campagne.json format
+        run: python -m json.tool campagne.json > /dev/null
+
+      - name: Validate campagne.json structure
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("campagne.json").read_text(encoding="utf-8"))
+          if not isinstance(data, dict):
+              raise SystemExit("campagne.json must be a JSON object")
+          campaigns = data.get("campaigns")
+          if not isinstance(campaigns, list):
+              raise SystemExit("campaigns must be a list")
+          required = {"title", "source", "action_url"}
+          for i, item in enumerate(campaigns):
+              if not isinstance(item, dict):
+                  raise SystemExit(f"campaign at index {i} must be an object")
+              missing = sorted(k for k in required if not item.get(k))
+              if missing:
+                  raise SystemExit(f"campaign at index {i} missing required keys: {', '.join(missing)}")
+          print(f"OK: validated {len(campaigns)} campaigns")
+          PY
+
+      - name: Validate frontend baseline
+        run: |
+          grep -q '<html lang="en">' index.html
+          grep -q 'id="globalOpsMap"' index.html
+          grep -q 'id="focusCampaigns"' index.html

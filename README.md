@@ -1,75 +1,42 @@
 # GreenAnchor
 
-Aggregatore 100% gratuito di campagne ambientali in stile Change, distribuito su GitHub Pages.
+GreenAnchor is an independent platform that helps people discover and support real environmental campaigns without creating duplicates.
 
-GreenAnchor - Campaign Consolidation & Completion Engine.
+The idea is simple: do not start another petition, help complete an existing one.
 
-Non creare un'altra campagna. Portiamone una a termine.
+## What it does
 
-GreenAnchor e un hub indipendente: non crea ne gestisce campagne, ma organizza dati pubblici e rimanda sempre alla fonte originale per partecipare.
+- Aggregates public campaign data from trusted sources.
+- Highlights urgent and high-impact actions.
+- Shows progress when reliable numeric targets are available.
+- Links users directly to the original campaign pages.
 
-## Architettura Tecnica
+## Tech at a glance
 
-- Frontend: pagina statica `index.html` + `app.js` + Tailwind CSS da CDN.
-- Database: file locale `campagne.json` versionato nel repository.
-- Aggiornamento dati: script Python `scripts/update_campaigns.py` eseguito ogni notte via GitHub Actions.
-- Motore di ricerca: Fuse.js client-side, senza server e senza backend.
+- Frontend: static site (`index.html`) deployed on GitHub Pages.
+- Data: versioned `campagne.json` in this repository.
+- Data updater: `scripts/update_campaigns.py`.
+- Search and filtering: client-side, no backend required.
 
-## Evoluzione Prodotto
-
-- GreenAnchor Radar: nuove campagne nelle ultime 24 ore, conteggio attive e urgenti.
-- GreenAnchor Focus: top 5 campagne ordinate per completion score, urgenza e concentrazione community.
-- Verifica tecnica: score di affidabilita (0-100) e stato `verificata`, `da_verificare`, `fonte_aggregata`.
-- Progresso deterministico: percentuale calcolata solo quando la fonte pubblica numeri verificabili.
-- Deduplicazione: URL canonico + titolo normalizzato.
-- Clustering semantico: individua campagne simili anche su fonti e lingue diverse.
-- Filtri avanzati: area (Italia/Europa/Globale), tema, tipo azione, ordinamento per urgenza/recenza/verifica.
-
-## Metriche Deterministiche Di Progresso
-
-- Petizioni: `firme raccolte / target firme`.
-- Raccolta fondi: `euro raccolti / target euro`.
-- Crowdfunding: `percentuale finanziata` oppure `euro raccolti / target` quando disponibili.
-- Raccolta adesioni: `adesioni / target`.
-- Eventi o mobilitazioni senza target numerico: nessun punteggio di progresso.
-
-L'AI e usata per classificazione/estrazione; il calcolo finale del progresso e deterministico e spiegabile.
-
-## Architettura Concettuale
-
-Sources -> Data Extraction -> Cleaning -> AI Classification -> Semantic Clustering -> Verification -> Completion Score -> GreenAnchor Focus -> Original Campaign
-
-## Fonti Mappate
-
-- Greenpeace Italia (Attivati)
-- WWF Italia
-- Legambiente
-- Marevivo
-- Change.org Italia
-- Iniziativa dei Cittadini Europei (ICE)
-- Avaaz (Ambiente)
-- Greenpeace (Act)
-- WWF (Act)
-- Change.org
-- openPetition
-
-Le fonti italiane sono prioritarie, con estensione a fonti europee e globali per aumentare l'impatto.
-
-## Deploy su GitHub Pages
-
-1. Vai su GitHub -> Settings -> Pages.
-2. Source: GitHub Actions.
-3. Esegui una push su `main` oppure avvia manualmente il workflow `Deploy GitHub Pages`.
-4. Attendi il completamento del job e apri l'URL pubblico.
-
-## Aggiornamento Manuale Dati
+## Quick start
 
 ```bash
 python -m pip install -r scripts/requirements.txt
 python scripts/update_campaigns.py
 ```
 
-## Note
+Then open `index.html` in your browser.
 
-- Lo scraping usa regole conservative su link testuali e potrebbe variare in base ai cambiamenti HTML delle fonti.
-- Se nessuna sorgente produce risultati, lo script inserisce un set di fallback per garantire continuita del servizio.
+## Automation
+
+- Nightly data refresh runs via GitHub Actions.
+- GitHub Pages deploy runs automatically on pushes to `main`.
+- Validation checks run on push and pull requests.
+
+## Contributing
+
+Contributions are welcome. For a fast guide, see `CONTRIBUTING.md`.
+
+## License
+
+MIT (see `LICENSE`).

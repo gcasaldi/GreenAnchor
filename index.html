@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenAnchor - Campagne Ambientali Consolidate</title>
+    <title>GreenAnchor - Consolidated Environmental Campaigns</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
@@ -297,6 +297,307 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 3rem;
+        }
+
+        .impact-panel {
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 24px;
+            background: rgba(9, 13, 22, 0.88);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+            animation: slideUp 0.8s ease-out 0.25s both;
+        }
+
+        .deck-reveal {
+            opacity: 0;
+            transform: translateY(26px) scale(0.99);
+            filter: blur(2px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.7s ease;
+            transition-delay: var(--deck-delay, 0ms);
+            will-change: transform, opacity;
+        }
+
+        .deck-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        .impact-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.95rem 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .impact-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.8rem;
+            color: #d6deed;
+            font-weight: 700;
+        }
+
+        .impact-brand i {
+            color: #59ffa7;
+            filter: drop-shadow(0 0 8px rgba(89, 255, 167, 0.65));
+        }
+
+        .impact-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(5, 180, 95, 0.18);
+            border: 1px solid rgba(89, 255, 167, 0.45);
+            font-size: 0.72rem;
+            color: #9dffca;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .impact-live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #59ffa7;
+            animation: pulseDot 1.7s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { transform: scale(0.85); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.7fr;
+            gap: 0;
+            min-height: 580px;
+        }
+
+        .impact-map-wrap {
+            position: relative;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            min-height: 580px;
+        }
+
+        .impact-map {
+            width: 100%;
+            height: 100%;
+            min-height: 580px;
+            background: #090c15;
+        }
+
+        .impact-overlay-title {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 420;
+            background: rgba(7, 10, 15, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 0.8rem 0.95rem;
+        }
+
+        .impact-overlay-title strong {
+            display: block;
+            color: #e8f0ff;
+            font-size: 0.88rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .impact-overlay-title span {
+            display: block;
+            margin-top: 0.2rem;
+            color: #93a4bf;
+            font-size: 0.78rem;
+        }
+
+        .impact-legend {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            z-index: 420;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0.6rem 0.7rem;
+            border-radius: 12px;
+            background: rgba(7, 10, 15, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            max-width: calc(100% - 2rem);
+        }
+
+        .impact-legend-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #d3dded;
+            font-size: 0.72rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .impact-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .impact-side {
+            padding: 1.1rem;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 1rem;
+            background: linear-gradient(180deg, rgba(12, 17, 28, 0.96), rgba(8, 10, 16, 0.96));
+        }
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.65rem;
+        }
+
+        .impact-kpi {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 0.75rem 0.8rem;
+        }
+
+        .impact-kpi .value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #59ffa7;
+            line-height: 1.1;
+        }
+
+        .impact-kpi .label {
+            margin-top: 0.25rem;
+            font-size: 0.7rem;
+            color: #94a0b7;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .impact-alert {
+            border: 1px solid rgba(255, 120, 120, 0.38);
+            background: linear-gradient(135deg, rgba(100, 20, 20, 0.2), rgba(31, 10, 10, 0.35));
+            border-radius: 12px;
+            padding: 0.7rem 0.8rem;
+            color: #ffb6b6;
+            font-size: 0.8rem;
+            line-height: 1.45;
+        }
+
+        .impact-controls {
+            display: grid;
+            gap: 0.5rem;
+            align-content: start;
+        }
+
+        .impact-control-btn {
+            width: 100%;
+            text-align: left;
+            border: 1px solid rgba(114, 255, 183, 0.35);
+            border-radius: 10px;
+            padding: 0.6rem 0.72rem;
+            background: rgba(13, 62, 43, 0.2);
+            color: #c8f9de;
+            cursor: pointer;
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .impact-control-btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(114, 255, 183, 0.75);
+            background: rgba(13, 62, 43, 0.34);
+        }
+
+        .impact-side-note {
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            background: rgba(255, 255, 255, 0.03);
+            font-size: 0.78rem;
+            color: #b5c2d8;
+            line-height: 1.45;
+        }
+
+        .impact-pulse-marker {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #59ffa7;
+            box-shadow: 0 0 0 5px rgba(89, 255, 167, 0.22);
+        }
+
+        .impact-pulse-marker::after {
+            content: '';
+            position: absolute;
+            inset: -9px;
+            border-radius: 50%;
+            border: 2px solid rgba(89, 255, 167, 0.45);
+            animation: impactPulse 2.2s ease-out infinite;
+        }
+
+        @keyframes impactPulse {
+            0% { transform: scale(0.55); opacity: 0.9; }
+            80% { transform: scale(1.5); opacity: 0; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .leaflet-popup-content-wrapper {
+            background: #0c1320;
+            color: #e5edfc;
+            border: 1px solid rgba(114, 255, 183, 0.4);
+        }
+
+        .leaflet-popup-tip {
+            background: #0c1320;
+        }
+
+        .impact-urgent-marker {
+            position: relative;
+            width: var(--urgent-size, 16px);
+            height: var(--urgent-size, 16px);
+            border-radius: 50%;
+            background: var(--urgent-color, #ff6b6b);
+            box-shadow: 0 0 16px color-mix(in srgb, var(--urgent-color, #ff6b6b) 65%, #000 35%);
+        }
+
+        .impact-urgent-marker::before,
+        .impact-urgent-marker::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px solid color-mix(in srgb, var(--urgent-color, #ff6b6b) 70%, #fff 30%);
+            animation: urgentPulse var(--urgent-speed, 1.7s) ease-out infinite;
+        }
+
+        .impact-urgent-marker::after {
+            animation-delay: calc(var(--urgent-speed, 1.7s) / 2);
+        }
+
+        @keyframes urgentPulse {
+            0% { transform: scale(0.75); opacity: 0.85; }
+            70% { transform: scale(1.65); opacity: 0; }
+            100% { transform: scale(1.65); opacity: 0; }
         }
 
         .btn {
@@ -832,6 +1133,28 @@
                 gap: 1rem;
             }
 
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-map-wrap {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                min-height: 420px;
+            }
+
+            .impact-map {
+                min-height: 420px;
+            }
+
+            .impact-side {
+                grid-template-rows: auto auto auto auto;
+            }
+
+            .impact-metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .search-bar {
                 max-width: 100%;
             }
@@ -940,24 +1263,24 @@
                     <span>GreenAnchor</span>
                 </div>
                 <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Cerca campagne ambientali...">
+                    <input type="text" id="searchInput" placeholder="Search environmental campaigns...">
                 </div>
                 <div class="header-actions">
                     <div class="stats" id="headerStats">
                         <div class="stat-item">
                             <div class="stat-number stat-campaigns">-</div>
-                            <div class="stat-label">Campagne</div>
+                            <div class="stat-label">Campaigns</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number stat-active">-</div>
-                            <div class="stat-label">Attive</div>
+                            <div class="stat-label">Active</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number stat-urgent">-</div>
-                            <div class="stat-label">Urgenti</div>
+                            <div class="stat-label">Urgent</div>
                         </div>
                     </div>
-                    <button class="theme-toggle" id="themeToggle" title="Cambia tema">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
                         <i class="fas fa-moon"></i>
                     </button>
                 </div>
@@ -965,18 +1288,76 @@
         </header>
 
         <main>
+            <section class="impact-panel" id="impactPanel">
+                <div class="impact-topbar">
+                    <div class="impact-brand">
+                        <i class="fas fa-earth-europe"></i>
+                        <span>GreenAnchor Global Command</span>
+                    </div>
+                    <div class="impact-live">
+                        <span class="impact-live-dot"></span>
+                        LIVE FEED
+                    </div>
+                </div>
+                <div class="impact-grid">
+                    <div class="impact-map-wrap">
+                        <div class="impact-overlay-title">
+                            <strong>Global Campaign Situation</strong>
+                            <span>Live priority map: Italy / Europe / Global</span>
+                        </div>
+                        <div class="impact-map" id="globalOpsMap" aria-label="Interactive world map of verified campaigns"></div>
+                        <div class="impact-legend">
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#59ffa7"></span>Verified</div>
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#ff6b6b"></span>Urgent</div>
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#7fb7ff"></span>Active routes</div>
+                        </div>
+                    </div>
+                    <aside class="impact-side">
+                        <div class="impact-metrics">
+                            <div class="impact-kpi">
+                                <div class="value" id="panelActive">-</div>
+                                <div class="label">Active campaigns</div>
+                            </div>
+                            <div class="impact-kpi">
+                                <div class="value" id="panelUrgent">-</div>
+                                <div class="label">Urgent 7d</div>
+                            </div>
+                            <div class="impact-kpi">
+                                <div class="value" id="panelSources">-</div>
+                                <div class="label">Tracked sources</div>
+                            </div>
+                            <div class="impact-kpi">
+                                <div class="value" id="panelPulse">-</div>
+                                <div class="label">New 24h</div>
+                            </div>
+                        </div>
+                        <div class="impact-alert" id="impactAlert">
+                            Monitoring booting up. Select a region to focus high-impact hotspots.
+                        </div>
+                        <div class="impact-controls" id="impactControls">
+                            <button class="impact-control-btn" data-view="global">Global view</button>
+                            <button class="impact-control-btn" data-view="europa">Europe focus</button>
+                            <button class="impact-control-btn" data-view="italia">Italy focus</button>
+                        </div>
+                        <div class="impact-side-note">
+                            Click pulsing map points to open verified official projects and take action in one step.
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
             <section class="hero">
                 <h1>
-                    <span class="gradient">Consolida le Campagne,</span><br>
-                    Non crearne Altre
+                    <span class="gradient">Consolidate Campaigns,</span><br>
+                    Do Not Create More
                 </h1>
-                <p>GreenAnchor aggrega petizioni ambientali da fonti verificate.</p>
+                <p>GreenAnchor aggregates environmental petitions from verified sources.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" onclick="document.getElementById('focusCampaigns').scrollIntoView({behavior: 'smooth'})">
-                        <i class="fas fa-search"></i> Esplora Campagne
+                        <i class="fas fa-search"></i> Explore Campaigns
                     </button>
                     <button class="btn btn-secondary" onclick="document.getElementById('aboutSection').scrollIntoView({behavior: 'smooth'})">
-                        <i class="fas fa-book"></i> Scopri di più
+                        <i class="fas fa-book"></i> Learn More
                     </button>
                 </div>
             </section>
@@ -989,19 +1370,19 @@
                 <div class="radar-grid">
                     <div class="radar-card">
                         <div class="radar-number" id="radarCampaigns">-</div>
-                        <div class="radar-label">Campagne Totali</div>
+                        <div class="radar-label">Total Campaigns</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarActive">-</div>
-                        <div class="radar-label">Attive</div>
+                        <div class="radar-label">Active</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarUrgent">-</div>
-                        <div class="radar-label">Urgenti (7 giorni)</div>
+                        <div class="radar-label">Urgent (7 days)</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarNew">-</div>
-                        <div class="radar-label">Nuove (24h)</div>
+                        <div class="radar-label">New (24h)</div>
                     </div>
                 </div>
             </section>
@@ -1009,13 +1390,13 @@
             <section class="focus-section" id="focusSectionContainer">
                 <div class="section-title">
                     <i class="fas fa-star"></i>
-                    <span>GreenAnchor Focus - Top Priorità</span>
+                    <span>GreenAnchor Focus - Top Priorities</span>
                 </div>
                 <div class="filters" id="filtersContainer">
-                    <button class="filter-btn active" data-filter="all">Tutto</button>
-                    <button class="filter-btn" data-filter="italia">🇮🇹 Italia</button>
-                    <button class="filter-btn" data-filter="europa">🇪🇺 Europa</button>
-                    <button class="filter-btn" data-filter="globale">🌍 Globale</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="italia">🇮🇹 Italy</button>
+                    <button class="filter-btn" data-filter="europa">🇪🇺 Europe</button>
+                    <button class="filter-btn" data-filter="globale">🌍 Global</button>
                 </div>
                 <div class="campaigns-grid" id="focusCampaigns"></div>
             </section>
@@ -1023,7 +1404,7 @@
             <section class="focus-section">
                 <div class="section-title">
                     <i class="fas fa-list"></i>
-                    <span>Tutte le Campagne</span>
+                    <span>All Campaigns</span>
                 </div>
                 <div class="campaigns-grid" id="allCampaigns"></div>
             </section>
@@ -1033,16 +1414,16 @@
             <section class="about-section" id="aboutSection">
                 <div class="section-title">
                     <i class="fas fa-user-circle"></i>
-                    <span>Chi Siamo</span>
+                    <span>About Us</span>
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>GreenAnchor - Consolidamento Campagne Ambientali</h3>
+                        <h3>GreenAnchor - Environmental Campaign Consolidation</h3>
                         <p>
-                            GreenAnchor è un hub indipendente che non crea né gestisce campagne ambientali, ma organizza 
-                            dati pubblici da fonti verificate e rimanda sempre alla sorgente originale per partecipare. 
-                            La nostra missione: <strong>consolidare, non frammentare</strong>. Non creiamo un'altra campagna, 
-                            portiamone una a termine.
+                            GreenAnchor is an independent hub that does not create or manage environmental campaigns.
+                            We organize public data from verified sources and always redirect to the original source to participate.
+                            Our mission is <strong>to consolidate, not fragment</strong>. We do not create another campaign,
+                            we help complete one.
                         </p>
                         <p style="margin-top: 1rem;">
                     
@@ -1053,13 +1434,13 @@
                 <div class="volunteer-hub" id="volunteerHub">
                     <div class="section-title">
                         <i class="fas fa-map-location-dot"></i>
-                        <span>Mappa</span>
+                        <span>Map</span>
                     </div>
                     <p class="volunteer-intro">
-                        Progetti ufficiali verificati.
+                        Verified official projects.
                     </p>
                     <div class="volunteer-grid">
-                        <div class="volunteer-map" id="volunteerMap" aria-label="Mappa Europa con progetti ufficiali verificati"></div>
+                        <div class="volunteer-map" id="volunteerMap" aria-label="Europe map with verified official projects"></div>
                         <div class="volunteer-list" id="volunteerList"></div>
                     </div>
                     <div class="volunteer-detail" id="volunteerDetail"></div>
@@ -1071,29 +1452,29 @@
                 <div class="footer-section">
                     <h3><i class="fas fa-leaf"></i> GreenAnchor</h3>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-                        Hub indipendente di campagne ambientali. Non creiamo campagne, le organizziamo e le portiamo a termine.
+                        Independent hub for environmental campaigns. We do not create campaigns, we organize and help complete them.
                     </p>
                 </div>
                 <div class="footer-section">
-                    <h3>Link Utili</h3>
+                    <h3>Useful Links</h3>
                     <a href="https://github.com/gcasaldi/GreenAnchor" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                     <a href="#faq">FAQ</a>
-                    <a href="#about">Chi Siamo</a>
+                    <a href="#about">About Us</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Fonti</h3>
+                    <h3>Sources</h3>
                     <a href="https://www.change.org" target="_blank">Change.org</a>
-                    <a href="https://ec.europa.eu/citizens" target="_blank">ICE Commissione UE</a>
-                    <a href="https://www.greenpeace.org/italy" target="_blank">Greenpeace Italia</a>
+                    <a href="https://ec.europa.eu/citizens" target="_blank">EU Commission ECI</a>
+                    <a href="https://www.greenpeace.org/italy" target="_blank">Greenpeace Italy</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 GreenAnchor | Aggregatore indipendente di campagne ambientali | 
+                <p>&copy; 2026 GreenAnchor | Independent environmental campaign aggregator |
                     <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
                 </p>
-                <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-muted);">Autrice: Giulia Casaldi</p>
+                <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-muted);">Author: Giulia Casaldi</p>
             </div>
         </footer>
     </div>
@@ -1103,56 +1484,56 @@
         const volunteerProjects = [
             {
                 id: 'greenpeace-italy',
-                title: 'Greenpeace Italia - Attivati',
-                region: 'Italia',
-                summary: 'Azioni, campagne e volontariato ufficiale per protezione del clima e della biodiversità.',
-                detail: 'Pagina ufficiale di attivazione Greenpeace Italia. Fonte verificata e sicura per partecipare come volontario o sostenitore.',
+                title: 'Greenpeace Italy - Get Involved',
+                region: 'Italy',
+                summary: 'Official actions, campaigns, and volunteering to protect climate and biodiversity.',
+                detail: 'Official Greenpeace Italy activation page. Verified and safe source to join as a volunteer or supporter.',
                 link: 'https://www.greenpeace.org/italy/attivati/',
-                type: 'Volontariato ambientale',
-                scope: 'Italia',
-                verified: 'Verificato',
+                type: 'Environmental volunteering',
+                scope: 'Italy',
+                verified: 'Verified',
                 pinClass: 'greenpeace-italy',
                 lat: 41.9028,
                 lng: 12.4964,
             },
             {
                 id: 'wwf-italy',
-                title: 'WWF Italia - Cosa puoi fare',
-                region: 'Italia',
-                summary: 'Percorsi ufficiali per contribuire alla tutela di natura, fauna e clima.',
-                detail: 'Canale ufficiale WWF Italia per partecipare in modo concreto ad attività, eventi e iniziative di volontariato.',
+                title: 'WWF Italy - What You Can Do',
+                region: 'Italy',
+                summary: 'Official ways to help protect nature, wildlife, and climate.',
+                detail: 'Official WWF Italy channel to join activities, events, and volunteering initiatives.',
                 link: 'https://www.wwf.it/',
-                type: 'Volontariato e attivismo',
-                scope: 'Italia',
-                verified: 'Verificato',
+                type: 'Volunteering and activism',
+                scope: 'Italy',
+                verified: 'Verified',
                 pinClass: 'wwf-italy',
                 lat: 41.9028,
                 lng: 12.4964,
             },
             {
                 id: 'legambiente-italy',
-                title: 'Legambiente - Campagne',
-                region: 'Italia',
-                summary: 'Campagne ufficiali e azioni locali su ambiente, territorio e comunità.',
-                detail: 'Portale Legambiente con campagne, eventi e opportunità sicure di partecipazione civica e volontariato.',
+                title: 'Legambiente - Campaigns',
+                region: 'Italy',
+                summary: 'Official campaigns and local actions on environment, territory, and communities.',
+                detail: 'Legambiente portal with campaigns, events, and safe opportunities for civic participation and volunteering.',
                 link: 'https://www.legambiente.it/campagne/',
-                type: 'Campagne e volontariato',
-                scope: 'Italia',
-                verified: 'Verificato',
+                type: 'Campaigns and volunteering',
+                scope: 'Italy',
+                verified: 'Verified',
                 pinClass: 'legambiente-italy',
                 lat: 41.9028,
                 lng: 12.4964,
             },
             {
                 id: 'marevivo-italy',
-                title: 'Marevivo - Cosa puoi fare',
-                region: 'Mediterraneo / Italia',
-                summary: 'Iniziative ufficiali per mare, coste e tutela degli ecosistemi marini.',
-                detail: 'Marevivo è una fonte verificata per partecipare ad azioni di volontariato e sensibilizzazione sul mare.',
+                title: 'Marevivo - What You Can Do',
+                region: 'Mediterranean / Italy',
+                summary: 'Official initiatives for sea, coastlines, and marine ecosystem protection.',
+                detail: 'Marevivo is a verified source to join volunteering and awareness actions for the sea.',
                 link: 'https://marevivo.it/cosa-puoi-fare/',
-                type: 'Volontariato marino',
-                scope: 'Italia',
-                verified: 'Verificato',
+                type: 'Marine volunteering',
+                scope: 'Italy',
+                verified: 'Verified',
                 pinClass: 'marevivo-italy',
                 lat: 41.8947,
                 lng: 12.4839,
@@ -1160,13 +1541,13 @@
             {
                 id: 'greenpeace-global',
                 title: 'Greenpeace International - Act',
-                region: 'Europa / Globale',
-                summary: 'Azioni globali e volontariato per clima, oceani e diritti ambientali.',
-                detail: 'Pagina internazionale ufficiale Greenpeace per aderire a campagne e supportare le azioni in modo sicuro.',
+                region: 'Europe / Global',
+                summary: 'Global actions and volunteering for climate, oceans, and environmental rights.',
+                detail: 'Official international Greenpeace page to join campaigns and support actions safely.',
                 link: 'https://www.greenpeace.org/international/act/',
-                type: 'Volontariato globale',
-                scope: 'Europa / Globale',
-                verified: 'Verificato',
+                type: 'Global volunteering',
+                scope: 'Europe / Global',
+                verified: 'Verified',
                 pinClass: 'greenpeace-global',
                 lat: 52.3676,
                 lng: 4.9041,
@@ -1174,13 +1555,13 @@
             {
                 id: 'wwf-global',
                 title: 'WWF Global - Act',
-                region: 'Europa / Globale',
-                summary: 'Partecipazione sicura a iniziative WWF internazionali.',
-                detail: 'Hub ufficiale WWF internazionale per campagne, attivismo e supporto verificato.',
+                region: 'Europe / Global',
+                summary: 'Safe participation in international WWF initiatives.',
+                detail: 'Official WWF international hub for campaigns, activism, and verified support.',
                 link: 'https://wwf.panda.org/act/',
-                type: 'Volontariato globale',
-                scope: 'Europa / Globale',
-                verified: 'Verificato',
+                type: 'Global volunteering',
+                scope: 'Europe / Global',
+                verified: 'Verified',
                 pinClass: 'wwf-global',
                 lat: 46.4212,
                 lng: 6.1889,
@@ -1188,7 +1569,287 @@
         ];
 
         let volunteerMap = null;
+        let globalOpsMap = null;
         const volunteerMarkers = new Map();
+        const globalOpsMarkers = new Map();
+        let revealObserver = null;
+        let urgentLayer = null;
+        let heatLayer = null;
+        let pendingCampaignData = null;
+
+        const scopeCenters = {
+            italia: [42.8, 12.6],
+            europa: [50.2, 10.4],
+            globale: [14.5, -17.2],
+        };
+
+        function normalizeScope(scope) {
+            const value = (scope || '').toLowerCase();
+            if (value.includes('italia') || value.includes('italy') || value === 'it') {
+                return 'italia';
+            }
+            if (value.includes('europa') || value.includes('europe') || value === 'eu') {
+                return 'europa';
+            }
+            return 'globale';
+        }
+
+        function parseDeadlineDays(deadline) {
+            if (!deadline) {
+                return null;
+            }
+            const dueDate = new Date(deadline);
+            if (Number.isNaN(dueDate.getTime())) {
+                return null;
+            }
+            return Math.ceil((dueDate.getTime() - Date.now()) / 86400000);
+        }
+
+        function createPulseIcon() {
+            return L.divIcon({
+                className: 'impact-pulse-icon',
+                html: '<span class="impact-pulse-marker"></span>',
+                iconSize: [18, 18],
+                iconAnchor: [9, 9],
+                popupAnchor: [0, -8],
+            });
+        }
+
+        function createUrgencyIcon(daysLeft) {
+            let color = '#ffb74d';
+            let size = 16;
+            let speed = 1.8;
+
+            if (daysLeft <= 2) {
+                color = '#ff3d57';
+                size = 21;
+                speed = 1.1;
+            } else if (daysLeft <= 4) {
+                color = '#ff6b6b';
+                size = 19;
+                speed = 1.3;
+            } else if (daysLeft <= 7) {
+                color = '#ff9a5a';
+                size = 17;
+                speed = 1.55;
+            }
+
+            return L.divIcon({
+                className: 'impact-urgent-icon',
+                html: `<span class="impact-urgent-marker" style="--urgent-color:${color};--urgent-size:${size}px;--urgent-speed:${speed}s"></span>`,
+                iconSize: [26, 26],
+                iconAnchor: [13, 13],
+                popupAnchor: [0, -12],
+            });
+        }
+
+        function mapArcLatLngs(start, end, arcFactor = 0.18, points = 28) {
+            const latLngs = [];
+            for (let i = 0; i <= points; i += 1) {
+                const t = i / points;
+                const lat = start[0] + (end[0] - start[0]) * t + Math.sin(Math.PI * t) * arcFactor * (Math.abs(end[1] - start[1]) / 2.4);
+                const lng = start[1] + (end[1] - start[1]) * t;
+                latLngs.push([lat, lng]);
+            }
+            return latLngs;
+        }
+
+        function initGlobalOpsMap() {
+            const mapContainer = document.getElementById('globalOpsMap');
+            if (!mapContainer || typeof L === 'undefined' || globalOpsMap) {
+                return;
+            }
+
+            globalOpsMap = L.map('globalOpsMap', {
+                zoomControl: true,
+                scrollWheelZoom: false,
+                worldCopyJump: true,
+                zoomSnap: 0.25,
+                minZoom: 2,
+            }).setView([24, 9], 2.2);
+
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+                maxZoom: 18,
+            }).addTo(globalOpsMap);
+
+            heatLayer = L.layerGroup().addTo(globalOpsMap);
+            urgentLayer = L.layerGroup().addTo(globalOpsMap);
+
+            const anchorPoint = [44.4, 8.95];
+            volunteerProjects.forEach(project => {
+                const marker = L.marker([project.lat, project.lng], {
+                    title: project.title,
+                    icon: createPulseIcon(),
+                }).addTo(globalOpsMap);
+
+                marker.bindPopup(`
+                    <strong>${project.title}</strong><br>
+                    ${project.region}<br>
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer">Open verified project</a>
+                `);
+
+                marker.on('click', () => showVolunteerProject(project.id));
+                globalOpsMarkers.set(project.id, marker);
+
+                L.polyline(mapArcLatLngs(anchorPoint, [project.lat, project.lng]), {
+                    color: '#7fb7ff',
+                    weight: 1.8,
+                    opacity: 0.5,
+                    dashArray: '6 8',
+                }).addTo(globalOpsMap);
+            });
+
+            if (pendingCampaignData) {
+                updateGlobalMapDataLayers(pendingCampaignData);
+                pendingCampaignData = null;
+            }
+        }
+
+        function updateGlobalMapDataLayers(data) {
+            if (!globalOpsMap || !urgentLayer || !heatLayer) {
+                pendingCampaignData = data;
+                return;
+            }
+
+            urgentLayer.clearLayers();
+            heatLayer.clearLayers();
+
+            const campaigns = data.campaigns || [];
+            const heatStats = {
+                italia: { total: 0, urgent: 0 },
+                europa: { total: 0, urgent: 0 },
+                globale: { total: 0, urgent: 0 },
+            };
+
+            const urgentCandidates = [];
+            campaigns.forEach(campaign => {
+                const scope = normalizeScope(campaign.scope || campaign.country);
+                heatStats[scope].total += 1;
+
+                const daysLeft = parseDeadlineDays(campaign.deadline);
+                if (daysLeft !== null && daysLeft >= 0 && daysLeft <= 14) {
+                    heatStats[scope].urgent += 1;
+                    urgentCandidates.push({
+                        id: campaign.id || campaign.title,
+                        title: campaign.title || 'Urgent campaign',
+                        actionUrl: campaign.action_url || '#',
+                        summary: campaign.summary || campaign.objective || 'Details not available.',
+                        scope,
+                        daysLeft,
+                    });
+                }
+            });
+
+            const maxTotal = Math.max(1, heatStats.italia.total, heatStats.europa.total, heatStats.globale.total);
+            const heatColors = {
+                italia: '#5bffbb',
+                europa: '#7fb7ff',
+                globale: '#ffd166',
+            };
+
+            Object.entries(heatStats).forEach(([scope, stats]) => {
+                const center = scopeCenters[scope];
+                if (!center || stats.total === 0) {
+                    return;
+                }
+
+                const intensity = stats.total / maxTotal;
+                const radius = 260000 + Math.round(intensity * 560000) + stats.urgent * 45000;
+                const fillOpacity = 0.1 + intensity * 0.22;
+                const color = heatColors[scope] || '#7fb7ff';
+
+                L.circle(center, {
+                    radius,
+                    color,
+                    weight: 1.3,
+                    opacity: 0.42,
+                    fillColor: color,
+                    fillOpacity,
+                    interactive: false,
+                }).addTo(heatLayer);
+            });
+
+            urgentCandidates
+                .sort((a, b) => a.daysLeft - b.daysLeft)
+                .slice(0, 9)
+                .forEach((item, index) => {
+                    const center = scopeCenters[item.scope] || scopeCenters.globale;
+                    const angle = (index % 6) * (Math.PI / 3);
+                    const ring = 0.85 + Math.floor(index / 3) * 0.9;
+                    const lat = center[0] + Math.sin(angle) * ring;
+                    const lng = center[1] + Math.cos(angle) * (ring * 1.4);
+
+                    const marker = L.marker([lat, lng], {
+                        title: item.title,
+                        icon: createUrgencyIcon(item.daysLeft),
+                    }).addTo(urgentLayer);
+
+                    const urgencyText = item.daysLeft === 0
+                        ? 'Ends today'
+                        : `Ends in ${item.daysLeft} days`;
+
+                    marker.bindPopup(`
+                        <strong>${item.title}</strong><br>
+                        ${urgencyText}<br>
+                        <span style="color:#8ea0bf">${item.summary}</span><br>
+                        <a href="${item.actionUrl}" target="_blank" rel="noopener noreferrer">Open campaign</a>
+                    `);
+                });
+        }
+
+        function initDeckReveal() {
+            const targets = document.querySelectorAll('main > section, #aboutSection, footer');
+            if (!targets.length) {
+                return;
+            }
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                targets.forEach(node => {
+                    node.classList.add('is-visible');
+                });
+                return;
+            }
+
+            revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+
+            targets.forEach((node, index) => {
+                node.classList.add('deck-reveal');
+                node.style.setProperty('--deck-delay', `${Math.min(index * 70, 280)}ms`);
+                revealObserver.observe(node);
+            });
+        }
+
+        function initImpactControls() {
+            const controls = document.querySelectorAll('#impactControls .impact-control-btn');
+            if (!controls.length) {
+                return;
+            }
+
+            controls.forEach(button => {
+                button.addEventListener('click', () => {
+                    const view = button.dataset.view;
+                    if (!globalOpsMap) {
+                        return;
+                    }
+
+                    if (view === 'italia') {
+                        globalOpsMap.setView([42.7, 12.5], 5.2, { animate: true });
+                    } else if (view === 'europa') {
+                        globalOpsMap.setView([49.7, 10.5], 4.2, { animate: true });
+                    } else {
+                        globalOpsMap.setView([24, 9], 2.2, { animate: true });
+                    }
+                });
+            });
+        }
 
         function initVolunteerMap() {
             const mapContainer = document.getElementById('volunteerMap');
@@ -1200,22 +1861,27 @@
                 zoomControl: true,
                 scrollWheelZoom: false,
                 worldCopyJump: true,
-            }).setView([47.2, 9.1], 4);
+            }).setView([24, 9], 2.3);
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors',
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
                 maxZoom: 18,
             }).addTo(volunteerMap);
 
             volunteerProjects.forEach(project => {
-                const marker = L.marker([project.lat, project.lng], {
+                const marker = L.circleMarker([project.lat, project.lng], {
+                    radius: 7,
+                    color: '#59ffa7',
+                    fillColor: '#59ffa7',
+                    fillOpacity: 0.82,
+                    weight: 1.5,
                     title: project.title,
                 }).addTo(volunteerMap);
 
                 marker.bindPopup(`
                     <strong>${project.title}</strong><br>
                     ${project.region}<br>
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer">Apri progetto verificato</a>
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer">Open verified project</a>
                 `);
 
                 marker.on('click', () => showVolunteerProject(project.id));
@@ -1229,9 +1895,9 @@
                 const data = await response.json();
                 renderDashboard(data);
             } catch (error) {
-                console.error('Errore nel caricamento campagne:', error);
+                console.error('Error loading campaigns:', error);
                 document.getElementById('focusCampaigns').innerHTML = 
-                    '<p style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Errore nel caricamento dei dati</p>';
+                    '<p style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">Error loading data</p>';
             }
         }
 
@@ -1241,11 +1907,20 @@
                 document.getElementById('radarActive').textContent = data.radar.active_campaigns || 0;
                 document.getElementById('radarUrgent').textContent = data.radar.urgent_campaigns || 0;
                 document.getElementById('radarNew').textContent = data.radar.new_campaigns_24h || 0;
+
+                const sourcesCount = new Set((data.campaigns || []).map(item => item.source).filter(Boolean)).size;
+                document.getElementById('panelActive').textContent = data.radar.active_campaigns || 0;
+                document.getElementById('panelUrgent').textContent = data.radar.urgent_campaigns || 0;
+                document.getElementById('panelPulse').textContent = data.radar.new_campaigns_24h || 0;
+                document.getElementById('panelSources').textContent = sourcesCount || '-';
+                document.getElementById('impactAlert').textContent = `Live monitoring: ${data.radar.urgent_campaigns || 0} urgent campaigns in the next 7 days. Operational priority on verified sources.`;
                 
                 document.querySelector('.stat-campaigns').textContent = data.campaigns?.length || 0;
                 document.querySelector('.stat-active').textContent = data.radar.active_campaigns || 0;
                 document.querySelector('.stat-urgent').textContent = data.radar.urgent_campaigns || 0;
             }
+
+            updateGlobalMapDataLayers(data);
 
             if (data.greenanchor_focus) {
                 renderCampaigns(data.greenanchor_focus, 'focusCampaigns');
@@ -1305,6 +1980,12 @@
                 marker.openPopup();
             }
 
+            const globalMarker = globalOpsMarkers.get(projectId);
+            if (globalMarker && globalOpsMap) {
+                globalOpsMap.setView(globalMarker.getLatLng(), 4.8, { animate: true });
+                globalMarker.openPopup();
+            }
+
             const detail = document.getElementById('volunteerDetail');
             if (!detail) {
                 return;
@@ -1320,7 +2001,7 @@
                 </div>
                 <div class="volunteer-detail-actions">
                     <a class="volunteer-action-btn" href="${project.link}" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-shield-heart"></i> Apri progetto
+                        <i class="fas fa-shield-heart"></i> Open project
                     </a>
                 </div>
             `;
@@ -1340,7 +2021,7 @@
                                 <span class="badge">${campaign.source}</span>
                                 <span class="badge">${scope}</span>
                                 <span class="badge" style="background: ${campaign.status === 'attiva' ? 'rgba(0, 217, 111, 0.15)' : 'rgba(255, 107, 107, 0.15)'}; color: ${campaign.status === 'attiva' ? 'var(--primary)' : 'var(--accent)'};">
-                                    ${campaign.status === 'attiva' ? '🟢 Attiva' : '🔴 Chiusa'}
+                                    ${campaign.status === 'attiva' ? '🟢 Active' : '🔴 Closed'}
                                 </span>
                             </div>
                         </div>
@@ -1350,7 +2031,7 @@
                             ${campaign.progress_percent !== null && campaign.progress_percent !== undefined ? `
                                 <div class="progress-section">
                                     <div class="progress-label">
-                                        <span class="progress-label-left">Progresso</span>
+                                        <span class="progress-label-left">Progress</span>
                                         <span class="progress-label-right">${progressPercent}%</span>
                                     </div>
                                     <div class="progress-bar">
@@ -1358,7 +2039,7 @@
                                     </div>
                                     ${campaign.progress_current !== null ? `
                                         <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
-                                            ${campaign.progress_current || 0} / ${campaign.progress_target || 0} ${campaign.progress_unit || 'firme'}
+                                            ${campaign.progress_current || 0} / ${campaign.progress_target || 0} ${campaign.progress_unit || 'signatures'}
                                         </div>
                                     ` : ''}
                                 </div>
@@ -1366,17 +2047,17 @@
 
                             ${campaign.deadline ? `
                                 <div style="font-size: 0.85rem; color: ${new Date(campaign.deadline) < new Date() ? 'var(--accent)' : 'var(--primary)'}; margin-top: 1rem;">
-                                    <i class="fas fa-calendar"></i> Scadenza: ${new Date(campaign.deadline).toLocaleDateString('it-IT')}
+                                    <i class="fas fa-calendar"></i> Deadline: ${new Date(campaign.deadline).toLocaleDateString('en-GB')}
                                 </div>
                             ` : ''}
 
                             <div class="campaign-footer">
                                 <button class="btn-action" onclick="openCampaign('${campaign.action_url}')">
-                                    Dettagli
+                                    Details
                                 </button>
                                 <a href="${campaign.action_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; flex: 1;">
                                     <button class="btn-action btn-action-primary" style="width: 100%; cursor: pointer;">
-                                        Partecipa
+                                        Join
                                     </button>
                                 </a>
                             </div>
@@ -1422,6 +2103,9 @@
             document.body.classList.toggle('light-theme');
         });
 
+        window.addEventListener('load', initDeckReveal);
+        window.addEventListener('load', initGlobalOpsMap);
+        window.addEventListener('load', initImpactControls);
         window.addEventListener('load', initVolunteerMap);
         window.addEventListener('load', renderVolunteerProjects);
 
