@@ -24,6 +24,9 @@ jobs:
       - name: Validate Python syntax
         run: python -m py_compile scripts/update_campaigns.py
 
+      - name: Check frontend JavaScript syntax
+        run: node --check mission-control.js
+
       - name: Validate campagne.json format
         run: python -m json.tool campagne.json > /dev/null
 
