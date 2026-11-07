@@ -31,7 +31,7 @@
     const host = u.hostname;
     const title = item.title.toLowerCase();
     if (host.endsWith('greenpeace.org')) {
-      return /^\/(?:international|italy)\/act\/[\w-]+$/.test(p);
+      return /^\/(?:international\/act|italy\/act|italy\/attivati)\/[\w-]+$/.test(p);
     }
     if (host.endsWith('openpetition.eu')) {
       return /^\/petition\/online\/[\w%-]+$/.test(p) && environmentalTerms.test(title);
@@ -42,11 +42,17 @@
     if (host.endsWith('citizens-initiative.europa.eu')) {
       return p.includes('/initiatives/details/') && environmentalTerms.test(title);
     }
+    if (host === 'attivati.legambiente.it') {
+      return /^\/page\/\d+\/petition\/\d+$/.test(p);
+    }
     if (host.endsWith('legambiente.it')) {
       return /^\/campagne\/[\w-]+$/.test(p);
     }
     if (host.endsWith('marevivo.it')) {
       return /^\/(?:campagne|progetti|petizioni)\/[\w-]+$/.test(p);
+    }
+    if (host === 'attivati.wwf.it') {
+      return /^\/[\w-]+$/.test(p);
     }
     if (host.endsWith('wwf.it')) {
       return /^\/(?:petizioni|campagne)\/[\w-]+$/.test(p);
@@ -237,6 +243,7 @@
       ['Dominio destinazione',u?.hostname||'Non disponibile'],
       ['Tipologia verifica',orgSite(item)?'Dominio di organizzazione nota':'Controllo manuale consigliato'],
       ['Ultima importazione',dateText(state.generatedAt)],
+      ['Revisione link',item.reviewed_at?item.reviewed_at+' (controllo di origine)':'Non disponibile'],
       ['Scadenza',item.deadline?dateText(item.deadline):'Non comunicata'],
       ['Tipo di azione',item.action_type||'Non determinato']
     ];
@@ -287,8 +294,23 @@
       if(!response.ok)throw new Error('HTTP '+response.status);
       const data=await response.json();
       if(!Array.isArray(data.campaigns))throw new Error('Struttura dati non valida');
+      // Small, manually sourced Italian catalog; older links expire rather
+      // than remaining on the homepage indefinitely without a new review.
+      let curated=[];
+      try {
+        const extra=await fetch('curated_actions.json',{cache:'no-store'});
+        if(extra.ok){
+          const payload=await extra.json();
+          const ttl=Number(payload.expiry_days)||60;
+          curated=(Array.isArray(payload.actions)?payload.actions:[]).filter(item=>{
+            const date=validDate(item.reviewed_at);
+            const days=date?(Date.now()-date.getTime())/86400000:Infinity;
+            return days>=0 && days<=ttl;
+          });
+        }
+      } catch(error) {console.warn('Curated links unavailable:',error);}
       const unique=new Map();
-      for(const item of data.campaigns){
+      for(const item of [...data.campaigns,...curated]){
         if(!actionable(item))continue;
         const key=urlOf(item.action_url)?.href;
         if(key&&!unique.has(key))unique.set(key,item);
