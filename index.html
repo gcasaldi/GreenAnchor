@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenAnchor - Consolidated Environmental Campaigns</title>
+    <title>GreenAnchor — Impact Intelligence | Azioni ambientali, fonti e verifiche</title>
+    <meta name="description" content="GreenAnchor raccoglie azioni ambientali da fonti identificabili. Esplora, verifica le informazioni e partecipa dalla pagina originale.">
+    <meta name="theme-color" content="#081216">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <style>
         * {
@@ -1202,6 +1204,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="mission-control.css?v=20261107">
+    <script src="mission-control.js?v=20261107" defer></script>
 </head>
 <body>
     <div class="animated-bg">
@@ -1263,24 +1267,24 @@
                     <span>GreenAnchor</span>
                 </div>
                 <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Search environmental campaigns...">
+                    <input type="search" id="searchInput" placeholder="Cerca azioni, temi o organizzazioni..." aria-label="Cerca azioni ambientali">
                 </div>
                 <div class="header-actions">
                     <div class="stats" id="headerStats">
                         <div class="stat-item">
                             <div class="stat-number stat-campaigns">-</div>
-                            <div class="stat-label">Campaigns</div>
+                            <div class="stat-label">Azioni</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number stat-active">-</div>
-                            <div class="stat-label">Active</div>
+                            <div class="stat-label">Da ONG</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number stat-urgent">-</div>
-                            <div class="stat-label">Urgent</div>
+                            <div class="stat-label">In scadenza</div>
                         </div>
                     </div>
-                    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <span class="site-status">Public data</span><button class="theme-toggle" id="themeToggle" title="Cambia tema" aria-label="Cambia tema" aria-pressed="false">
                         <i class="fas fa-moon"></i>
                     </button>
                 </div>
@@ -1288,124 +1292,137 @@
         </header>
 
         <main>
+            <section class="hero" aria-labelledby="heroTitle">
+                <div class="hero-copy">
+                    <div class="eyebrow">GREENANCHOR / IMPACT INTELLIGENCE</div>
+                    <h1 id="heroTitle">Meno rumore.<br><span class="gradient">Più impatto.</span></h1>
+                    <p>Le iniziative per l'ambiente non hanno bisogno dell'ennesima copia. Hanno bisogno di essere trovate, comprese e sostenute. GreenAnchor seleziona collegamenti a iniziative esistenti e mostra da dove arrivano i dati.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#focusSectionContainer"><i class="fas fa-arrow-up-right-from-square"></i> Esplora le azioni</a>
+                        <a class="btn btn-secondary" href="#aboutSection"><i class="fas fa-fingerprint"></i> Come verifichiamo</a>
+                    </div>
+                    <div class="hero-footnote"><i class="fas fa-shield-alt"></i> Nessuna nuova petizione · Link alle fonti originali · Nessuna firma raccolta qui</div>
+                </div>
+                <div class="signal-orb" aria-label="Riepilogo dati disponibili">
+                    <div class="signal-kicker">ENVIRONMENTAL SIGNAL INDEX / 01</div>
+                    <div class="signal-big" id="signalTotal">—</div>
+                    <div class="signal-caption">Azioni dirette individuate nel dataset pubblico</div>
+                    <div class="signal-divider"></div>
+                    <div class="signal-row"><span>Fonti presenti</span><b id="signalSources">—</b></div>
+                    <div class="signal-row"><span>Ultimo aggiornamento</span><b class="data-stamp" id="signalSync">in caricamento</b></div>
+                    <div class="signal-row"><span>Origine</span><b>Dataset versionato · GitHub</b></div>
+                </div>
+            </section>
+
             <section class="impact-panel" id="impactPanel">
                 <div class="impact-topbar">
                     <div class="impact-brand">
                         <i class="fas fa-earth-europe"></i>
-                        <span>GreenAnchor Global Command</span>
+                        <span>GreenAnchor / Impact Atlas</span>
                     </div>
                     <div class="impact-live">
                         <span class="impact-live-dot"></span>
-                        LIVE FEED
+                        <span id="dataStatus">CARICAMENTO SNAPSHOT</span>
                     </div>
                 </div>
                 <div class="impact-grid">
                     <div class="impact-map-wrap">
                         <div class="impact-overlay-title">
-                            <strong>Global Campaign Situation</strong>
-                            <span>Live priority map: Italy / Europe / Global</span>
+                            <strong>Atlante delle azioni</strong>
+                            <span>Esplora le aree · punti indicativi</span>
                         </div>
                         <div class="impact-map" id="globalOpsMap" aria-label="Interactive world map of verified campaigns"></div>
                         <div class="impact-legend">
-                            <div class="impact-legend-item"><span class="impact-dot" style="background:#59ffa7"></span>Verified</div>
-                            <div class="impact-legend-item"><span class="impact-dot" style="background:#ff6b6b"></span>Urgent</div>
-                            <div class="impact-legend-item"><span class="impact-dot" style="background:#7fb7ff"></span>Active routes</div>
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#59ffa7"></span>Canali ufficiali</div>
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#ff6b6b"></span>Scadenze dichiarate</div>
+                            <div class="impact-legend-item"><span class="impact-dot" style="background:#7fb7ff"></span>Collegamenti</div>
                         </div>
                     </div>
                     <aside class="impact-side">
                         <div class="impact-metrics">
                             <div class="impact-kpi">
                                 <div class="value" id="panelActive">-</div>
-                                <div class="label">Active campaigns</div>
+                                <div class="label">Azioni selezionate</div>
                             </div>
                             <div class="impact-kpi">
                                 <div class="value" id="panelUrgent">-</div>
-                                <div class="label">Urgent 7d</div>
+                                <div class="label">Scadenze entro 7 giorni</div>
                             </div>
                             <div class="impact-kpi">
                                 <div class="value" id="panelSources">-</div>
-                                <div class="label">Tracked sources</div>
+                                <div class="label">Fonti nel catalogo</div>
                             </div>
                             <div class="impact-kpi">
                                 <div class="value" id="panelPulse">-</div>
-                                <div class="label">New 24h</div>
+                                <div class="label">Prime apparizioni 24h</div>
                             </div>
                         </div>
                         <div class="impact-alert" id="impactAlert">
-                            Monitoring booting up. Select a region to focus high-impact hotspots.
+                            Lettura del dataset in corso. Le informazioni vanno sempre confermate alla pagina originale.
                         </div>
                         <div class="impact-controls" id="impactControls">
-                            <button class="impact-control-btn" data-view="global">Global view</button>
-                            <button class="impact-control-btn" data-view="europa">Europe focus</button>
-                            <button class="impact-control-btn" data-view="italia">Italy focus</button>
+                            <button class="impact-control-btn" data-view="global">Mondo</button>
+                            <button class="impact-control-btn" data-view="europa">Europa</button>
+                            <button class="impact-control-btn" data-view="italia">Italia</button>
                         </div>
                         <div class="impact-side-note">
-                            Click pulsing map points to open verified official projects and take action in one step.
+                            I punti rappresentano indicativamente le organizzazioni, non la posizione delle campagne. I cerchi illustrano volumi aggregati per area.
                         </div>
                     </aside>
-                </div>
-            </section>
-
-            <section class="hero">
-                <h1>
-                    <span class="gradient">Consolidate Campaigns,</span><br>
-                    Do Not Create More
-                </h1>
-                <p>GreenAnchor aggregates environmental petitions from verified sources.</p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary" onclick="document.getElementById('focusCampaigns').scrollIntoView({behavior: 'smooth'})">
-                        <i class="fas fa-search"></i> Explore Campaigns
-                    </button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('aboutSection').scrollIntoView({behavior: 'smooth'})">
-                        <i class="fas fa-book"></i> Learn More
-                    </button>
                 </div>
             </section>
 
             <section class="radar">
                 <div class="radar-title">
                     <i class="fas fa-radar"></i>
-                    <span>GreenAnchor Radar</span>
+                    <span>Signal Radar <small id="syncNotice" style="display:block;font:400 11px DM Sans,sans-serif;letter-spacing:0;color:#8cae9d;margin-top:4px">Snapshot in caricamento</small></span>
                 </div>
                 <div class="radar-grid">
                     <div class="radar-card">
                         <div class="radar-number" id="radarCampaigns">-</div>
-                        <div class="radar-label">Total Campaigns</div>
+                        <div class="radar-label">Azioni dirette</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarActive">-</div>
-                        <div class="radar-label">Active</div>
+                        <div class="radar-label">Link di organizzazioni</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarUrgent">-</div>
-                        <div class="radar-label">Urgent (7 days)</div>
+                        <div class="radar-label">Scadenze nei 7 giorni</div>
                     </div>
                     <div class="radar-card">
                         <div class="radar-number" id="radarNew">-</div>
-                        <div class="radar-label">New (24h)</div>
+                        <div class="radar-label">Nuove nel dataset 24h</div>
                     </div>
                 </div>
             </section>
 
+            <div class="trust-strip" aria-label="Metodo GreenAnchor">
+                <div class="trust-item"><strong><i class="fas fa-link"></i> Link diretti</strong><span>Escludiamo pagine generiche e directory quando non rimandano a una singola azione.</span></div>
+                <div class="trust-item"><strong><i class="fas fa-fingerprint"></i> Controlli tracciabili</strong><span>Mostriamo la fonte e il dominio. Non sostituiamo la verifica sul sito originale.</span></div>
+                <div class="trust-item"><strong><i class="fas fa-database"></i> Dati senza finzioni</strong><span>Numeri e scadenze compaiono solo se presenti nel dataset, con data dello snapshot.</span></div>
+            </div>
             <section class="focus-section" id="focusSectionContainer">
                 <div class="section-title">
                     <i class="fas fa-star"></i>
-                    <span>GreenAnchor Focus - Top Priorities</span>
+                    <span>Focus / Azioni da esplorare</span>
                 </div>
-                <div class="filters" id="filtersContainer">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="italia">🇮🇹 Italy</button>
-                    <button class="filter-btn" data-filter="europa">🇪🇺 Europe</button>
-                    <button class="filter-btn" data-filter="globale">🌍 Global</button>
-                </div>
+                <p class="section-subtitle">Collegamenti prioritari per tema e fonte. Non è una graduatoria dell’impatto reale.</p>
+                <div class="section-tools"><div class="filters" id="filtersContainer">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Tutte</button>
+                    <button class="filter-btn" data-filter="italia">🇮🇹 Italia</button>
+                    <button class="filter-btn" data-filter="europa">🇪🇺 Europa</button>
+                    <button class="filter-btn" data-filter="globale">🌍 Mondo</button>
+                </div><button id="bookmarkFilter" type="button" class="bookmark-filter" aria-pressed="false">☆ Solo salvate</button></div>
                 <div class="campaigns-grid" id="focusCampaigns"></div>
             </section>
 
             <section class="focus-section">
                 <div class="section-title">
                     <i class="fas fa-list"></i>
-                    <span>All Campaigns</span>
+                    <span>Explore / Tutte le azioni</span>
                 </div>
+                <p class="section-subtitle" id="resultCount" role="status" aria-live="polite">Caricamento dati...</p>
                 <div class="campaigns-grid" id="allCampaigns"></div>
             </section>
         </main>
@@ -1414,16 +1431,15 @@
             <section class="about-section" id="aboutSection">
                 <div class="section-title">
                     <i class="fas fa-user-circle"></i>
-                    <span>About Us</span>
+                    <span>Il nostro metodo</span>
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>GreenAnchor - Environmental Campaign Consolidation</h3>
+                        <h3>Una piattaforma per orientarsi, non per creare nuove petizioni</h3>
                         <p>
-                            GreenAnchor is an independent hub that does not create or manage environmental campaigns.
-                            We organize public data from verified sources and always redirect to the original source to participate.
-                            Our mission is <strong>to consolidate, not fragment</strong>. We do not create another campaign,
-                            we help complete one.
+                            GreenAnchor è un progetto indipendente che raccoglie collegamenti pubblici ad azioni ambientali esistenti.
+                            Il filtro automatico esclude molte pagine generiche, ma non equivale a un controllo editoriale o a una certificazione dell'efficacia delle iniziative.
+                            Ogni scheda indica il dominio di origine e rimanda al sito esterno, dove verificare lo stato e aderire.
                         </p>
                         <p style="margin-top: 1rem;">
                     
@@ -1434,10 +1450,10 @@
                 <div class="volunteer-hub" id="volunteerHub">
                     <div class="section-title">
                         <i class="fas fa-map-location-dot"></i>
-                        <span>Map</span>
+                        <span>Directory / Canali delle organizzazioni</span>
                     </div>
                     <p class="volunteer-intro">
-                        Verified official projects.
+                        Una mappa esplorativa dei canali delle organizzazioni. I segnaposto sono indicativi, non mostrano le sedi delle singole campagne.
                     </p>
                     <div class="volunteer-grid">
                         <div class="volunteer-map" id="volunteerMap" aria-label="Europe map with verified official projects"></div>
@@ -1452,19 +1468,19 @@
                 <div class="footer-section">
                     <h3><i class="fas fa-leaf"></i> GreenAnchor</h3>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-                        Independent hub for environmental campaigns. We do not create campaigns, we organize and help complete them.
+                        Riuniamo collegamenti pubblici ad azioni per l’ambiente. Nessuna petizione creata qui: valuta sempre i dettagli sulla fonte originale.
                     </p>
                 </div>
                 <div class="footer-section">
-                    <h3>Useful Links</h3>
+                    <h3>Esplora</h3>
                     <a href="https://github.com/gcasaldi/GreenAnchor" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#about">About Us</a>
+                    <a href="#focusSectionContainer">Azioni in evidenza</a>
+                    <a href="#aboutSection">Metodo</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Sources</h3>
+                    <h3>Organizzazioni</h3>
                     <a href="https://www.change.org" target="_blank">Change.org</a>
                     <a href="https://ec.europa.eu/citizens" target="_blank">EU Commission ECI</a>
                     <a href="https://www.greenpeace.org/italy" target="_blank">Greenpeace Italy</a>
@@ -1472,13 +1488,15 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 GreenAnchor | Independent environmental campaign aggregator |
-                    <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
+                    <a href="https://github.com/gcasaldi/GreenAnchor" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Codice e trasparenza</a>
                 </p>
-                <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-muted);">Author: Giulia Casaldi</p>
+                <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-muted);">Ideato da Giulia Casaldi · <span id="lastUpdate">Snapshot in caricamento</span></p>
             </div>
         </footer>
     </div>
 
+    <dialog class="verification-dialog" id="verificationDialog" aria-label="Dettagli verifica fonte"><div class="dialog-inner" id="verificationContent"></div></dialog>
+    <div data-toast role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         const volunteerProjects = [
@@ -1949,7 +1967,7 @@
             `).join('');
 
             detail.innerHTML = '';
-            showVolunteerProject(volunteerProjects[0].id);
+            showVolunteerProject(volunteerProjects[0].id, false);
 
             list.querySelectorAll('.volunteer-project').forEach(button => {
                 button.addEventListener('click', () => showVolunteerProject(button.dataset.projectId));
@@ -1960,7 +1978,7 @@
             });
         }
 
-        function showVolunteerProject(projectId) {
+        function showVolunteerProject(projectId, focusMaps = true) {
             const project = volunteerProjects.find(item => item.id === projectId);
             if (!project) {
                 return;
@@ -1975,13 +1993,13 @@
             });
 
             const marker = volunteerMarkers.get(projectId);
-            if (marker && volunteerMap) {
+            if (marker && volunteerMap && focusMaps) {
                 volunteerMap.setView(marker.getLatLng(), 6, { animate: true });
                 marker.openPopup();
             }
 
             const globalMarker = globalOpsMarkers.get(projectId);
-            if (globalMarker && globalOpsMap) {
+            if (globalMarker && globalOpsMap && focusMaps) {
                 globalOpsMap.setView(globalMarker.getLatLng(), 4.8, { animate: true });
                 globalMarker.openPopup();
             }
@@ -2071,45 +2089,13 @@
             window.open(url, '_blank');
         }
 
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('.campaign-card');
-            cards.forEach(card => {
-                const title = card.querySelector('.campaign-title').textContent.toLowerCase();
-                const summary = card.querySelector('.campaign-summary').textContent.toLowerCase();
-                card.style.display = title.includes(searchTerm) || summary.includes(searchTerm) ? '' : 'none';
-            });
-        });
-
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                const filter = btn.dataset.filter;
-                const cards = document.querySelectorAll('.campaign-card');
-                cards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = '';
-                    } else {
-                        const scope = card.querySelector('.campaign-meta').textContent.toLowerCase();
-                        card.style.display = scope.includes(filter) ? '' : 'none';
-                    }
-                });
-            });
-        });
-
-        document.getElementById('themeToggle').addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-        });
-
         window.addEventListener('load', initDeckReveal);
         window.addEventListener('load', initGlobalOpsMap);
         window.addEventListener('load', initImpactControls);
         window.addEventListener('load', initVolunteerMap);
         window.addEventListener('load', renderVolunteerProjects);
 
-        window.addEventListener('load', loadCampaigns);
+        window.addEventListener('load', initGreenAnchorMission);
     </script>
 </body>
 </html>
