@@ -972,6 +972,55 @@ def load_previous_map() -> dict[str, dict]:
     return out
 
 
+# Editorial safety gate: a homepage/directory is not an individual campaign.
+# This is a URL/page-type heuristic, not proof of campaign legitimacy or impact.
+ENVIRONMENT_TERMS = re.compile(
+    r"klima|grün|gruen|wald|natur|umwelt|oekolog|ökol|biodivers|meer|ozean|"
+    r"plastik|tierschutz|forest|climat|ocean|wildlife|environment|green|polluti|"
+    r"species|nature|fossil|sea|mining|dairy|meat|planet|marine|energia|"
+    r"ambiente|foreste|oceani|inquinament|animali|mare|cambiament",
+    re.IGNORECASE,
+)
+
+
+def is_direct_environmental_action(item: dict) -> bool:
+    """Accept a direct action URL, not a generic directory or news article.
+
+    Organisations are not independently audited here. A recognized domain
+    does not validate the activity or its current status.
+    """
+    title = str(item.get("title") or "").strip()
+    raw_url = str(item.get("action_url") or "")
+    if len(title) < 12:
+        return False
+
+    parsed = urlparse(raw_url)
+    if parsed.scheme != "https":
+        return False
+    host = (parsed.hostname or "").lower()
+    path = parsed.path.lower().rstrip("/")
+
+    if host == "greenpeace.org" or host.endswith(".greenpeace.org"):
+        return bool(re.fullmatch(r"/(?:international|italy)/act/[a-z0-9_-]+", path))
+    if host == "openpetition.eu" or host.endswith(".openpetition.eu"):
+        return bool(re.fullmatch(r"/petition/online/[a-z0-9%_-]+", path)) and bool(ENVIRONMENT_TERMS.search(title))
+    if host == "change.org" or host.endswith(".change.org"):
+        return bool(re.fullmatch(r"/p/[a-z0-9%_-]+", path)) and bool(ENVIRONMENT_TERMS.search(title))
+    if host == "citizens-initiative.europa.eu":
+        return "/initiatives/details/" in path and bool(ENVIRONMENT_TERMS.search(title))
+    if host in {"legambiente.it", "www.legambiente.it"}:
+        return bool(re.fullmatch(r"/campagne/[a-z0-9_-]+", path))
+    if host in {"marevivo.it", "www.marevivo.it"}:
+        return bool(re.fullmatch(r"/(?:campagne|progetti|petizioni)/[a-z0-9_-]+", path))
+    if host in {"wwf.it", "www.wwf.it"}:
+        return bool(re.fullmatch(r"/(?:petizioni|campagne)/[a-z0-9_-]+", path))
+    if host == "wwf.panda.org":
+        return bool(re.fullmatch(r"/act/[a-z0-9_-]+", path))
+    if host in {"avaaz.org", "secure.avaaz.org"}:
+        return bool(re.fullmatch(r"/campaign/[a-z0-9_-]+/[a-z0-9_-]+", path)) and bool(ENVIRONMENT_TERMS.search(title))
+    return False
+
+
 def dedupe(campaigns: Iterable[dict]) -> list[dict]:
     by_key: dict[str, dict] = {}
     for item in campaigns:
@@ -1102,6 +1151,10 @@ def main() -> None:
     else:
         all_campaigns = ensure_source_coverage(all_campaigns, now_dt, previous_map)
         all_campaigns = dedupe(all_campaigns)
+
+    pre_gate_count = len(all_campaigns)
+    all_campaigns = [item for item in all_campaigns if is_direct_environmental_action(item)]
+    print(f"Quality gate: {len(all_campaigns)}/{pre_gate_count} collegamenti diretti ammessi")
 
     all_campaigns = assign_semantic_clusters(all_campaigns)
     focus = select_focus(all_campaigns, now_dt)
