@@ -51,6 +51,8 @@ jobs:
 
       - name: Validate frontend baseline
         run: |
-          grep -q '<html lang="en">' index.html
+          grep -q '<html lang="it">' index.html
+          test -s mission-control.css
+          test -s mission-control.js
           grep -q 'id="globalOpsMap"' index.html
           grep -q 'id="focusCampaigns"' index.html
