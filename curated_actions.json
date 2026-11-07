@@ -1,0 +1,111 @@
+{
+  "reviewed_at": "2026-11-07",
+  "review_method": "Public source-page review; linked campaign status is not independently audited",
+  "expiry_days": 60,
+  "actions": [
+    {
+      "id": "curated-gp-it-fossili",
+      "source": "Greenpeace Italia",
+      "organization": "Greenpeace Italia",
+      "title": "Basta investire su petrolio, gas e carbone!",
+      "summary": "Appello di Greenpeace Italia sugli investimenti nei combustibili fossili e sulla crisi climatica. Le condizioni della petizione sono disponibili sul sito ufficiale.",
+      "objective": "Sostenere la richiesta di ridurre gli investimenti fossili.",
+      "action_url": "https://www.greenpeace.org/italy/attivati/basta-investire-su-petrolio-gas-e-carbone/",
+      "source_url": "https://www.greenpeace.org/italy/cosa-facciamo/clima/",
+      "tags": [
+        "clima",
+        "energia"
+      ],
+      "country": "IT",
+      "scope": "Italia",
+      "language": "it",
+      "theme": "clima",
+      "action_type": "petizione",
+      "verified_organization": true,
+      "status": "da_confermare",
+      "status_basis": "reviewed listing, status to confirm at source",
+      "reviewed_at": "2026-11-07",
+      "first_seen": "2026-11-07T10:00:00Z",
+      "deadline": null,
+      "progress_percent": null
+    },
+    {
+      "id": "curated-gp-it-eni",
+      "source": "Greenpeace Italia",
+      "organization": "Greenpeace Italia",
+      "title": "Una Giusta Causa per il pianeta",
+      "summary": "Iniziativa di Greenpeace Italia collegata alla crisi climatica e all'azione legale nei confronti di ENI. Verifica sul sito originale come partecipare.",
+      "objective": "Informare e aderire all'iniziativa direttamente dalla pagina di Greenpeace Italia.",
+      "action_url": "https://www.greenpeace.org/italy/attivati/la-giusta-causa-per-il-pianeta/",
+      "source_url": "https://www.greenpeace.org/italy/cosa-facciamo/clima/",
+      "tags": [
+        "clima",
+        "giustizia climatica"
+      ],
+      "country": "IT",
+      "scope": "Italia",
+      "language": "it",
+      "theme": "clima",
+      "action_type": "petizione",
+      "verified_organization": true,
+      "status": "da_confermare",
+      "status_basis": "reviewed listing, status to confirm at source",
+      "reviewed_at": "2026-11-07",
+      "first_seen": "2026-11-07T10:00:00Z",
+      "deadline": null,
+      "progress_percent": null
+    },
+    {
+      "id": "curated-wwf-it-crimini",
+      "source": "WWF Italia",
+      "organization": "WWF Italia",
+      "title": "Stop Crimini di Natura",
+      "summary": "Petizione WWF Italia che chiede interventi contro i crimini ai danni della fauna e della flora selvatiche. Consulta il sito originale per i dettagli.",
+      "objective": "Richiedere misure per contrastare i crimini contro la natura.",
+      "action_url": "https://attivati.wwf.it/stop-crimini-di-natura",
+      "source_url": "https://www.wwf.it/pandanews/animali/crimini-di-natura/stop-crimini-di-natura-al-via-la-petizione-per-chiedere-al-governo-di-fermarli/",
+      "tags": [
+        "biodiversita",
+        "animali"
+      ],
+      "country": "IT",
+      "scope": "Italia",
+      "language": "it",
+      "theme": "biodiversita",
+      "action_type": "petizione",
+      "verified_organization": true,
+      "status": "da_confermare",
+      "status_basis": "reviewed listing, status to confirm at source",
+      "reviewed_at": "2026-11-07",
+      "first_seen": "2026-11-07T10:00:00Z",
+      "deadline": null,
+      "progress_percent": null
+    },
+    {
+      "id": "curated-legambiente-it-smog",
+      "source": "Legambiente",
+      "organization": "Legambiente",
+      "title": "Ci siamo rotti i polmoni. No allo smog!",
+      "summary": "Petizione di Legambiente per chiedere azioni contro lo smog e per città più vivibili. Verifica la pagina originale prima di aderire.",
+      "objective": "Chiedere interventi contro l'inquinamento atmosferico.",
+      "action_url": "https://attivati.legambiente.it/page/74655/petition/1?locale=it-IT",
+      "source_url": "https://www.legambiente.it/cosa-puoi-fare/petizioni",
+      "tags": [
+        "aria",
+        "inquinamento"
+      ],
+      "country": "IT",
+      "scope": "Italia",
+      "language": "it",
+      "theme": "inquinamento",
+      "action_type": "petizione",
+      "verified_organization": true,
+      "status": "da_confermare",
+      "status_basis": "reviewed listing, status to confirm at source",
+      "reviewed_at": "2026-11-07",
+      "first_seen": "2026-11-07T10:00:00Z",
+      "deadline": null,
+      "progress_percent": null
+    }
+  ]
+}
