@@ -30,6 +30,9 @@ jobs:
       - name: Validate campagne.json format
         run: python -m json.tool campagne.json > /dev/null
 
+      - name: Validate curated action JSON
+        run: python -m json.tool curated_actions.json > /dev/null
+
       - name: Validate campagne.json structure
         run: |
           python - <<'PY'
