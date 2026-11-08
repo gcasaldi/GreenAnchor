@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-07T02:06:07.083224+00:00",
+  "generated_at": "2026-11-08T02:06:46.720771+00:00",
   "radar": {
-    "generated_at": "2026-11-07T02:05:57.708728+00:00",
-    "new_campaigns_24h": 1,
+    "generated_at": "2026-11-08T02:06:36.547666+00:00",
+    "new_campaigns_24h": 0,
     "active_campaigns": 8,
     "urgent_campaigns": 0,
-    "fragmented_topics": 0
+    "fragmented_topics": 1
   },
   "greenanchor_focus": [
     {
@@ -32,10 +32,10 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-11-07T02:05:57.708728+00:00",
-      "is_new_24h": true,
+      "is_new_24h": false,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -63,7 +63,113 @@
         "versiegelung",
         "weitere"
       ],
-      "semantic_cluster_id": "cluster-006",
+      "semantic_cluster_id": "cluster-001",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "2c46902a1b17",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Beyond Seafood – Support migrant fishers",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/support-migrant-fishers/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
+      "first_seen": "2026-10-22T02:11:11.915322+00:00",
+      "is_new_24h": false,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_current": null,
+      "progress_target": null,
+      "progress_percent": null,
+      "progress_unit": null,
+      "progress_measurable": false,
+      "progress_note": null,
+      "progress_method": "deterministico",
+      "semantic_tokens": [
+        "beyond",
+        "fishers",
+        "migrant",
+        "seafood",
+        "support"
+      ],
+      "semantic_cluster_id": "cluster-002",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "a114a0798c7a",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Sign the open letter",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/reclaim-the-moral-compass/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "mail action",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": false,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_current": null,
+      "progress_target": null,
+      "progress_percent": null,
+      "progress_unit": null,
+      "progress_measurable": false,
+      "progress_note": null,
+      "progress_method": "deterministico",
+      "semantic_tokens": [
+        "letter",
+        "open",
+        "sign"
+      ],
+      "semantic_cluster_id": "cluster-003",
       "semantic_cluster_size": 1
     },
     {
@@ -89,8 +195,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -115,7 +221,7 @@
         "meat",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-018",
+      "semantic_cluster_id": "cluster-004",
       "semantic_cluster_size": 1
     },
     {
@@ -141,8 +247,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -167,58 +273,7 @@
         "mining",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-019",
-      "semantic_cluster_size": 1
-    },
-    {
-      "id": "9989de0e36a7",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop Fossil Gas",
-      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
-      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-fossil-gas/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "verified_organization": true,
-      "status": "attiva",
-      "theme": "ambiente",
-      "action_type": "petizione",
-      "deadline": null,
-      "scope": "Globale",
-      "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
-      "first_seen": "2026-08-18T15:58:40.595340+00:00",
-      "is_new_24h": false,
-      "verification_score": 100,
-      "verification_status": "verificata",
-      "verification_checks": {
-        "primary_source": true,
-        "campaign_active": true,
-        "organization_identified": true,
-        "date_verified": true,
-        "link_working": true,
-        "goal_declared": true
-      },
-      "progress_current": null,
-      "progress_target": null,
-      "progress_percent": null,
-      "progress_unit": null,
-      "progress_measurable": false,
-      "progress_note": null,
-      "progress_method": "deterministico",
-      "semantic_tokens": [
-        "fossil",
-        "stop"
-      ],
-      "semantic_cluster_id": "cluster-020",
+      "semantic_cluster_id": "cluster-005",
       "semantic_cluster_size": 1
     }
   ],
@@ -247,10 +302,10 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-11-07T02:05:57.708728+00:00",
-      "is_new_24h": true,
+      "is_new_24h": false,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -278,7 +333,113 @@
         "versiegelung",
         "weitere"
       ],
-      "semantic_cluster_id": "cluster-006",
+      "semantic_cluster_id": "cluster-001",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "2c46902a1b17",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Beyond Seafood – Support migrant fishers",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/support-migrant-fishers/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "petizione",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
+      "first_seen": "2026-10-22T02:11:11.915322+00:00",
+      "is_new_24h": false,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_current": null,
+      "progress_target": null,
+      "progress_percent": null,
+      "progress_unit": null,
+      "progress_measurable": false,
+      "progress_note": null,
+      "progress_method": "deterministico",
+      "semantic_tokens": [
+        "beyond",
+        "fishers",
+        "migrant",
+        "seafood",
+        "support"
+      ],
+      "semantic_cluster_id": "cluster-002",
+      "semantic_cluster_size": 1
+    },
+    {
+      "id": "a114a0798c7a",
+      "source": "Greenpeace",
+      "organization": "Greenpeace",
+      "title": "Sign the open letter",
+      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
+      "action_url": "https://www.greenpeace.org/international/act/reclaim-the-moral-compass/",
+      "source_url": "https://www.greenpeace.org/international/act/",
+      "tags": [
+        "attivati",
+        "ambiente",
+        "azioni legali"
+      ],
+      "country": "Global",
+      "language": "en",
+      "verified_organization": true,
+      "status": "attiva",
+      "theme": "ambiente",
+      "action_type": "mail action",
+      "deadline": null,
+      "scope": "Globale",
+      "verified_source": true,
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
+      "first_seen": "2026-08-18T15:58:40.595340+00:00",
+      "is_new_24h": false,
+      "verification_score": 100,
+      "verification_status": "verificata",
+      "verification_checks": {
+        "primary_source": true,
+        "campaign_active": true,
+        "organization_identified": true,
+        "date_verified": true,
+        "link_working": true,
+        "goal_declared": true
+      },
+      "progress_current": null,
+      "progress_target": null,
+      "progress_percent": null,
+      "progress_unit": null,
+      "progress_measurable": false,
+      "progress_note": null,
+      "progress_method": "deterministico",
+      "semantic_tokens": [
+        "letter",
+        "open",
+        "sign"
+      ],
+      "semantic_cluster_id": "cluster-003",
       "semantic_cluster_size": 1
     },
     {
@@ -304,8 +465,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -330,7 +491,7 @@
         "meat",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-018",
+      "semantic_cluster_id": "cluster-004",
       "semantic_cluster_size": 1
     },
     {
@@ -356,8 +517,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -382,58 +543,7 @@
         "mining",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-019",
-      "semantic_cluster_size": 1
-    },
-    {
-      "id": "9989de0e36a7",
-      "source": "Greenpeace",
-      "organization": "Greenpeace",
-      "title": "Stop Fossil Gas",
-      "summary": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
-      "objective": "Obiettivo: supportare un'azione ambientale concreta rilevata da Greenpeace.",
-      "action_url": "https://www.greenpeace.org/international/act/stop-fossil-gas/",
-      "source_url": "https://www.greenpeace.org/international/act/",
-      "tags": [
-        "attivati",
-        "ambiente",
-        "azioni legali"
-      ],
-      "country": "Global",
-      "language": "en",
-      "verified_organization": true,
-      "status": "attiva",
-      "theme": "ambiente",
-      "action_type": "petizione",
-      "deadline": null,
-      "scope": "Globale",
-      "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
-      "first_seen": "2026-08-18T15:58:40.595340+00:00",
-      "is_new_24h": false,
-      "verification_score": 100,
-      "verification_status": "verificata",
-      "verification_checks": {
-        "primary_source": true,
-        "campaign_active": true,
-        "organization_identified": true,
-        "date_verified": true,
-        "link_working": true,
-        "goal_declared": true
-      },
-      "progress_current": null,
-      "progress_target": null,
-      "progress_percent": null,
-      "progress_unit": null,
-      "progress_measurable": false,
-      "progress_note": null,
-      "progress_method": "deterministico",
-      "semantic_tokens": [
-        "fossil",
-        "stop"
-      ],
-      "semantic_cluster_id": "cluster-020",
+      "semantic_cluster_id": "cluster-005",
       "semantic_cluster_size": 1
     }
   ],
@@ -462,10 +572,10 @@
       "deadline": null,
       "scope": "Europa",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-11-07T02:05:57.708728+00:00",
-      "is_new_24h": true,
+      "is_new_24h": false,
       "verification_score": 100,
       "verification_status": "verificata",
       "verification_checks": {
@@ -493,7 +603,7 @@
         "versiegelung",
         "weitere"
       ],
-      "semantic_cluster_id": "cluster-006",
+      "semantic_cluster_id": "cluster-001",
       "semantic_cluster_size": 1
     },
     {
@@ -519,8 +629,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-10-22T02:11:11.915322+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -547,7 +657,7 @@
         "seafood",
         "support"
       ],
-      "semantic_cluster_id": "cluster-015",
+      "semantic_cluster_id": "cluster-002",
       "semantic_cluster_size": 1
     },
     {
@@ -573,8 +683,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -599,7 +709,7 @@
         "open",
         "sign"
       ],
-      "semantic_cluster_id": "cluster-017",
+      "semantic_cluster_id": "cluster-003",
       "semantic_cluster_size": 1
     },
     {
@@ -625,8 +735,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -651,7 +761,7 @@
         "meat",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-018",
+      "semantic_cluster_id": "cluster-004",
       "semantic_cluster_size": 1
     },
     {
@@ -677,8 +787,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -703,7 +813,7 @@
         "mining",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-019",
+      "semantic_cluster_id": "cluster-005",
       "semantic_cluster_size": 1
     },
     {
@@ -729,8 +839,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -754,7 +864,7 @@
         "fossil",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-020",
+      "semantic_cluster_id": "cluster-006",
       "semantic_cluster_size": 1
     },
     {
@@ -780,8 +890,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -806,7 +916,7 @@
         "corporate",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-021",
+      "semantic_cluster_id": "cluster-007",
       "semantic_cluster_size": 2
     },
     {
@@ -832,8 +942,8 @@
       "deadline": null,
       "scope": "Globale",
       "verified_source": true,
-      "last_verified": "2026-11-07T02:05:57.708728+00:00",
-      "last_seen": "2026-11-07T02:05:57.708728+00:00",
+      "last_verified": "2026-11-08T02:06:36.547666+00:00",
+      "last_seen": "2026-11-08T02:06:36.547666+00:00",
       "first_seen": "2026-08-18T15:58:40.595340+00:00",
       "is_new_24h": false,
       "verification_score": 100,
@@ -858,9 +968,8 @@
         "intimidation",
         "stop"
       ],
-      "semantic_cluster_id": "cluster-021",
+      "semantic_cluster_id": "cluster-007",
       "semantic_cluster_size": 2
     }
-  ],
-  "curation_note": "Campaigns are selected by URL/domain/page-type heuristics. Campaign accuracy, availability, impact and status are not independently verified."
+  ]
 }
